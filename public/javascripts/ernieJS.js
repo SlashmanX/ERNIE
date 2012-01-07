@@ -1,5 +1,6 @@
 var url = [location.protocol, '//', location.host].join('');
 var socket = io.connect(url);
+$.inlog(true);
 
 $(document).ready(function() {
 	var url = [location.protocol, '//', location.host].join('');
