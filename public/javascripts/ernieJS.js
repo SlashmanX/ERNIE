@@ -1,6 +1,6 @@
 var url = [location.protocol, '//', location.host].join('');
 var socket = io.connect(url);
-$.inlog(true);
+
 
 $(document).ready(function() {
 	var url = [location.protocol, '//', location.host].join('');
@@ -14,6 +14,8 @@ $(document).ready(function() {
 	if (!$('body').hasClass('login')) {
        var active = updatePage(path);
     }
+    
+    $.inlog(true);
 	
 	
 	
