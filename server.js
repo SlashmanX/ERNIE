@@ -54,7 +54,7 @@ SQLclient.query('CREATE DATABASE '+REPORT_DATABASE, function(err) {
 SQLclient.query('USE '+REPORT_DATABASE);
 
 SQLclient.query(
-  'CREATE TABLE '+EMPLOYEE_TABLE+' IF NOT EXISTS ('+
+  'CREATE TABLE IF NOT EXISTS '+EMPLOYEE_TABLE+' ('+
 	  '`id` int(11) not null auto_increment,'+
 	  '`name` varchar(255),'+
 	  '`position` text,'+
