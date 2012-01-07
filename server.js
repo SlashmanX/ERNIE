@@ -54,12 +54,19 @@ SQLclient.query('CREATE DATABASE '+REPORT_DATABASE, function(err) {
 SQLclient.query('USE '+REPORT_DATABASE);
 
 SQLclient.query(
-  'CREATE TABLE IF NOT EXISTS '+EMPLOYEE_TABLE+
-  '(id INT(11) AUTO_INCREMENT, '+
-  'name VARCHAR(255), '+
-  'position TEXT, '+
-  'email TEXT, '+
-  'PRIMARY KEY (id))'
+  'CREATE TABLE '+EMPLOYEE_TABLE+' ('+
+	  '`id` int(11) not null auto_increment,'+
+	  '`name` varchar(255),'+
+	  '`position` text,'+
+	  '`email` text,'+
+	  '`username` varchar(255) not null,'+
+	  '`level` int(2) not null default '1','+
+	  '`password` varchar(255),'+
+	  '`last_login` datetime,'+
+	  '`oauth_token` varchar(255),'+
+	  '`oauth_token_secret` varchar(255),'+
+	  'PRIMARY KEY (`id`)'+
+	') ENGINE=MyISAM DEFAULT CHARSET=latin1;'
 );
 
 // Configuration
