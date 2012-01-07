@@ -40,7 +40,7 @@
             base.$dots = base.$el.find("em");
             base.$loadingText = base.$el.find("span");
             
-            base.$el.css("position", "relative");
+            //base.$el.css("position", "relative");
             /*base.$loadingText.css({
                 "position": "absolute",
                 "top": (base.$el.outerHeight() / 2) - (base.$loadingText.outerHeight() / 2),
