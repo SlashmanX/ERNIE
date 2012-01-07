@@ -120,7 +120,6 @@ $(document).ready(function() {
 	
 	$('#userLogOut').live('click', function(e) {
 		e.preventDefault();
-		alert('Clicked');
 		$.cookie('loggedIn', 'false', { expires: 7, path: '/' });
 		updatePage('main');
 		var stateObj = { activePage:  'main'};
@@ -189,7 +188,9 @@ $(document).ready(function() {
 function processLogin()
 {
 	var path = location.pathname;
-	$('#infotext').Loadingdotdotdot({"loadString": 'Logging In'});
+	//alert('logging in');
+	$('#infotext').Loadingdotdotdot({'loadString': 'Logging In', 'maxDots': 3});
+	//alert('logging in');
 	
 	var dataString = 'username='+ $('input#username').val() + '&password=' + functions.sha1($('input#password').val());
   	$.ajax({
@@ -197,13 +198,16 @@ function processLogin()
     	url: "/login",
 	    data: dataString,
 	    success: function(data) {
-	    	$('#infotext').Loadingdotdotdot("Stop");
 	    	if(data)
 	    	{
 		    	$.cookie('loggedIn', 'true', { expires: 7, path: '/' });
+		    	alert('ok');
 		    	$('.login').load('/', function(response, status, xhr){
+		    		var stateObj = { activePage:  'login'};
+					history.pushState(stateObj, "ERNIE", path);
 		    		$('body').removeClass('login');
 					updatePage(path);
+					$("#infotext").Loadingdotdotdot("Stop");
 					
 				});
 				var stateObj = { activePage:  'login'};
@@ -273,10 +277,12 @@ function showLoadingBar()
 	loadingID.css("top", 0);
 	loadingID.css("left",($(window).width() /2) - ($('#loading').width() /2));
 	loadingID.show();
+	loadingID.Loadingdotdotdot({'maxDots': 3});
 }
 
 function hideLoadingBar()
 {
+	$('#loading').Loadingdotdotdot("Stop");
 	$('#loading').fadeOut('slow');
 }
 
