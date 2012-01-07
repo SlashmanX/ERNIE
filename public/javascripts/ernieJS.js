@@ -188,7 +188,7 @@ $(document).ready(function() {
 function processLogin()
 {
 	var path = location.pathname;
-	$('#infotext').Loadingdotdotdot({"loadString: 'Logging In'"});
+	//$('#infotext').Loadingdotdotdot({"loadString: 'Logging In'"});
 	
 	var dataString = 'username='+ $('input#username').val() + '&password=' + functions.sha1($('input#password').val());
   	$.ajax({
@@ -196,7 +196,7 @@ function processLogin()
     	url: "/login",
 	    data: dataString,
 	    success: function(data) {
-	    	$('#infotext').Loadingdotdotdot("Stop");
+	    	//$('#infotext').Loadingdotdotdot("Stop");
 	    	if(data)
 	    	{
 		    	$.cookie('loggedIn', 'true', { expires: 7, path: '/' });
