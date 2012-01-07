@@ -44,7 +44,7 @@
                 "left": (base.$el.width() / 2) - (base.$loadingText.width() / 2)
             });
                         
-            base.theInterval = setInterval(base.dotItUp, base.options.speed, base.$dots, base.options.maxDots);
+            base.theInterval = setInterval(base.dotItUp, base.options.speed, base.$dots, base.options.maxDots, base.options.loadString);
             
         };
         
