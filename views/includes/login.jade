@@ -1,0 +1,19 @@
+body.login
+	div#login-wrapper
+		div#login-top
+			h1 ERNIE Login
+		div#login-content
+			div.notification.information
+				div#infotext
+					Please Enter Your Login Details
+			form#loginForm
+				p
+					label Username 
+					input(type='text', name='username', id='username')
+				div.clear
+				p
+					label Password 
+					input(type='password', name='password', id='password')
+				div.clear
+				p
+					input(class='button', type='submit', id='loginButton', value='Log In!')

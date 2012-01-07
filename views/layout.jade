@@ -1,0 +1,27 @@
+- var loggedIn = loggedIn
+!!! 5
+html
+  head
+    title= title
+    link(rel='stylesheet', href='/stylesheets/style.css')
+    script(src="/javascripts/jquery-1.5.2.min.js")
+    script(src="/javascripts/hideshow.js")
+    script(src="/javascripts/jquery.tablesorter.min.js")
+    script(src="/javascripts/jquery.equalHeight.js")
+    script(src="/socket.io/socket.io.js")
+    script(src="/javascripts/json.js")
+    script(src="/javascripts/serializeObject.js")
+    script(src="/javascripts/jquery.scrollTo-1.4.2.min.js")
+    script(src="/javascripts/jquery-cookie.js")
+    script(src="/javascripts/functions.js")
+    script(src="/javascripts/jquery.simplemodal.1.4.2.min.js")
+    script(src="/javascripts/ernieJS.js")
+    
+  
+   if(loggedIn == 'true')
+    include includes/head
+    body#whole
+      section#main.column.main!= body
+      
+   else
+     include includes/login

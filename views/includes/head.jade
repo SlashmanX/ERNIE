@@ -1,0 +1,77 @@
+- var level = userLevel
+- var userID = userID
+- var userName = userName
+header#header.header
+	hgroup
+		h1.site_title 
+			a(href="/") ERNIE Admin
+		h2.section_title
+			|Dashboard
+		div.btn_view_site
+			a(href="http://www.slashmanx.com", id = 'userLogOut') Log Out
+
+section#secondary_bar
+	div.user
+		p #{userName} (
+			a(href="#", id = 'onlineUsers')
+				span#numUsers 
+					|0
+				|  Users Online
+			|)
+			
+	div#onlineUsersModal
+		div#onlineUsersInner Loading Users...
+
+	div.breadcrumbs_container
+		article.breadcrumbs
+			a(id ="home", href="/") Website Admin
+			div.breadcrumb_divider
+			span#newBreadcrumbs
+				a.current Dashboard
+				
+aside#sidebar
+	div.nav
+		form.quick_search
+			input(type="text", id ="search", placeholder="Quick Search")
+		hr
+		h3 Reports
+		ul.toggle#reports
+			-	if(level == 1)
+				li.icn_new_article 
+					a(href="#", id="new") Generate New Report
+			li.icn_edit_article 
+				a(href="#", id ="edit") Edit Existing Report
+			li.icn_tags 
+				a(href="#", id = "kpi") K.P.I's
+			
+		h3 Employees
+		ul.toggle#employees
+			li.icn_add_user 
+				a(href="#", id = "add") Add New Employee
+			li.icn_view_users 
+				a(href="#", id = "view") View Employees
+			li.icn_profile 
+				a(href="#", id = "you") Your Info
+			
+		h3 Projects
+		ul.toggle#projects
+			li.icn_folder 
+				a(href="#", id="add") Add Project
+			li.icn_photo 
+				a(href="#", id="edit") Edit Existing Project
+		
+		footer
+			hr
+			p 
+				strong
+					| Copyright &copy; 2011 Website Admin
+			p
+				| Original theme by 
+				a(href="http://medialoot.com/item/html5-admin-template/") MediaLoot
+				|. Modified by
+				a(href="http://slashmanx.com") E&oacute;in Martin
+
+div#loading Loading....
+
+			
+

@@ -1,0 +1,13 @@
+{
+  "name": "ernie",
+  "version": "0.0.1",
+  "private": true,
+  "dependencies": {
+    "express": "2.5.1",
+    "less": ">= 0.0.1",
+    "jade": ">= 0.0.1",
+    "socket.io": ">= 0.8.7",
+    "mysql": "~0.9.5",
+    "connect": ">= 1.8.0"
+  }
+}
