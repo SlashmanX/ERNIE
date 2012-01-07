@@ -102,6 +102,7 @@ $(document).ready(function() {
 	$('#loginForm').live('submit',function(e) {
 	
 		e.preventDefault();
+		processLogin();
 	
 	
 	});
@@ -151,9 +152,9 @@ $(document).ready(function() {
     	}
 	});
 	
-	document.addEventListener("visibilitychange", visibilityChanged);
+	/*document.addEventListener("visibilitychange", visibilityChanged);
     document.addEventListener("webkitvisibilitychange", visibilityChanged);
-    document.addEventListener("msvisibilitychange", visibilityChanged);
+    document.addEventListener("msvisibilitychange", visibilityChanged);*/
     
     
 	
@@ -184,7 +185,7 @@ $(document).ready(function() {
 function processLogin()
 {
 	var path = location.pathname;
-	$('#infotext').text('Logging in...');
+	$('#infotext').Loadingdotdotdot({"loadString: 'Logging In'"});
 	
 	var dataString = 'username='+ $('input#username').val() + '&password=' + functions.sha1($('input#password').val());
   	$.ajax({
@@ -192,7 +193,7 @@ function processLogin()
     	url: "/login",
 	    data: dataString,
 	    success: function(data) {
-	    	alert(data);
+	    	$('#infotext').Loadingdotdotdot("Stop");
 	    	if(data)
 	    	{
 		    	$.cookie('loggedIn', 'true', { expires: 7, path: '/' });
@@ -212,6 +213,7 @@ function processLogin()
 				infoParent.addClass('attention');
 				$('#infotext').text('Error logging in. Please try again.');
 			}
+			
       	}
 	  });
 }
