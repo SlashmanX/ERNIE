@@ -274,10 +274,10 @@ function showOnlineUsers()
 function showLoadingBar()
 {
 	var loadingID = $('#loading');
+	loadingID.Loadingdotdotdot();
 	loadingID.css("top", 0);
 	loadingID.css("left",($(window).width() /2) - ($('#loading').width() /2));
 	loadingID.show();
-	loadingID.Loadingdotdotdot({'maxDots': 3});
 }
 
 function hideLoadingBar()
