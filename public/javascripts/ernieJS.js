@@ -201,7 +201,6 @@ function processLogin()
 	    	if(data)
 	    	{
 		    	$.cookie('loggedIn', 'true', { expires: 7, path: '/' });
-		    	alert('ok');
 		    	$('.login').load('/', function(response, status, xhr){
 		    		var stateObj = { activePage:  'login'};
 					history.pushState(stateObj, "ERNIE", path);
@@ -274,7 +273,6 @@ function showOnlineUsers()
 function showLoadingBar()
 {
 	var loadingID = $('#loading');
-	loadingID.Loadingdotdotdot({'maxDots': 3});
 	loadingID.css("top", 0);
 	loadingID.css("left",($(window).width() /2) - ($('#loading').width() /2));
 	loadingID.show();

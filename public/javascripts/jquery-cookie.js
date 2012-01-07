@@ -8,6 +8,7 @@
  *
  */
 jQuery.cookie = function (key, value, options) {
+	console.log('COOOOOOOOOOOKKKKKKIIIIIIEEEEEEEEEEEE');
 
     // key and at least value given, set cookie...
     if (arguments.length > 1 && String(value) !== "[object Object]") {

@@ -13,6 +13,7 @@ var mysql 		= 	require('mysql');
 
 var app 		= 	module.exports 	= 	express.createServer();
 var json 		= 	JSON.stringify;
+var	users		=	[];
 
 var port 		= 	process.env.PORT || 13476;
 
@@ -108,16 +109,7 @@ app.dynamicHelpers({
     //return getUsername(req.cookies.userid);
     if(req.cookies.loggedin == 'true')
     {
-	    /*SQLclient.query(
-	  						'SELECT `name` FROM '+EMPLOYEE_TABLE+' WHERE `id` = '+ req.cookies.userid,
-	  						function selectCb(err, results, fields) {
-	    					if (err) {
-	      					throw err;
-	    					}
-	    					console.log('Username: '+ results[0]['name']);
-	    					return results[0]['name'];
-	    				});*/
-	    				return "Eoin";
+	   	return users[req.cookies.userid].getName();
 	}
 	
 	return null;
@@ -157,7 +149,7 @@ app.post('/login', function(req, res){
 	console.log('post form: '+ username +'; '+ password);
 	
 	
-	SQLclient.query('SELECT `id` FROM '+EMPLOYEE_TABLE+' WHERE (`username` = "'+ username +'" AND `password` = "'+password+'") LIMIT 1',
+	SQLclient.query('SELECT `id`, `name` FROM '+EMPLOYEE_TABLE+' WHERE (`username` = "'+ username +'" AND `password` = "'+password+'") LIMIT 1',
 		function selectCb(err, results, fields) {
 			if (err) 
 			{
@@ -169,7 +161,10 @@ app.post('/login', function(req, res){
     		successful = (results !== undefined && results.length > 0);
     		if(successful)
     		{
-    			res.cookie('userID', results[0]['id'], { expires: new Date(Date.now() + 900000)});
+    			var userID = results[0]['id'];
+    			res.cookie('userID', userID, { expires: new Date(Date.now() + 900000)});
+    			users[userID] = new User(userID, results[0]['name'], 'true', req.session.id);
+    			
     		}
 	
 			res.contentType('application/json');
@@ -203,7 +198,7 @@ console.log('DATABASE: '+process.env.DATABASE_URL);
 
 var socket = io.listen(app);
 
-var users = [], count = 0;
+var count = 0;
 socket.set('log level', 1); // reduce logging
 
 socket.set('authorization', function (data, accept) {
@@ -236,19 +231,6 @@ socket.sockets.on('connection', function(client){
 	console.log('SHA1: '+ functions.sha1('hello'));
 	
 	console.log('Session ID: '+ client.handshake.sessionID);
-	
-	var me = new User(users.length, 'Testing', 'true', client.handshake.sessionID);
-	
-	var other = new User(users.length, 'Other Person', 'true', client.handshake.sessionID);
-	
-	console.log("name of Client: " + me.getName());
-	
-	if(!inArray(users, me))
-	{
-		users.push(me);
-		users.push(other);
-		console.log('new connection');
-	}
 	client.join(client.handshake.sessionID);
 	client.broadcast.emit('updateCount', getUserCount());
 	console.log('New Connection, ip: '+ client.handshake.address.address);
@@ -322,9 +304,9 @@ function getUsers()
 
 	var onlineUsers = [];
 		
-	for(var i = 0; i < users.length; i++)
+	for(var u in users)
 	{
-		onlineUsers.push(users[i].getName());
+		onlineUsers.push(users[u].getName());
 	}
 	
 	return json(onlineUsers);
