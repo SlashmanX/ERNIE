@@ -120,6 +120,7 @@ $(document).ready(function() {
 	
 	$('#userLogOut').live('click', function(e) {
 		e.preventDefault();
+		alert('Clicked');
 		$.cookie('loggedIn', 'false', { expires: 7, path: '/' });
 		updatePage('main');
 		var stateObj = { activePage:  'main'};
