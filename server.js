@@ -60,7 +60,7 @@ SQLclient.query(
 	  '`position` text,'+
 	  '`email` text,'+
 	  '`username` varchar(255) not null,'+
-	  '`level` int(2) not null default '1','+
+	  '`level` int(2) not null default `1`,'+
 	  '`password` varchar(255),'+
 	  '`last_login` datetime,'+
 	  '`oauth_token` varchar(255),'+
