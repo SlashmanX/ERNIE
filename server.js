@@ -3,7 +3,7 @@
  * Module dependencies.
  */
 
-    var express 	= 	require('express')
+var express 	= 	require('express')
 var routes 		= 	require('./routes')
 var io			=	require('socket.io');
 var connect		=	require('connect');
@@ -14,7 +14,7 @@ var mysql 		= 	require('mysql');
 var app 		= 	module.exports 	= 	express.createServer();
 var json 		= 	JSON.stringify;
 
-var port 		= 	process.env.PORT || 8080;
+var port 		= 	process.env.PORT || 13476;
 
 var parseCookie = 	connect.utils.parseCookie;
 	
