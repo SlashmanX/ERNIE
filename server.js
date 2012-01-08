@@ -101,7 +101,12 @@ app.dynamicHelpers({
   },
   userID: function (req, res) {
   	if(req.cookies.loggedin == 'true')
+  	{
+  		if(users[req.cookies.userid] === "undefined")
+  			users[req.cookies.userid] = new User(userID, "Eoin", 'true', req.session.id);
     	return req.cookies.userid;
+    	
+    }
     	
     return null;
   },
