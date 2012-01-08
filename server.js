@@ -103,7 +103,7 @@ app.dynamicHelpers({
   	if(req.cookies.loggedin == 'true')
   	{
   		if(typeof users[req.cookies.userid] === "undefined")
-  			users[req.cookies.userid] = new User(userID, "Eoin", 'true', req.session.id);
+  			users[req.cookies.userid] = new User(req.cookies.userid, "Eoin", 'true', req.session.id);
     	return req.cookies.userid;
     	
     }
