@@ -343,8 +343,7 @@ function getUsers()
 		
 	for(var u in users)
 	{
-		//onlineUsers.push(users[u].getName());
-		onlineUsers.push('Eoin');
+		onlineUsers.push(users[u].getName());
 	}
 	
 	return json(onlineUsers);
