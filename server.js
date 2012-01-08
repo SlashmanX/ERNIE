@@ -103,7 +103,7 @@ app.dynamicHelpers({
   	if(req.cookies.loggedin == 'true')
   	{
   		if(typeof users[req.cookies.userid] === "undefined")
-  			addUsertoArray(req.cookies.userid, req.session.id);
+  			addUsertoArray(req.cookies.userid, null);
     	return req.cookies.userid;
     	
     }
