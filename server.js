@@ -102,6 +102,7 @@ app.dynamicHelpers({
   userID: function (req, res) {
   	if(req.cookies.loggedin == 'true')
   	{
+  		console.log('USERID!!!!!!!! '+ req.cookies.userid)
   		if(typeof users[req.cookies.userid] === "undefined")
   			addUsertoArray(req.cookies.userid, null);
     	return req.cookies.userid;
