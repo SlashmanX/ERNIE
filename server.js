@@ -103,7 +103,7 @@ app.dynamicHelpers({
   	if(req.cookies.loggedin == 'true')
   	{
   		if(typeof users[req.cookies.userid] === "undefined")
-  			addUsertoArray(req.cookies.userid, null);
+  			addUsertoArray(req.cookies.userid, req.session.id);
     	return req.cookies.userid;
     	
     }
@@ -377,7 +377,12 @@ function getUserCount()
 function addUsertoArray(userID, sessionID)
 {
 	console.log('UserID: ' + userID);
-	users[userID] = new User(userID, getUsername(userID), 'true', sessionID);
+	getUsername(userID, function(username){
+	
+		users[userID] = new User(userID, username, 'true', sessionID);
+	
+	});
+	
 }
 
 function inArray(a, obj) {
