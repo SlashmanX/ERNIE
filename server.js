@@ -359,7 +359,7 @@ function getUsers()
 function getUserCount()
 {
 	
-	var rooms = socket.sockets.manager.rooms;
+	/*var rooms = socket.sockets.manager.rooms;
 	
 	var count = 0;
 	
@@ -371,6 +371,12 @@ function getUserCount()
    			console.log('Room: '+ key);
    		}
    		
+	}*/
+	
+	var count = 0;
+	for(var u in users)
+	{
+		count++;
 	}
 	
 	getUsers();
