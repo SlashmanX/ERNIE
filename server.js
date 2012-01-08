@@ -294,7 +294,7 @@ function getUserLevel(userID)
 function getUsername(userID)
 {
 	SQLclient.query(
-  						'SELECT `name` FROM '+EMPLOYEE_TABLE+' WHERE `id` = '+userID+,
+  						'SELECT `name` FROM '+EMPLOYEE_TABLE+' WHERE `id` = '+userID ,
   						function selectCb(err, results, fields) {
     					if (err) {
       					throw err;
