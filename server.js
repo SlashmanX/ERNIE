@@ -237,23 +237,31 @@ socket.set('authorization', function (data, accept) {
  
 socket.sockets.on('connection', function(client){
 
+	
 	var myID = client.handshake.userID;
-	getUsername(myID, function(username){
+	console.log('userID Socket: '+ myID);
+	if(typeof myID !== "undefined")
+	{
+		console.log('defined');
 	
-
-		if((typeof myID !== "undefined") && myID !== null && !userIsInArray(myID))
-		{
-			console.log('new user');
-			
-			users[myID] = new User(myID, username, 'true', client.handshake.sessionID);
-		}
-		else
-		{
-			console.log('User returning: '+ myID + ' '+ username);
-		}
+		getUsername(myID, function(username){
+		
 	
-	
-	});
+			if((typeof myID !== "undefined") && myID !== null && !userIsInArray(myID))
+			{
+				console.log('new user');
+				
+				users[myID] = new User(myID, username, 'true', client.handshake.sessionID);
+			}
+			else
+			{
+				console.log('User returning: '+ myID + ' '+ username);
+				users[myID].addSession();
+			}
+		
+		
+		});
+	}
 	
 	client.join(client.handshake.sessionID);
 	client.broadcast.emit('updateCount', getUserCount());
@@ -261,7 +269,16 @@ socket.sockets.on('connection', function(client){
 		
 	   
 	client.on('disconnect', function(){
+		console.log('disconnected');
+		console.log(myID +' before sessions: '+ users[myID].sessionCount());
 		client.leave('/'+client.handshake.sessionID);
+		users[myID].removeSession();
+		console.log(myID +' sessions: '+ users[myID].sessionCount());
+		if(users[myID].sessionCount() == 0)
+		{
+			console.log('removing');
+			users.splice(myID, 1); // Remove it if really found
+		}
 		client.broadcast.emit('updateCount', getUserCount());
 	
 	});
@@ -413,10 +430,11 @@ function daysToMillis(days)
 }
 var User = Class.extend({
 	init 		: function(id, name, loggedIn, sessionID) {
-			this.id 		= id;
-			this.name 		= name;
-			this.loggedIn 	= loggedIn;
-			this.sessionID 	= sessionID
+			this.id 			= 	id;
+			this.name 			= 	name;
+			this.loggedIn 		= 	loggedIn;
+			this.sessionID		=	sessionID;
+			this.numSessions	=	0;
 	},
     setId 		: function(id){
         	this.id = id;
@@ -442,6 +460,15 @@ var User = Class.extend({
     getSessionID	:	function(){
     		return this.sessionID
     },
+    addSession	:	function(){
+    		this.numSessions++;
+    },
+    removeSession	:	function(){
+    		this.numSessions--;
+    },
+    sessionCount	:	function(){
+    		return this.numSessions;
+    }
     
 });
 
