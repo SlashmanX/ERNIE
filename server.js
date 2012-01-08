@@ -170,7 +170,10 @@ app.post('/login', function(req, res){
     		if(successful)
     		{
     			var userID = results[0]['id'];
-    			res.cookie('userID', userID, { expires: new Date(Date.now() + 900000)});
+    			var days = 7;
+    			var t = days = new Date();
+            	t.setDate(t.getDate() + days);
+    			res.cookie('userID', userID, { expires: t});
     			users[userID] = new User(userID, results[0]['name'], 'true', req.session.id);
     			
     		}

@@ -273,6 +273,7 @@ function showOnlineUsers()
 function showLoadingBar()
 {
 	var loadingID = $('#loading');
+	$('#loading').Loadingdotdotdot();
 	loadingID.css("top", 0);
 	loadingID.css("left",($(window).width() /2) - ($('#loading').width() /2));
 	loadingID.show();
