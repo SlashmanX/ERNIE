@@ -325,7 +325,9 @@ function userIsInArray(userID)
 
 function getUsername(userID, callback)
 {
-	SQLclient.query(
+	if(typeof userID !== "undefined")
+	{
+		SQLclient.query(
   						'SELECT `name` FROM '+EMPLOYEE_TABLE+' WHERE `id` = '+userID ,
   						function selectCb(err, results, fields) {
     					if (err) {
@@ -334,6 +336,10 @@ function getUsername(userID, callback)
     					console.log('username SQL: '+results[0]['name']);
     					callback(results[0]['name']);
     				});
+    }
+    
+    else
+    	callback('Error');
 }
 
 function getUsers()
