@@ -170,10 +170,8 @@ app.post('/login', function(req, res){
     		if(successful)
     		{
     			var userID = results[0]['id'];
-    			var days = 7;
-    			var t = days = new Date();
-            	t.setDate(t.getDate() + days);
-    			res.cookie('userID', userID, { expires: t});
+    			var days = 1;
+    			res.cookie('userID', userID, { maxAge: daysToMillis(days)});
     			users[userID] = new User(userID, results[0]['name'], 'true', req.session.id);
     			
     		}
@@ -401,6 +399,11 @@ function inArray(a, obj) {
        }
     }
     return false;
+}
+
+function daysToMillis(days)
+{
+	return (days * 24 * 60 * 60 * 1000);
 }
 var User = Class.extend({
 	init 		: function(id, name, loggedIn, sessionID) {

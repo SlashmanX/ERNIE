@@ -120,7 +120,7 @@ $(document).ready(function() {
 	
 	$('#userLogOut').live('click', function(e) {
 		e.preventDefault();
-		$.cookie('loggedIn', 'false', { expires: 7, path: '/' });
+		$.cookie('loggedIn', 'false', { expires: 1, path: '/' });
 		updatePage('main');
 		var stateObj = { activePage:  'main'};
 		history.pushState(stateObj, "ERNIE", '/');
@@ -200,7 +200,7 @@ function processLogin()
 	    success: function(data) {
 	    	if(data)
 	    	{
-		    	$.cookie('loggedIn', 'true', { expires: 7, path: '/' });
+		    	$.cookie('loggedIn', 'true', { expires: 1, path: '/' });
 		    	$('.login').load('/', function(response, status, xhr){
 		    		var stateObj = { activePage:  'login'};
 					history.pushState(stateObj, "ERNIE", path);
@@ -216,6 +216,7 @@ function processLogin()
 			else
 			{
 				var infoParent = $('#infotext').parent();
+				$("#infotext").Loadingdotdotdot("Stop");
 				infoParent.removeClass('information');
 				infoParent.addClass('attention');
 				$('#infotext').text('Error logging in. Please try again.');
