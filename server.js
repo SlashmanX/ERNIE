@@ -102,7 +102,6 @@ app.dynamicHelpers({
   userID: function (req, res) {
   	if(req.cookies.loggedin == 'true')
   	{
-  		console.log('USERID!!!!!!!! '+ req.cookies.userid)
   		if(typeof users[req.cookies.userid] === "undefined")
   			addUsertoArray(req.cookies.userid, null);
     	return req.cookies.userid;
@@ -113,10 +112,13 @@ app.dynamicHelpers({
   },
   userName: function (req, res) {
     //return getUsername(req.cookies.userid);
-    if(req.cookies.loggedin == 'true' && (typeof users[req.cookies.userid] !== "undefined"))
+    if(req.cookies.loggedin == 'true' && (typeof req.cookies.userid !== "undefined") && (typeof users[req.cookies.userid] !== "undefined"))
     {
+    	console.log('got cookies'+ req.cookies.userid);
 	   	return users[req.cookies.userid].getName();
 	}
+	
+	console.log('Cookies are null');
 	
 	return null;
   },
@@ -222,6 +224,7 @@ socket.set('authorization', function (data, accept) {
         // note that you will need to use the same key to grad the
         // session id, as you specified in the Express setup.
         data.sessionID = data.cookie['express.sid'];
+        data.userID = data.cookie['userid'];
     } else {
        // if there isn't, turn down the connection with a message
        // and leave the function.
@@ -232,14 +235,28 @@ socket.set('authorization', function (data, accept) {
 });
  
 socket.sockets.on('connection', function(client){
- 
 
-	console.log('SHA1: '+ functions.sha1('hello'));
+	var myID = client.handshake.userID;
+	getUsername(myID, function(username){
 	
-	console.log('Session ID: '+ client.handshake.sessionID);
+
+		if((typeof myID !== "undefined") && myID !== null && !userIsInArray(myID))
+		{
+			console.log('new user');
+			
+			users[myID] = new User(myID, username, 'true', client.handshake.sessionID);
+		}
+		else
+		{
+			console.log('User returning: '+ myID + ' '+ username);
+		}
+	
+	
+	});
+	
 	client.join(client.handshake.sessionID);
 	client.broadcast.emit('updateCount', getUserCount());
-	console.log('New Connection, ip: '+ client.handshake.address.address);
+	//console.log('New Connection, ip: '+ client.handshake.address.address);
 		
 	   
 	client.on('disconnect', function(){
@@ -292,7 +309,21 @@ function getUserLevel(userID)
 	return 1;
 }
 
-function getUsername(userID)
+function userIsInArray(userID)
+{
+	for(var u in users)
+	{
+		if(users[u].getId() == userID)
+		{
+			return true;
+		}
+	}
+	
+	return false;
+
+}
+
+function getUsername(userID, callback)
 {
 	SQLclient.query(
   						'SELECT `name` FROM '+EMPLOYEE_TABLE+' WHERE `id` = '+userID ,
@@ -300,8 +331,8 @@ function getUsername(userID)
     					if (err) {
       					throw err;
     					}
-    					console.log('Username: '+ results[0]['name']);
-    					return results[0]['name'];
+    					console.log('username SQL: '+results[0]['name']);
+    					callback(results[0]['name']);
     				});
 }
 
@@ -312,7 +343,8 @@ function getUsers()
 		
 	for(var u in users)
 	{
-		onlineUsers.push(users[u].getName());
+		//onlineUsers.push(users[u].getName());
+		onlineUsers.push('Eoin');
 	}
 	
 	return json(onlineUsers);
