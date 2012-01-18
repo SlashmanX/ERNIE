@@ -270,10 +270,14 @@ socket.sockets.on('connection', function(client){
 	   
 	client.on('disconnect', function(){
 		console.log('disconnected');
+<<<<<<< HEAD
 		if(users[myID] !== null)
 		{
 			console.log(myID +' before sessions: '+ users[myID].sessionCount());
 		}
+=======
+		console.log(myID +' before sessions: '+ users[myID].sessionCount());
+>>>>>>> be683722ad9a075022b5532dbf8847da5e8b9f8e
 		client.leave('/'+client.handshake.sessionID);
 		users[myID].removeSession();
 		console.log(myID +' sessions: '+ users[myID].sessionCount());
