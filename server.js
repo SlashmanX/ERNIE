@@ -112,7 +112,7 @@ app.dynamicHelpers({
   },
   userName: function (req, res) {
     //return getUsername(req.cookies.userid);
-    if(req.cookies.loggedin == 'true' && (typeof req.cookies.userid !== "undefined") && (typeof users[req.cookies.userid] !== "undefined"))
+    if(req.cookies.loggedin == 'true' && (typeof req.cookies.userid !== "undefined") && (typeof users[req.cookies.userid] !== null))
     {
     	console.log('got cookies'+ req.cookies.userid);
 	   	return users[req.cookies.userid].getName();
@@ -270,7 +270,10 @@ socket.sockets.on('connection', function(client){
 	   
 	client.on('disconnect', function(){
 		console.log('disconnected');
-		console.log(myID +' before sessions: '+ users[myID].sessionCount());
+		if(users[myID] !== null)
+		{
+			console.log(myID +' before sessions: '+ users[myID].sessionCount());
+		}
 		client.leave('/'+client.handshake.sessionID);
 		users[myID].removeSession();
 		console.log(myID +' sessions: '+ users[myID].sessionCount());
