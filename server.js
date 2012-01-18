@@ -272,7 +272,7 @@ socket.sockets.on('connection', function(client){
 		console.log('disconnected');
 		if(users[myID] !== null)
 		{
-			console.log(myID +' before sessions: '+ users[myID].sessionCount());
+			console.log(myID +' before 2 sessions: '+ users[myID].sessionCount());
 		}
 		client.leave('/'+client.handshake.sessionID);
 		users[myID].removeSession();
