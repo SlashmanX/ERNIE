@@ -127,12 +127,10 @@ $(document).ready(function() {
 	
 	});
 	//On Click Event
-	$("ul.toggle li").live('click',function(e) {
-	
-		//alert('Hello');
+	$("ul.nav li:not(.dropdown)").live('click',function(e) {
 		e.preventDefault();
-		var action = $(this).find('a:first').attr('id');
-		var what = $(this).parent().attr('id');
+		var action = ($(this).find('a:first').text()).toLowerCase();
+		var what = $(this).parentsUntil('ul .nav').parent().attr('class').replace('nav ', '');
 		var newUrl = "/"+what +"/"+action+"/";
 		//alert(newUrl);
 		
@@ -162,7 +160,7 @@ $(document).ready(function() {
     
 	
 	
-	var menuYloc = $('.nav').offset().top;
+	/*var menuYloc = $('.nav').offset().top;
 	$('.nav').css({top:menuYloc});
 	console.log('Y: '+ menuYloc);
     $(window).scroll(function () { 
@@ -178,7 +176,7 @@ $(document).ready(function() {
         	$('.nav').animate({top:menuYloc},{duration:1000,queue:false});
         }
         
-    });
+    });*/
 
 });
 
@@ -275,7 +273,7 @@ function showLoadingBar()
 {
 	var loadingID = $('#loading');
 	loadingID.Loadingdotdotdot({});
-	loadingID.css("top", 0);
+	loadingID.css("top", 10);
 	loadingID.css("left",($(window).width() /2) - ($('#loading').width() /2));
 	loadingID.show();
 }
@@ -342,7 +340,6 @@ function updateBreadCrumbs(origURL)
 function updatePage(DivUrl)
 {
 	var offset = $(window).offset();
-	
 	showLoadingBar();
 	var newPage;
 	var action;
@@ -364,7 +361,7 @@ function updatePage(DivUrl)
 
 	
 	
-	$('#main').load('/'+ newPage +'/ #main', function(response, status, xhr){
+	$('#content').load('/'+ newPage +'/ #content', function(response, status, xhr){
 			if (status != "error") {
 				socket.emit('initial');
 				updateBreadCrumbs(DivUrl);

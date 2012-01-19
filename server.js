@@ -75,7 +75,7 @@ SQLclient.query(
 app.configure(function(){
   app.set('views', __dirname + '/views');
   app.set('view engine', 'jade');
-  //app.set('view options', { pretty: true }); // Uncomment to make source look readable
+  app.set('view options', { pretty: true }); // Uncomment to make source look readable
   app.use(express.bodyParser());
   app.use(express.cookieParser());
   app.use(express.session({secret: 'secret', key: 'express.sid'}));
@@ -270,9 +270,9 @@ socket.sockets.on('connection', function(client){
 	   
 	client.on('disconnect', function(){
 		console.log('disconnected');
-		if(users[myID] !== null)
+		/*if(users[myID] !== null)
 		{
-			console.log(myID +' before 2 sessions: '+ users[myID].sessionCount());
+			console.log(myID +' before sessions: '+ users[myID].sessionCount());
 		}
 		client.leave('/'+client.handshake.sessionID);
 		users[myID].removeSession();
@@ -281,7 +281,7 @@ socket.sockets.on('connection', function(client){
 		{
 			console.log('removing');
 			users.splice(myID, 1); // Remove it if really found
-		}
+		}*/
 		client.broadcast.emit('updateCount', getUserCount());
 	
 	});

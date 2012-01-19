@@ -4,7 +4,8 @@ html
   head
     title= title
     link(rel='stylesheet', href='/stylesheets/style.css')
-    script(src="/javascripts/jquery-1.5.2.min.js")
+    script(src="http://code.jquery.com/jquery-1.7.1.min.js")
+    script(src="/javascripts/bootstrap-dropdown.js")
     script(src="/javascripts/jquery-cookie.js")
     script(src="/javascripts/jquery.inlog.js")
     script(src="/javascripts/hideshow.js")
@@ -18,13 +19,7 @@ html
     script(src="/javascripts/jquery.simplemodal.1.4.2.min.js")
     script(src="/javascripts/jquery.loadingdotdotdot.js")
     script(src="/javascripts/ernieJS.js")
-    
-    
-  
-   if(loggedIn == 'true')
+
     include includes/head
     body#whole
-      section#main.column.main!= body
-      
-   else
-     include includes/login
+      .container!= body

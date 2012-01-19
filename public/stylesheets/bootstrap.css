@@ -1334,7 +1334,6 @@ table .headerSortUp.purple, table .headerSortDown.purple {
 }
 .topbar p {
   margin: 0;
-  color: #ffffff;
   line-height: 40px;
 }
 .topbar p a:hover {
@@ -2468,19 +2467,4 @@ button.btn::-moz-focus-inner, input[type=submit].btn::-moz-focus-inner {
   -webkit-box-shadow: 0 1px 4px rgba(0, 105, 214, 0.25);
   -moz-box-shadow: 0 1px 4px rgba(0, 105, 214, 0.25);
   box-shadow: 0 1px 4px rgba(0, 105, 214, 0.25);
-}
-body {
-  padding-top: 60px;
-}
-.topbar p {
-  color: #ffffff;
-}
-#loading {
-  position: fixed;
-  top: 10;
-  left: 0;
-  text-align: left;
-  height: 15px;
-  color: #FFFFFF;
-  z-index: 10000;
 }
