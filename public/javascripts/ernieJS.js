@@ -91,6 +91,8 @@ $(document).ready(function() {
 		updatePage('main');
 		var stateObj = { activePage:  'main'};
 		history.pushState(stateObj, "ERNIE", '/');
+		$('.active').removeClass('active');
+		$(this).parent().addClass('active');
 	
 	});
 	
@@ -132,12 +134,15 @@ $(document).ready(function() {
 		var action = ($(this).find('a:first').text()).toLowerCase();
 		var what = $(this).parentsUntil('ul .nav').parent().attr('class').replace('nav ', '');
 		var newUrl = "/"+what +"/"+action+"/";
-		//alert(newUrl);
+		
 		
 		var stateObj = { activePage:  what};
 		history.pushState(stateObj, "ERNIE", newUrl);
 		socket.emit('changePage', newUrl);
 		var activeDiv = updatePage(newUrl);
+		$('.active').removeClass('active');
+		$(this).addClass('active');
+		$(this).parentsUntil('li .dropdown').parent().addClass('active');
 	
 	});
 	
@@ -349,7 +354,7 @@ function updatePage(DivUrl)
 	if (DivUrl == 'main')
 	{
 		newPage = 'main';
-		activeArea = 'header';
+		activeArea = 'content';
 		
 	}
 	else
