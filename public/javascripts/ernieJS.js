@@ -340,10 +340,12 @@ function updateBreadCrumbs(origURL)
 function updatePage(DivUrl)
 {
 	var offset = $(window).offset();
+	
 	showLoadingBar();
 	var newPage;
 	var action;
 	var activeArea = 'main';
+	
 	if (DivUrl == 'main')
 	{
 		newPage = 'main';
@@ -358,23 +360,19 @@ function updatePage(DivUrl)
 		activeArea = newPage +"_"+ action;
 		
 	}
-
-	
-	
-	$('#content').load('/'+ newPage +'/ #content', function(response, status, xhr){
+		
+	$('.content').load('/'+ newPage +'/ .content', function(response, status, xhr){
 			if (status != "error") {
 				socket.emit('initial');
 				updateBreadCrumbs(DivUrl);
-				$(window).scrollTo('.'+activeArea, 800);
+				$(window).scrollTo('.'+activeArea, 800, {offset: {top:-60, left:0}});
 			}
 			else {
-				$('#main').load('/404/ #main');
+				$('.content').load('/404/ .content');
 				updateBreadCrumbs('error');
 				$(window).scrollTo(0, 800);
 			}
 			hideLoadingBar();
-			var height = $('#main').height();
-			$('#sidebar').height(height);
 			
 	});
 }
