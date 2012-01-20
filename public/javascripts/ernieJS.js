@@ -140,7 +140,7 @@ $(document).ready(function() {
 	$("ul.nav li:not(.dropdown)").live('click',function(e) {
 		e.preventDefault();
 		var action = ($(this).find('a:first').text()).toLowerCase();
-		var what = $(this).parentsUntil('ul .nav').parent().attr('class').replace('nav ', '').replace(' active', '');
+		var what = $(this).parentsUntil('ul .nav').parent().attr('id');
 		var newUrl = "/"+what +"/"+action+"/";
 		
 		
