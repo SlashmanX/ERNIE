@@ -1,6 +1,7 @@
 - var level = userLevel
 - var userID = userID
 - var userName = userName
+- var loggedIn = loggedIn
 header.topbar(data-dropdown="dropdown")
 	.topbar-inner
 		nav.container
@@ -8,44 +9,48 @@ header.topbar(data-dropdown="dropdown")
 			ul.nav
 				li
 					a(href="#")#home Home
-				ul.nav.reports
-					li.dropdown
-						a.menu.dropdown-toggle(href="#") Reports
-						ul.dropdown-menu
-							li
-								a(href="#") New
-							li
-								a(href="#") Edit
-							li
-								a(href="#") K.P.I
-				ul.nav.employees
-					li.dropdown
-						a.menu.dropdown-toggle(href="#") Employees
-						ul.dropdown-menu
-							li
-								a(href="#") New
-							li
-								a(href="#") Edit
-							li
-								a(href="#") You
-				ul.nav.projects
-					li.dropdown
-						a.menu.dropdown-toggle(href="#") Projects
-						ul.dropdown-menu
-							li
-								a(href="#") New
-							li
-								a(href="#") Edit
-							li
-								a(href="#") You
-			p.pull-right
-				|Logged in as 
-				a(href="#") emartin
-				|.
-				a#onlineUsers(href="#", data-backdrop="true", data-controls-modal="onlineUsersModal", data-keyboard="true")
-					span#numUsers
-						|0 
-					|   Users Online.
+				if(loggedIn == 'true')
+				
+					ul.nav.reports.forceLogIn
+						li.dropdown
+							a.menu.dropdown-toggle(href="#") Reports
+							ul.dropdown-menu
+								li
+									a(href="#") New
+								li
+									a(href="#") Edit
+								li
+									a(href="#") K.P.I
+					ul.nav.employees.forceLogIn
+						li.dropdown
+							a.menu.dropdown-toggle(href="#") Employees
+							ul.dropdown-menu
+								li
+									a(href="#") New
+								li
+									a(href="#") Edit
+								li
+									a(href="#") You
+					ul.nav.projects.forceLogIn
+						li.dropdown
+							a.menu.dropdown-toggle(href="#") Projects
+							ul.dropdown-menu
+								li
+									a(href="#") New
+								li
+									a(href="#") Edit
+								li
+									a(href="#") You
+			p.pull-right.forceLogIn
+				if(loggedIn == 'true')
+					|Logged in as 
+					a(href="#") emartin
+					|.
+					a(href="#")#userLogOut Log Out?
+					a#onlineUsers(href="#", data-backdrop="true", data-controls-modal="onlineUsersModal", data-keyboard="true")
+						span#numUsers
+							|0 
+						|   Users Online.
 
 div#loading Loading....
 div#onlineUsersModal.modal.hide.fade

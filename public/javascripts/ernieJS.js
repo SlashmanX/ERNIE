@@ -130,6 +130,7 @@ $(document).ready(function() {
 	$('#userLogOut').live('click', function(e) {
 		e.preventDefault();
 		$.cookie('loggedIn', 'false', { expires: 1, path: '/' });
+		showHideMenus();
 		updatePage('main');
 		var stateObj = { activePage:  'main'};
 		history.pushState(stateObj, "ERNIE", '/');
@@ -199,7 +200,7 @@ function processLogin()
 {
 	var path = location.pathname;
 	//alert('logging in');
-	$('#infotext').Loadingdotdotdot({'loadString': 'Logging In', 'maxDots': 3});
+	$('#loginText').Loadingdotdotdot({'loadString': 'Logging In', 'maxDots': 3});
 	//alert('logging in');
 	
 	var dataString = 'username='+ $('input#username').val() + '&password=' + functions.sha1($('input#password').val());
@@ -211,12 +212,12 @@ function processLogin()
 	    	if(data)
 	    	{
 		    	$.cookie('loggedIn', 'true', { expires: 1, path: '/' });
-		    	$('.login').load('/', function(response, status, xhr){
+		    	$('#body').load('/', function(response, status, xhr){
 		    		var stateObj = { activePage:  'login'};
 					history.pushState(stateObj, "ERNIE", path);
-		    		$('body').removeClass('login');
 					updatePage(path);
-					$("#infotext").Loadingdotdotdot("Stop");
+					$('#loginText').Loadingdotdotdot("Stop");
+					//showHideMenus();
 					
 				});
 				var stateObj = { activePage:  'login'};
@@ -226,20 +227,25 @@ function processLogin()
 			else
 			{
 				var infoParent = $('#infotext').parent();
-				$("#infotext").Loadingdotdotdot("Stop");
+				$('#loginText').Loadingdotdotdot("Stop");
 				infoParent.removeClass('information');
 				infoParent.addClass('attention');
-				$('#infotext').text('Error logging in. Please try again.');
+				$('#loginText').text('Error logging in. Please try again.');
 			}
 			
       	}
 	  });
 }
 
+function showHideMenus()
+{
+	$('.forceLogIn').toggle();
+
+}
+
 function showOnlineUsers()
 {
 	socket.emit('getUsers');
-	showLoadingBar();
 	socket.on('getUsers', function(UserArray){
 	
 		var usersOnline = '';
@@ -258,8 +264,6 @@ function showOnlineUsers()
 		//alert(usersOnline)
 		
 		$('.modal-body').html(usersOnline);
-		
-		hideLoadingBar();
 	});
 }
 
@@ -340,7 +344,7 @@ function updatePage(DivUrl)
 	var action;
 	var activeArea = 'main';
 	
-	if (DivUrl == 'main')
+	if (DivUrl == 'main' || DivUrl == '/')
 	{
 		newPage = 'main';
 		activeArea = 'content';

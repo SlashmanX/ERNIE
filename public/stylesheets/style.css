@@ -2482,7 +2482,7 @@ body {
   text-align: left;
   height: 15px;
   color: #FFFFFF;
-  z-index: 10000;
+  z-index: 14000;
 }
 .modal-backdrop, .modal-backdrop.fade.in {
   filter: alpha(opacity=50);
