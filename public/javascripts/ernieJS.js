@@ -26,29 +26,10 @@ $(document).ready(function() {
 	
 	
 	socket.on('connect', function() {
-		socket.emit('initial');
 		socket.emit('updateCount');
 	    console.log('Connected!');
 	    
 	});
-	
-	socket.on('initial', function(msg) {
-			msg = JSON.parse(msg);
-			//alert(msg);
-			
-			$('#database li').remove();
-			
-			for (result in msg) 
-			{
-				if(msg[result].numUsers == undefined)
-				{
-					//alert('updating db list');
-  					$('#database').append("<li>"+msg[result].name +"</li>")	
-  				}
-  				
-			}
-			$('#loader').hide();
-		});
 		
 	socket.on('updateCount', function(count) {
 		$('#numUsers').text(count).hide().fadeIn('slow');
@@ -215,8 +196,10 @@ function processLogin()
 		    	$('#body').load('/', function(response, status, xhr){
 		    		var stateObj = { activePage:  'login'};
 					history.pushState(stateObj, "ERNIE", path);
-					updatePage(path);
-					$('#loginText').Loadingdotdotdot("Stop");
+					updatePage(path, function(status){
+						$('#loginText').Loadingdotdotdot("Stop");
+					 });
+					
 					//showHideMenus();
 					
 				});
@@ -335,7 +318,7 @@ function updateBreadCrumbs(origURL)
 		
 }
 
-function updatePage(DivUrl)
+function updatePage(DivUrl, callback)
 {
 	var offset = $(window).offset();
 	
@@ -371,6 +354,7 @@ function updatePage(DivUrl)
 				$(window).scrollTo(0, 800);
 			}
 			hideLoadingBar();
+			callback(status);
 			
 	});
 }
