@@ -344,7 +344,6 @@ function updatePage(DivUrl, callback)
 		
 	$('.content').load('/'+ newPage +'/ .content', function(response, status, xhr){
 			if (status != "error") {
-				socket.emit('initial');
 				updateBreadCrumbs(DivUrl);
 				$(window).scrollTo('.'+activeArea, 800, {offset: {top:-60, left:0}});
 			}
