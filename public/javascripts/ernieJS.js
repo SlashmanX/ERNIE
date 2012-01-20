@@ -16,6 +16,12 @@ $(document).ready(function() {
     }
     
     $.inlog(true);
+    
+    $('#onlineUsersModal').modal({
+  			keyboard: true,
+  			backdrop: true,
+  			show: false
+	})
 	
 	
 	
@@ -100,6 +106,7 @@ $(document).ready(function() {
 	
 	$('#onlineUsers').live('click', function(e) {
 		e.preventDefault();
+		//alert('clicked online');
 		showOnlineUsers();
 	
 	});
@@ -235,7 +242,7 @@ function showOnlineUsers()
 	showLoadingBar();
 	socket.on('getUsers', function(UserArray){
 	
-		var usersOnline = '<h2>Online Users</h2>';
+		var usersOnline = '';
 		
 		UserArray.replace(/[^a-zA-Z 0-9]+/g,'');
 		
@@ -248,29 +255,11 @@ function showOnlineUsers()
 				usersOnline = usersOnline  + username + '<hr/>';
 		}
 		
-		$('#onlineUsersInner').html(usersOnline);
+		//alert(usersOnline)
+		
+		$('.modal-body').html(usersOnline);
 		
 		hideLoadingBar();
-		
-	
-	
-		$('#onlineUsersModal').modal({opacity: 50, overlayClose:true, onOpen: function (dialog) {
-			dialog.overlay.fadeIn('slow', function () {
-				dialog.data.hide();
-				dialog.container.fadeIn('slow', function () {
-					dialog.data.slideDown('slow');
-					
-				});
-			});
-},onClose:function (dialog) {
-			dialog.data.slideUp('fast', function () {
-				dialog.container.fadeOut('fast', function () {
-					dialog.overlay.fadeOut('fast', function () {
-						$.modal.close();
-					});
-				});
-			});
-		}});
 	});
 }
 

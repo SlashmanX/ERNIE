@@ -2484,3 +2484,9 @@ body {
   color: #FFFFFF;
   z-index: 10000;
 }
+.modal-backdrop, .modal-backdrop.fade.in {
+  filter: alpha(opacity=50);
+  -khtml-opacity: 0.5;
+  -moz-opacity: 0.5;
+  opacity: 0.5;
+}

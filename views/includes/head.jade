@@ -3,7 +3,7 @@
 - var userName = userName
 header.topbar(data-dropdown="dropdown")
 	.topbar-inner
-		nav.container-fluid
+		nav.container
 			a.brand(href="#") ERNIE
 			ul.nav
 				li
@@ -42,9 +42,17 @@ header.topbar(data-dropdown="dropdown")
 				|Logged in as 
 				a(href="#") emartin
 				|.
-				a#userCount(href="#")
+				a#onlineUsers(href="#", data-backdrop="true", data-controls-modal="onlineUsersModal", data-keyboard="true")
 					span#numUsers
 						|0 
 					|   Users Online.
 
 div#loading Loading....
+div#onlineUsersModal.modal.hide.fade
+	div.modal-header
+		a(href="#").close &times;
+		h3 Online Users
+	div.modal-body
+		p Loading Users
+	div.modal-footer
+		a(href="#").btn.primary.close-modal Ok

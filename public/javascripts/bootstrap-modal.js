@@ -47,6 +47,8 @@
       	transitionEnd = "oTransitionEnd"
       }
     }
+    
+    
 
   })
 
@@ -58,6 +60,8 @@
     this.settings = $.extend({}, $.fn.modal.defaults, options)
     this.$element = $(content)
       .delegate('.close', 'click.modal', $.proxy(this.hide, this))
+    this.$element = $(content)
+      .delegate('.close-modal', 'click.modal', $.proxy(this.hide, this))
 
     if ( this.settings.show ) {
       this.show()
@@ -84,6 +88,7 @@
           that.$element
             .appendTo(document.body)
             .show()
+            
 
           if (transition) {
             that.$element[0].offsetWidth // force reflow
