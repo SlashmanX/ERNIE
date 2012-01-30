@@ -4,23 +4,23 @@ html
   head
     title= title
     link(rel='stylesheet', href='/stylesheets/style.css')
+    script(src="/socket.io/socket.io.js")
     script(src="http://code.jquery.com/jquery-1.7.1.min.js")
+    script(src="/javascripts/jquery-cookie.js")
     script(src="/javascripts/bootstrap-dropdown.js")
     script(src="/javascripts/bootstrap-modal.js")
-    script(src="/javascripts/jquery-cookie.js")
     script(src="/javascripts/jquery.inlog.js")
     script(src="/javascripts/hideshow.js")
     script(src="/javascripts/jquery.tablesorter.min.js")
     script(src="/javascripts/jquery.equalHeight.js")
-    script(src="/socket.io/socket.io.js")
     script(src="/javascripts/json.js")
     script(src="/javascripts/serializeObject.js")
     script(src="/javascripts/jquery.scrollTo-1.4.2.min.js")
     script(src="/javascripts/functions.js")
-    //script(src="/javascripts/jquery.simplemodal.1.4.2.min.js")
     script(src="/javascripts/jquery.loadingdotdotdot.js")
     script(src="/javascripts/ernieJS.js")
   body#body
+    Hello
 
     include includes/head
     if(loggedIn == 'true')
