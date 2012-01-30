@@ -116,10 +116,10 @@ $(document).ready(function() {
 	
 	});
 	//On Click Event
-	$("ul.nav li:not(.dropdown #home)").live('click',function(e) {
+	$("ul.nav li:not(.dropdown)").live('click',function(e) {
 		e.preventDefault();
 		var action = ($(this).find('a:first').text()).toLowerCase();
-		var what = $(this).parentsUntil('ul .nav').attr('id');
+		var what = $(this).parentsUntil('li .dropdown').parent().parent().attr('id');
 		var newUrl = "/"+what +"/"+action+"/";
 		
 		
