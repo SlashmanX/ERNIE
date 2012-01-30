@@ -15,8 +15,6 @@ $(document).ready(function() {
        var active = updatePage(path);
     }
     
-    $.inlog(true);
-    
     $('#onlineUsersModal').modal({
   			keyboard: true,
   			backdrop: true,
