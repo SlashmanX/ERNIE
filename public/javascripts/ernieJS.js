@@ -119,7 +119,7 @@ $(document).ready(function() {
 	$("ul.nav li:not(.dropdown #home)").live('click',function(e) {
 		e.preventDefault();
 		var action = ($(this).find('a:first').text()).toLowerCase();
-		var what = $(this).parentsUntil('ul .nav').child('ul').attr('id');
+		var what = $(this).parentsUntil('ul .nav').attr('id');
 		var newUrl = "/"+what +"/"+action+"/";
 		
 		
