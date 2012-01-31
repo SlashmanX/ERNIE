@@ -11,13 +11,13 @@ var classjs 	= 	require('./public/javascripts/class.js');
 var functions 	= 	require('./public/javascripts/functions.js');
 var mysql 		= 	require('mysql');
 
-var app 		= 	module.exports 	= 	express.createServer();
-var json 		= 	JSON.stringify;
+var app         =   module.exports  =   express.createServer();
+var json        =   JSON.stringify;
 var	users		=	[];
 
-var port 		= 	process.env.PORT || 13476;
+var port        =   process.env.PORT    ||  13476;
 
-var parseCookie = 	connect.utils.parseCookie;
+var parseCookie =   connect.utils.parseCookie;
 	
 // BLACKNIGHT
 var REPORT_DATABASE 	= 	'db1104243_ernie';

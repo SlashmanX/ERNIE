@@ -116,22 +116,7 @@ $(document).ready(function() {
 	
 	});
 	//On Click Event
-	$("ul.nav li:not(.dropdown):not(#home)").live('click',function(e) {
-		e.preventDefault();
-		var action = ($(this).find('a:first').text()).toLowerCase();
-		var what = $(this).parentsUntil('li.dropdown').parent().parent().attr('id');
-		var newUrl = "/"+what +"/"+action+"/";
-		
-		
-		var stateObj = { activePage:  what};
-		history.pushState(stateObj, "ERNIE", newUrl);
-		socket.emit('changePage', newUrl);
-		var activeDiv = updatePage(newUrl);
-		$('.active').removeClass('active');
-		$(this).addClass('active');
-		$(this).parentsUntil('li .dropdown').parent().addClass('active');
 	
-	});
 	
 
 	
@@ -173,7 +158,25 @@ $(document).ready(function() {
 });
 
 
-
+function bindMenus()
+{
+    $("ul.nav li:not(.dropdown):not(#home)").live('click',function(e) {
+    	e.preventDefault();
+		var action = ($(this).find('a:first').text()).toLowerCase();
+		var what = $(this).parentsUntil('li.dropdown').parent().parent().attr('id');
+		var newUrl = "/"+what +"/"+action+"/";
+		
+		
+		var stateObj = { activePage:  what};
+		history.pushState(stateObj, "ERNIE", newUrl);
+		socket.emit('changePage', newUrl);
+		var activeDiv = updatePage(newUrl);
+		$('.active').removeClass('active');
+		$(this).addClass('active');
+		$(this).parentsUntil('li .dropdown').parent().addClass('active');
+	
+	});
+}
 
 function processLogin()
 {
@@ -196,9 +199,8 @@ function processLogin()
 					history.pushState(stateObj, "ERNIE", path);
 					updatePage(path, function(status){
 						$('#loginText').Loadingdotdotdot("Stop");
+                        bindMenus();
 					 });
-					
-					//showHideMenus();
 					
 				});
 				var stateObj = { activePage:  'login'};
