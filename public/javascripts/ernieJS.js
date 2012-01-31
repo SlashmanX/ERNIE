@@ -199,7 +199,7 @@ function processLogin()
 					history.pushState(stateObj, "ERNIE", path);
 					updatePage(path, function(status){
 						$('#loginText').Loadingdotdotdot("Stop");
-                        bindMenus();
+                        
 					 });
 					
 				});
@@ -353,6 +353,7 @@ function updatePage(DivUrl, callback)
 				$(window).scrollTo(0, 800);
 			}
 			hideLoadingBar();
+            bindMenus();
 			callback(status);
 			
 	});
