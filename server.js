@@ -188,9 +188,6 @@ app.use(function(req,res){
 
 
 app.listen(port);
-console.log('App IP: '+ app.address().port);
-console.log('DATABASE: '+process.env.DATABASE_URL);
-//console.log("Express server listening on port %d in %s mode", app.address().port, app.settings.env);
 
 var socket = io.listen(app);
 
