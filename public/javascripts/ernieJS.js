@@ -15,8 +15,6 @@ $(document).ready(function() {
        var active = updatePage(path);
     }
     
-    $.inlog(true);
-    
     $('#onlineUsersModal').modal({
   			keyboard: true,
   			backdrop: true,
@@ -118,6 +116,12 @@ $(document).ready(function() {
 	
 	});
 	//On Click Event
+<<<<<<< HEAD
+=======
+	
+	
+
+>>>>>>> 7e78b295ffc6eeef9f29319c57a2ad65f6c29eed
 	
 	$(window).bind('popstate', function(event) {
   		var state = event.originalEvent.state;
@@ -157,7 +161,25 @@ $(document).ready(function() {
 });
 
 
-
+function bindMenus()
+{
+    $("ul.nav li:not(.dropdown):not(#home)").live('click',function(e) {
+    	e.preventDefault();
+		var action = ($(this).find('a:first').text()).toLowerCase();
+		var what = $(this).parentsUntil('li.dropdown').parent().parent().attr('id');
+		var newUrl = "/"+what +"/"+action+"/";
+		
+		
+		var stateObj = { activePage:  what};
+		history.pushState(stateObj, "ERNIE", newUrl);
+		socket.emit('changePage', newUrl);
+		var activeDiv = updatePage(newUrl);
+		$('.active').removeClass('active');
+		$(this).addClass('active');
+		$(this).parentsUntil('li .dropdown').parent().addClass('active');
+	
+	});
+}
 
 function processLogin()
 {
@@ -180,10 +202,12 @@ function processLogin()
 					history.pushState(stateObj, "ERNIE", path);
 					updatePage(path, function(status){
 						$('#loginText').Loadingdotdotdot("Stop");
+<<<<<<< HEAD
 						bindMenuItems();
+=======
+                        
+>>>>>>> 7e78b295ffc6eeef9f29319c57a2ad65f6c29eed
 					 });
-					
-					//showHideMenus();
 					
 				});
 				var stateObj = { activePage:  'login'};
@@ -356,6 +380,7 @@ function updatePage(DivUrl, callback)
 				$(window).scrollTo(0, 800);
 			}
 			hideLoadingBar();
+            bindMenus();
 			callback(status);
 			
 	});

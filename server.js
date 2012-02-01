@@ -12,14 +12,18 @@ var functions 	= 	require('./public/javascripts/functions.js');
 var	private		=	require('./private/config.js');
 var mysql 		= 	require('mysql');
 
-var app 		= 	module.exports 	= 	express.createServer();
-var json 		= 	JSON.stringify;
+var app         =   module.exports  =   express.createServer();
+var json        =   JSON.stringify;
 var	users		=	[];
 
+<<<<<<< HEAD
 var port 		= 	process.env.PORT || 13476;
 var	dbInfo		=	JSON.parse(private.getDBInfo('blacknight'));
+=======
+var port        =   process.env.PORT    ||  13476;
+>>>>>>> 7e78b295ffc6eeef9f29319c57a2ad65f6c29eed
 
-var parseCookie = 	connect.utils.parseCookie;
+var parseCookie =   connect.utils.parseCookie;
 	
 // BLACKNIGHT
 var REPORT_DATABASE 	= 	dbInfo['db'];
