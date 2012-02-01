@@ -16,6 +16,7 @@ var app         =   module.exports  =   express.createServer();
 var json        =   JSON.stringify;
 var	users		=	[];
 
+var parseCookie =   connect.utils.parseCookie;
 
 var port 		= 	process.env.PORT || 13476;
 var	dbInfo		=	JSON.parse(private.getDBInfo('blacknight'));
