@@ -22,8 +22,8 @@ var port 		= 	process.env.PORT || 13476;
 var	dbInfo		=	JSON.parse(private.getDBInfo('blacknight'));
 	
 // BLACKNIGHT
-var REPORT_DATABASE 	= 	dbInfo['db'];
-var	EMPLOYEE_TABLE = dbInfo['employeeTable'];
+var	REPORT_DATABASE		=	dbInfo['db'];
+var	EMPLOYEE_TABLE		=	dbInfo['employeeTable'];
 
 
 var	SQLclient = mysql.createClient({
