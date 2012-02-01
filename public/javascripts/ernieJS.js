@@ -115,6 +115,13 @@ $(document).ready(function() {
 		history.pushState(stateObj, "ERNIE", '/');
 	
 	});
+<<<<<<< HEAD
+=======
+	//On Click Event
+	
+	
+
+>>>>>>> 7e78b295ffc6eeef9f29319c57a2ad65f6c29eed
 	
 	$(window).bind('popstate', function(event) {
   		var state = event.originalEvent.state;
@@ -195,7 +202,11 @@ function processLogin()
 					history.pushState(stateObj, "ERNIE", path);
 					updatePage(path, function(status){
 						$('#loginText').Loadingdotdotdot("Stop");
+<<<<<<< HEAD
 						bindMenuItems();
+=======
+                        
+>>>>>>> 7e78b295ffc6eeef9f29319c57a2ad65f6c29eed
 					 });
 					
 				});
