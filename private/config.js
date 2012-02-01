@@ -3,7 +3,6 @@
 	exports.getDBInfo = function(provider) {
 	
 		var dbInfo = {};
-		console.log('db called '+ provider);
 		
 				dbInfo['host'] = 'localhost';
 				dbInfo['user'] = 'root';
@@ -14,13 +13,11 @@
 		switch(provider)
 		{
 			case 'blacknight':
-				console.log('blacknight called');
 				dbInfo['host'] = 'mysql1156.cp.blacknight.com';
 				dbInfo['user'] = 'u1104243_ernie';
 				dbInfo['db'] = 'db1104243_ernie';
 				dbInfo['password'] = '4thYearProject';
 				dbInfo['employeeTable'] = 'ernie_employees';
-				console.log('end of call ' + dbInfo['host']);
 			break;
 			case 'localhost':
 				dbInfo['host'] = 'localhost';
