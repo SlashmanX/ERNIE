@@ -19,7 +19,7 @@ var	users		=	[];
 var parseCookie =   connect.utils.parseCookie;
 
 var port 		= 	process.env.PORT || 13476;
-var	dbInfo		=	JSON.parse(private.getDBInfo('blacknight'));
+var	dbInfo		=	JSON.parse(private.getDBInfo());
 	
 // BLACKNIGHT
 var	REPORT_DATABASE		=	dbInfo['db'];

@@ -14,12 +14,6 @@ $(document).ready(function() {
 	if (!$('body').hasClass('login')) {
        var active = updatePage(path);
     }
-    
-    $('#onlineUsersModal').modal({
-  			keyboard: true,
-  			backdrop: true,
-  			show: false
-	})
 	
 	
 	

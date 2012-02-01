@@ -2,7 +2,7 @@
 - var userID = userID
 - var userName = userName
 - var loggedIn = loggedIn
-header.topbar(data-dropdown="dropdown")
+header.topbar
 	.topbar-inner
 		nav.container
 			a.brand(href="#") ERNIE
@@ -13,7 +13,7 @@ header.topbar(data-dropdown="dropdown")
 				
 					ul.nav#reports.forceLogIn
 						li.dropdown
-							a.menu.dropdown-toggle(href="#") Reports
+							a.dropdown-toggle(href="#", data-toggle="dropdown") Reports
 							ul.dropdown-menu
 								li
 									a(href="#") New
@@ -23,7 +23,7 @@ header.topbar(data-dropdown="dropdown")
 									a(href="#") K.P.I
 					ul.nav#employees.forceLogIn
 						li.dropdown
-							a.menu.dropdown-toggle(href="#") Employees
+							a.dropdown-toggle(href="#", data-toggle="dropdown") Employees
 							ul.dropdown-menu
 								li
 									a(href="#") New
@@ -33,7 +33,7 @@ header.topbar(data-dropdown="dropdown")
 									a(href="#") You
 					ul.nav#projects.forceLogIn
 						li.dropdown
-							a.menu.dropdown-toggle(href="#") Projects
+							a.dropdown-toggle(href="#", data-toggle="dropdown") Projects
 							ul.dropdown-menu
 								li
 									a(href="#") New
@@ -47,17 +47,17 @@ header.topbar(data-dropdown="dropdown")
 					a(href="#") emartin
 					|.
 					a(href="#")#userLogOut Log Out?
-					a#onlineUsers(href="#", data-backdrop="true", data-controls-modal="onlineUsersModal", data-keyboard="true")
+					a#onlineUsers(href="#onlineUsersModal", data-toggle="modal")
 						span#numUsers
 							|0 
 						|   Users Online.
 
 div#loading Loading....
-div#onlineUsersModal.modal.hide.fade
+div.modal.hide.fade#onlineUsersModal
 	div.modal-header
-		a(href="#").close &times;
+		a.close(data-dismiss="modal") x
 		h3 Online Users
 	div.modal-body
-		p Loading Users
+		p Loading Users...
 	div.modal-footer
-		a(href="#").btn.primary.close-modal Ok
+		a(href="#", data-dismiss="modal").btn.btn-primary Close
