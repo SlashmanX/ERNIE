@@ -115,13 +115,6 @@ $(document).ready(function() {
 		history.pushState(stateObj, "ERNIE", '/');
 	
 	});
-	//On Click Event
-<<<<<<< HEAD
-=======
-	
-	
-
->>>>>>> 7e78b295ffc6eeef9f29319c57a2ad65f6c29eed
 	
 	$(window).bind('popstate', function(event) {
   		var state = event.originalEvent.state;
@@ -202,11 +195,7 @@ function processLogin()
 					history.pushState(stateObj, "ERNIE", path);
 					updatePage(path, function(status){
 						$('#loginText').Loadingdotdotdot("Stop");
-<<<<<<< HEAD
 						bindMenuItems();
-=======
-                        
->>>>>>> 7e78b295ffc6eeef9f29319c57a2ad65f6c29eed
 					 });
 					
 				});
@@ -227,25 +216,6 @@ function processLogin()
 	  });
 }
 
-function bindMenuItems()
-{
-	$("ul.nav li:not(.dropdown)").live('click',function(e) {
-		e.preventDefault();
-		var action = ($(this).find('a:first').text()).toLowerCase();
-		var what = $(this).parentsUntil('ul .nav').parent().attr('id');
-		var newUrl = "/"+what +"/"+action+"/";
-		
-		
-		var stateObj = { activePage:  what};
-		history.pushState(stateObj, "ERNIE", newUrl);
-		socket.emit('changePage', newUrl);
-		var activeDiv = updatePage(newUrl);
-		$('.active').removeClass('active');
-		$(this).addClass('active');
-		$(this).parentsUntil('li .dropdown').parent().addClass('active');
-	
-	});
-}
 
 function showHideMenus()
 {
