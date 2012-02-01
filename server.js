@@ -9,6 +9,7 @@ var io			=	require('socket.io');
 var connect		=	require('connect');
 var classjs 	= 	require('./public/javascripts/class.js');
 var functions 	= 	require('./public/javascripts/functions.js');
+var	private		=	require('./private/config.js');
 var mysql 		= 	require('mysql');
 
 var app 		= 	module.exports 	= 	express.createServer();
@@ -16,35 +17,21 @@ var json 		= 	JSON.stringify;
 var	users		=	[];
 
 var port 		= 	process.env.PORT || 13476;
+var	dbInfo		=	JSON.parse(private.getDBInfo('blacknight'));
 
 var parseCookie = 	connect.utils.parseCookie;
 	
 // BLACKNIGHT
-var REPORT_DATABASE 	= 	'db1104243_ernie';
+var REPORT_DATABASE 	= 	dbInfo['db'];
+var	EMPLOYEE_TABLE = dbInfo['employeeTable'];
 
-// HEROKU
-//var	REPORT_DATABASE = 'heroku_3c3d586f6d78228';
 
-// LOCALHOST
-//var REPORT_DATABASE 	= 	'ernie';
-var	EMPLOYEE_TABLE = 'ernie_employees';
 var	SQLclient = mysql.createClient({
 
 		// BLACKNIGHT
-		host: 'mysql1156.cp.blacknight.com',
-  		user: 'u1104243_ernie',
-  		password: '4thYearProject',
-  		
-  		// HEROKU
-  		//host: 'us-mm-auto-dca-01.cleardb.com',
-  		//user: '77408e24a20620',
-  		//password: 'ed8a92b5',
-  		//port: 3306
-  		
-  		// LOCALHOST
-  		//host: 'localhost',
-  		//user: 'root',
-  		//password: 'mancity'
+		host: dbInfo['host'],
+  		user: dbInfo['user'],
+  		password: dbInfo['password'],
 		});
 
 SQLclient.query('CREATE DATABASE '+REPORT_DATABASE, function(err) {
