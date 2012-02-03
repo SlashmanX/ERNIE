@@ -2,6 +2,7 @@ var url = [location.protocol, '//', location.host].join('');
 var socket = io.connect(url);
 
 
+
 $(document).ready(function() {
 	var url = [location.protocol, '//', location.host].join('');
 	var path = location.pathname;
@@ -24,7 +25,7 @@ $(document).ready(function() {
 	});
 		
 	socket.on('updateCount', function(count) {
-		$('#numUsers').text(count).hide().fadeIn('slow');
+		$('#onlineUsers').text(count).hide().fadeIn('slow');
 	
 	});
 	
@@ -354,3 +355,4 @@ function capitaliseFirstLetter(string)
 {
 	return string.charAt(0).toUpperCase() + string.slice(1);
 }
+

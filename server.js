@@ -351,12 +351,6 @@ function getUsers()
 {
 
 	var onlineUsers = [];
-	
-	onlineUsers.push("Eoin");
-	
-	onlineUsers.push("Ryan");
-	
-	onlineUsers.push("Anthony");
 		
 	for(var u in users)
 	{

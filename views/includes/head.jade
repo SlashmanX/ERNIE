@@ -2,60 +2,66 @@
 - var userID = userID
 - var userName = userName
 - var loggedIn = loggedIn
-header.topbar
-	.topbar-inner
-		nav.container
+header.navbar.navbar-fixed-top
+	.navbar-inner
+		nav.container-fluid
+			a.btn.btn-navbar(data-toggle="collapse", data-target=".nav-collapse")
+				span.icon-bar
+				span.icon-bar
+				span.icon-bar
 			a.brand(href="#") ERNIE
-			ul.nav
-				li#home
-					a(href="#") Home
+			.nav-collapse
+				ul.nav
+					li#home
+						a(href="#") Home
+					if(loggedIn == 'true')
+					
+						ul.nav#reports.forceLogIn
+							li.dropdown
+								a.dropdown-toggle(href="#", data-toggle="dropdown") Reports
+									b.caret
+								ul.dropdown-menu
+									li
+										a(href="#") New
+									li
+										a(href="#") Edit
+									li
+										a(href="#") K.P.I
+						ul.nav#employees.forceLogIn
+							li.dropdown
+								a.dropdown-toggle(href="#", data-toggle="dropdown") Employees
+									b.caret
+								ul.dropdown-menu
+									li
+										a(href="#") New
+									li
+										a(href="#") Edit
+									li
+										a(href="#") You
+						ul.nav#projects.forceLogIn
+							li.dropdown
+								a.dropdown-toggle(href="#", data-toggle="dropdown") Projects
+									b.caret
+								ul.dropdown-menu
+									li
+										a(href="#") New
+									li
+										a(href="#") Edit
+									li
+										a(href="#") You
+			p.pull-right.forceLogIn.navbar-text
 				if(loggedIn == 'true')
-				
-					ul.nav#reports.forceLogIn
-						li.dropdown
-							a.dropdown-toggle(href="#", data-toggle="dropdown") Reports
-							ul.dropdown-menu
-								li
-									a(href="#") New
-								li
-									a(href="#") Edit
-								li
-									a(href="#") K.P.I
-					ul.nav#employees.forceLogIn
-						li.dropdown
-							a.dropdown-toggle(href="#", data-toggle="dropdown") Employees
-							ul.dropdown-menu
-								li
-									a(href="#") New
-								li
-									a(href="#") Edit
-								li
-									a(href="#") You
-					ul.nav#projects.forceLogIn
-						li.dropdown
-							a.dropdown-toggle(href="#", data-toggle="dropdown") Projects
-							ul.dropdown-menu
-								li
-									a(href="#") New
-								li
-									a(href="#") Edit
-								li
-									a(href="#") You
-			p.pull-right.forceLogIn
-				if(loggedIn == 'true')
-					|Logged in as 
-					a(href="#") emartin
+					|Hello
+					a(href="#") #{userName}
 					|.
-					a(href="#")#userLogOut Log Out?
-					a#onlineUsers(href="#onlineUsersModal", data-toggle="modal")
-						span#numUsers
-							|0 
-						|   Users Online.
+					a(href="#")#userLogOut 
+						|Log Out?
+					a#onlineUsers(href="#onlineUsersModal", data-toggle="modal") 0
 
 div#loading Loading....
 div.modal.hide.fade#onlineUsersModal
 	div.modal-header
-		a.close(data-dismiss="modal") x
+		a.close(data-dismiss="modal") &times;
 		h3 Online Users
 	div.modal-body
 		p Loading Users...
