@@ -7,10 +7,8 @@ html
     script(src="/socket.io/socket.io.js")
     script(src="http://code.jquery.com/jquery-1.7.1.min.js")
     script(src="/javascripts/jquery-cookie.js")
-    script(src="/javascripts/bootstrap-transition.js")
-    script(src="/javascripts/bootstrap-dropdown.js")
-    script(src="/javascripts/bootstrap-collapse.js")
-    script(src="/javascripts/bootstrap-modal.js")
+    script(src="/javascripts/jquery.inlog.js")
+    script(src="/javascripts/bootstrap.min.js")
     script(src="/javascripts/hideshow.js")
     script(src="/javascripts/jquery.tablesorter.min.js")
     script(src="/javascripts/jquery.equalHeight.js")
@@ -21,12 +19,12 @@ html
     script(src="/javascripts/jquery.loadingdotdotdot.js")
     script(src="/javascripts/ernieJS.js")
   body#body
-
-    include includes/head
-    if(loggedIn == 'true')
-      .container!= body
-        include includes/footer
-    else
-      .container
-        include includes/login
-        include includes/footer
+    .outer
+      include includes/head
+      if(loggedIn == 'true')
+        .container!= body
+          include includes/footer
+      else
+        .container
+          include includes/login
+          include includes/footer

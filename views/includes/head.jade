@@ -33,30 +33,38 @@ header.navbar.navbar-fixed-top
 									b.caret
 								ul.dropdown-menu
 									li
+										a(href="#") View All
+									li
 										a(href="#") New
 									li
 										a(href="#") Edit
-									li
-										a(href="#") You
 						ul.nav#projects.forceLogIn
 							li.dropdown
 								a.dropdown-toggle(href="#", data-toggle="dropdown") Projects
 									b.caret
 								ul.dropdown-menu
 									li
+										a(href="#") View All
+									li
 										a(href="#") New
 									li
 										a(href="#") Edit
-									li
-										a(href="#") You
-			p.pull-right.forceLogIn.navbar-text
 				if(loggedIn == 'true')
-					|Hello
-					a(href="#") #{userName}
-					|.
-					a(href="#")#userLogOut 
-						|Log Out?
-					a#onlineUsers(href="#onlineUsersModal", data-toggle="modal") 0
+					ul.nav#user
+						li.dropdown.pull-right.forceLogIn
+							a.dropdown-toggle(href="#", data-toggle="dropdown") You
+								b.caret
+							ul.dropdown-menu
+								li
+									a(href="#") Profile
+								li.divider
+								li#userLogOut
+									a(href="#") Log Out
+					p.pull-right.forceLogIn.navbar-text
+						a#userCount(href="#") 
+							span#onlineUsers 0
+							|  Users Online
+				
 
 div#loading Loading....
 div.modal.hide.fade#onlineUsersModal

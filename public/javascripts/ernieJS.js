@@ -1,7 +1,7 @@
 var url = [location.protocol, '//', location.host].join('');
 var socket = io.connect(url);
 
-
+var scripts = [];
 
 $(document).ready(function() {
 	var url = [location.protocol, '//', location.host].join('');
@@ -16,77 +16,13 @@ $(document).ready(function() {
        var active = updatePage(path);
     }
 	
-	
-	
-	socket.on('connect', function() {
-		socket.emit('updateCount');
-	    console.log('Connected!');
-	    
-	});
-		
-	socket.on('updateCount', function(count) {
-		$('#onlineUsers').text(count).hide().fadeIn('slow');
-	
-	});
-	
-	socket.on('updatedDB', function(msg) {
-		//alert(msg);
-		msg = JSON.parse(msg);
-		//alert("Updated");
-	   $('#database').append("<li style ='display: none;'>"+msg.name +"</li>")
-	   $('#database li:last').slideDown('slow');
-	   
-		document.title = 'New Employee';
-	   
-	});
+	//$.inlog(true);
+	initSocketFunctions();
+	bindMenus();
 
 	
-	socket.on('disconnect', function() {
-	    console.log('Disconnected!');
-	});
 	
-	socket.on('changePage', function(url) {
-		//alert ('changing page to '+ url);
-		var stateObj = { activePage:  url};
-		history.pushState(stateObj, "ERNIE", url);
-		//path = 'main';
-		var page = updatePage(url);
-		
-	
-	});
-
-	
-	$('#addEmployee').live('submit',function(e) {
-	
-		e.preventDefault();
-		var form = JSON.stringify($(this).serializeObject());
-		socket.emit("db", form);
-	
-	
-	});
-
-	$('#home').live('click', function(e) {
-	
-		e.preventDefault();
-		updatePage('main');
-		var stateObj = { activePage:  'main'};
-		history.pushState(stateObj, "ERNIE", '/');
-		$('.active').removeClass('active');
-		$(this).parent().addClass('active');
-	
-	});
-	
-	
-	
-	$('#onlineUsers').live('click', function(e) {
-		e.preventDefault();
-		//alert('clicked online');
-		showOnlineUsers();
-	
-	});
-	
-	$('#loginForm').live('submit',function(e) {
-	
+	$('#loginForm').one('submit', function(e) {
 		e.preventDefault();
 		processLogin();
 	
@@ -101,15 +37,6 @@ $(document).ready(function() {
 	
 	});
 	
-	$('#userLogOut').live('click', function(e) {
-		e.preventDefault();
-		$.cookie('loggedIn', 'false', { expires: 1, path: '/' });
-		showHideMenus();
-		updatePage('main');
-		var stateObj = { activePage:  'main'};
-		history.pushState(stateObj, "ERNIE", '/');
-	
-	});
 	
 	$(window).bind('popstate', function(event) {
   		var state = event.originalEvent.state;
@@ -149,25 +76,6 @@ $(document).ready(function() {
 });
 
 
-function bindMenus()
-{
-    $("ul.nav li:not(.dropdown):not(#home)").live('click',function(e) {
-    	e.preventDefault();
-		var action = ($(this).find('a:first').text()).toLowerCase();
-		var what = $(this).parentsUntil('li.dropdown').parent().parent().attr('id');
-		var newUrl = "/"+what +"/"+action+"/";
-		
-		
-		var stateObj = { activePage:  what};
-		history.pushState(stateObj, "ERNIE", newUrl);
-		socket.emit('changePage', newUrl);
-		var activeDiv = updatePage(newUrl);
-		$('.active').removeClass('active');
-		$(this).addClass('active');
-		$(this).parentsUntil('li .dropdown').parent().addClass('active');
-	
-	});
-}
 
 function processLogin()
 {
@@ -185,17 +93,18 @@ function processLogin()
 	    	if(data)
 	    	{
 		    	$.cookie('loggedIn', 'true', { expires: 1, path: '/' });
-		    	$('#body').load('/', function(response, status, xhr){
-		    		var stateObj = { activePage:  'login'};
-					history.pushState(stateObj, "ERNIE", path);
-					updatePage(path, function(status){
-						$('#loginText').Loadingdotdotdot("Stop");
-						bindMenuItems();
-					 });
-					
+		    	$('.outer').load('/ .outer', function(response, status, xhr){
+		    		loadScripts(function(){
+		    			var stateObj = { activePage:  'login'};
+						history.pushState(stateObj, "ERNIE", path);
+						updatePage(path, function(status){
+							$('#loginText').Loadingdotdotdot("Stop");
+							bindMenus();
+							initSocketFunctions();
+							socket.emit('updateCount');
+						});
+					});
 				});
-				var stateObj = { activePage:  'login'};
-				history.pushState(stateObj, "ERNIE", path);
 			}
 			
 			else
@@ -210,7 +119,96 @@ function processLogin()
       	}
 	  });
 }
+function bindMenus()
+{
+	$('#home').on('click', function(e) {
+	
+		e.preventDefault();
+		var stateObj = { activePage:  'main'};
+		history.pushState(stateObj, "ERNIE", '/');
+		updatePage('main');
+		$('.active').removeClass('active');
+		$(this).parent().addClass('active');
+	
+	});
+	$("ul.nav li:not(.dropdown):not(#home):not(#userLogOut)").on('click',function(e) {
+    	e.preventDefault();
+		var action = ($(this).find('a:first').text()).toLowerCase();
+		var what = $(this).parentsUntil('li.dropdown').parent().parent().attr('id');
+		var newUrl = "/"+what +"/"+action+"/";
+		
+		
+		var stateObj = { activePage:  what};
+		history.pushState(stateObj, "ERNIE", newUrl);
+		socket.emit('changePage', newUrl);
+		var activeDiv = updatePage(newUrl);
+		$('.active').removeClass('active');
+		$(this).addClass('active');
+		$(this).parentsUntil('li .dropdown').parent().addClass('active');
+	
+	});
+	
+	$('#userCount').on('click', function(e) {
+		e.preventDefault();
+		showOnlineUsers();
+	
+	});
+	
+	$('#userLogOut').on('click', function(e) {
+		e.preventDefault();
+		$.cookie('loggedIn', 'false', { expires: 1, path: '/' });
+		showHideMenus();
+		updatePage('main');
+		var stateObj = { activePage:  'main'};
+		history.pushState(stateObj, "ERNIE", '/');
+	
+	});
+}
 
+
+function initSocketFunctions()
+{
+	socket.on('connect', function() {
+		socket.emit('updateCount');
+	    console.log('Connected!');
+	    
+	});
+		
+	socket.on('updateCount', function(count) {
+		$('#onlineUsers').text(count).hide().fadeIn('slow');
+	
+	});
+	
+	socket.on('updatedDB', function(msg) {
+		//alert(msg);
+		msg = JSON.parse(msg);
+		//alert("Updated");
+	   $('#database').append("<li style ='display: none;'>"+msg.name +"</li>")
+	   $('#database li:last').slideDown('slow');
+	   
+		document.title = 'New Employee';
+	   
+	});
+
+	
+	socket.on('disconnect', function() {
+	    console.log('Disconnected!');
+	});
+	
+	socket.on('changePage', function(url) {
+		//alert ('changing page to '+ url);
+		var stateObj = { activePage:  url};
+		history.pushState(stateObj, "ERNIE", url);
+		//path = 'main';
+		var page = updatePage(url);
+		
+	
+	});
+}
+function loadScripts(callback)
+{
+	callback();
+}
 
 function showHideMenus()
 {
@@ -220,6 +218,7 @@ function showHideMenus()
 
 function showOnlineUsers()
 {
+	$('#onlineUsersModal').modal('show')
 	socket.emit('getUsers');
 	socket.on('getUsers', function(UserArray){
 	
@@ -245,16 +244,21 @@ function showOnlineUsers()
 function showLoadingBar()
 {
 	var loadingID = $('#loading');
-	loadingID.Loadingdotdotdot({});
-	loadingID.css("top", 10);
-	loadingID.css("left",($(window).width() /2) - ($('#loading').width() /2));
-	loadingID.show();
+	//$.getScript("/javascripts/jquery.loadingdotdotdot.js", function() {
+		loadingID.Loadingdotdotdot({});
+		loadingID.css("top", 10);
+		loadingID.css("left",($(window).width() /2) - ($('#loading').width() /2));
+		loadingID.show();
+    //});
+	
 }
 
 function hideLoadingBar()
 {
-	$('#loading').Loadingdotdotdot("Stop");
-	$('#loading').fadeOut('slow');
+	//$.getScript("/javascripts/jquery.loadingdotdotdot.js", function() {
+		$('#loading').Loadingdotdotdot("Stop");
+		$('#loading').fadeOut('slow');
+	//});
 }
 
 function PageIsHidden()
@@ -313,7 +317,6 @@ function updateBreadCrumbs(origURL)
 function updatePage(DivUrl, callback)
 {
 	var offset = $(window).offset();
-	
 	showLoadingBar();
 	var newPage;
 	var action;
@@ -337,15 +340,18 @@ function updatePage(DivUrl, callback)
 	$('.content').load('/'+ newPage +'/ .content', function(response, status, xhr){
 			if (status != "error") {
 				updateBreadCrumbs(DivUrl);
-				$(window).scrollTo('.'+activeArea, 800, {offset: {top:-60, left:0}});
+				$.getScript("/javascripts/jquery.scrollTo-1.4.2.min.js", function() {
+					$(window).scrollTo('.'+activeArea, 800, {offset: {top:-60, left:0}});
+				});
 			}
 			else {
 				$('.content').load('/404/ .content');
 				updateBreadCrumbs('error');
-				$(window).scrollTo(0, 800);
+				$.getScript("/javascripts/jquery.scrollTo-1.4.2.min.js", function() {
+					$(window).scrollTo(0, 800);
+				});
 			}
 			hideLoadingBar();
-            bindMenus();
 			callback(status);
 			
 	});

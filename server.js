@@ -19,7 +19,7 @@ var	users		=	[];
 var parseCookie =   connect.utils.parseCookie;
 
 var port 		= 	process.env.PORT || 13476;
-var	dbInfo		=	JSON.parse(private.getDBInfo('blacknight'));
+var	dbInfo		=	JSON.parse(private.getDBInfo(''));
 	
 // BLACKNIGHT
 var	REPORT_DATABASE		=	dbInfo['db'];
@@ -221,7 +221,7 @@ socket.set('authorization', function (data, accept) {
  
 socket.sockets.on('connection', function(client){
 
-	
+	console.log('connection');
 	var myID = client.handshake.userID;
 	console.log('userID Socket: '+ myID);
 	if(typeof myID !== "undefined")
@@ -249,6 +249,7 @@ socket.sockets.on('connection', function(client){
 	
 	client.join(client.handshake.sessionID);
 	client.broadcast.emit('updateCount', getUserCount());
+	client.emit('updateCount', getUserCount());
 	//console.log('New Connection, ip: '+ client.handshake.address.address);
 		
 	   
