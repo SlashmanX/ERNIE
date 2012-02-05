@@ -143,6 +143,8 @@ app.post('/login', function(req, res){
 	var successful = false;
 	console.log('post form: '+ username +'; '+ password);
 	
+	var userID = -1;
+	
 	
 	SQLclient.query('SELECT `id`, `name` FROM '+EMPLOYEE_TABLE+' WHERE (`username` = "'+ username +'" AND `password` = "'+password+'") LIMIT 1',
 		function selectCb(err, results, fields) {
@@ -156,7 +158,7 @@ app.post('/login', function(req, res){
     		successful = (results !== undefined && results.length > 0);
     		if(successful)
     		{
-    			var userID = results[0]['id'];
+    			userID = results[0]['id'];
     			var days = 1;
     			res.cookie('userID', userID, { maxAge: daysToMillis(days)});
     			users[userID] = new User(userID, results[0]['name'], 'true', req.session.id);
@@ -164,7 +166,7 @@ app.post('/login', function(req, res){
     		}
 	
 			res.contentType('application/json');
-			var data = JSON.stringify(successful);
+			var data = json(userID);
 			res.header('Content-Length', data.length);
 			console.log('Data: '+data);
 			res.end(data); // ALWAYS make sure to 'end' a post.
@@ -275,6 +277,32 @@ socket.sockets.on('connection', function(client){
 	
 	client.on('updateCount', function(){
 		client.emit('updateCount', getUserCount());
+	});
+	
+	client.on('setUserID', function(id){
+		myID = id;
+		if(typeof myID !== "undefined")
+		{
+			console.log('defined');
+		
+			getUsername(myID, function(username){
+			
+		
+				if((typeof myID !== "undefined") && myID !== null && !userIsInArray(myID))
+				{
+					console.log('new user');
+					
+					users[myID] = new User(myID, username, 'true', client.handshake.sessionID);
+				}
+				else
+				{
+					console.log('User returning: '+ myID + ' '+ username);
+					users[myID].addSession();
+				}
+			
+			
+			});
+		}
 	});
 	
 	client.on('db', function(msg){

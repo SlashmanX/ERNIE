@@ -90,7 +90,7 @@ function processLogin()
     	url: "/login",
 	    data: dataString,
 	    success: function(data) {
-	    	if(data)
+	    	if(data != '-1')
 	    	{
 		    	$.cookie('loggedin', 'true', { expires: 1, path: '/' });
 		    	$('.outer').load('/ .outer', function(response, status, xhr){
@@ -101,6 +101,7 @@ function processLogin()
 							$('#loginText').Loadingdotdotdot("Stop");
 							bindMenus();
 							initSocketFunctions();
+							socket.emit('setUserID', data);
 							socket.emit('updateCount');
 						});
 					});
