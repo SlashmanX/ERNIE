@@ -92,7 +92,7 @@ function processLogin()
 	    success: function(data) {
 	    	if(data)
 	    	{
-		    	$.cookie('loggedIn', 'true', { expires: 1, path: '/' });
+		    	$.cookie('loggedin', 'true', { expires: 1, path: '/' });
 		    	$('.outer').load('/ .outer', function(response, status, xhr){
 		    		loadScripts(function(){
 		    			var stateObj = { activePage:  'login'};
@@ -128,7 +128,7 @@ function bindMenus()
 		history.pushState(stateObj, "ERNIE", '/');
 		updatePage('main');
 		$('.active').removeClass('active');
-		$(this).parent().addClass('active');
+		$(this).addClass('active');
 	
 	});
 	$("ul.nav li:not(.dropdown):not(#home):not(#userLogOut)").on('click',function(e) {
@@ -144,7 +144,7 @@ function bindMenus()
 		var activeDiv = updatePage(newUrl);
 		$('.active').removeClass('active');
 		$(this).addClass('active');
-		$(this).parentsUntil('li .dropdown').parent().addClass('active');
+		$(this).parentsUntil('li .dropdown').parent('li').addClass('active');
 	
 	});
 	
@@ -156,7 +156,8 @@ function bindMenus()
 	
 	$('#userLogOut').on('click', function(e) {
 		e.preventDefault();
-		$.cookie('loggedIn', 'false', { expires: 1, path: '/' });
+		$.cookie('loggedin', 'false', { expires: 1, path: '/' });
+		socket.emit('logOut');
 		showHideMenus();
 		updatePage('main');
 		var stateObj = { activePage:  'main'};

@@ -19,7 +19,7 @@ var	users		=	[];
 var parseCookie =   connect.utils.parseCookie;
 
 var port 		= 	process.env.PORT || 13476;
-var	dbInfo		=	JSON.parse(private.getDBInfo('blacknight'));
+var	dbInfo		=	JSON.parse(private.getDBInfo(''));
 	
 // BLACKNIGHT
 var	REPORT_DATABASE		=	dbInfo['db'];
@@ -242,14 +242,16 @@ socket.sockets.on('connection', function(client){
 				console.log('User returning: '+ myID + ' '+ username);
 				users[myID].addSession();
 			}
+			
+			
+	
+			client.join(client.handshake.sessionID);
+			client.broadcast.emit('updateCount', getUserCount());
+			client.emit('updateCount', getUserCount());
 		
 		
 		});
 	}
-	
-	client.join(client.handshake.sessionID);
-	client.broadcast.emit('updateCount', getUserCount());
-	client.emit('updateCount', getUserCount());
 	//console.log('New Connection, ip: '+ client.handshake.address.address);
 		
 	   
@@ -294,6 +296,15 @@ socket.sockets.on('connection', function(client){
 		console.log('getUsers called')
 		client.emit('getUsers', getUsers());
 		
+	
+	});
+	
+	client.on('logOut', function(){
+		if(users[myID] !== null)
+		{
+			client.leave('/'+client.handshake.sessionID);
+		}
+		users.splice(myID, 1);		
 	
 	});
 	    
