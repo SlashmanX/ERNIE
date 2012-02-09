@@ -6,6 +6,12 @@ var scripts = [];
 $(document).ready(function() {
 	var url = [location.protocol, '//', location.host].join('');
 	var path = location.pathname;
+	if(path.substr(-1) != '/') {
+        path+= '/';
+        var stateObj = { activePage:  path};
+		history.replaceState(stateObj, "ERNIE", url + path);
+
+    }
 	if(path == '/' || path == '/index.html')
 	{
 		var stateObj = { activePage:  'main'};
@@ -38,7 +44,7 @@ $(document).ready(function() {
 	});
 	
 	
-	$(window).bind('popstate', function(event) {
+	/*$(window).bind('popstate', function(event) {
   		var state = event.originalEvent.state;
 
   		if(state)
@@ -46,7 +52,7 @@ $(document).ready(function() {
     		updatePage(state.activePage);
     		//alert("After Scroll");
     	}
-	});
+	});*/
 	
 	/*document.addEventListener("visibilitychange", visibilityChanged);
     document.addEventListener("webkitvisibilitychange", visibilityChanged);
@@ -132,7 +138,7 @@ function bindMenus()
 		$(this).addClass('active');
 	
 	});
-	$("ul.nav li:not(.dropdown):not(#home):not(#userLogOut)").on('click',function(e) {
+	$("ul.nav:not(.nav-tabs) li:not(.dropdown):not(#home):not(#userLogOut)").on('click',function(e) {
     	e.preventDefault();
 		var action = ($(this).find('a:first').text()).toLowerCase();
 		var what = $(this).parentsUntil('li.dropdown').parent().parent().attr('id');
@@ -330,6 +336,11 @@ function updatePage(DivUrl, callback)
 		activeArea = 'content';
 		
 	}
+	else if(DivUrl == '/graphs/')
+	{
+		newPage = 'graphs';
+		activeArea = 'content';
+	}
 	else
 	{
 		var splitUrl = DivUrl.split('/');
@@ -339,12 +350,13 @@ function updatePage(DivUrl, callback)
 		
 	}
 		
-	$('.content').load('/'+ newPage +'/ .content', function(response, status, xhr){
+	$('.content').load('/'+ newPage +'/ .content > *', function(response, status, xhr){
 			if (status != "error") {
 				updateBreadCrumbs(DivUrl);
 				$.getScript("/javascripts/jquery.scrollTo-1.4.2.min.js", function() {
 					$(window).scrollTo('.'+activeArea, 800, {offset: {top:-60, left:0}});
 				});
+				$.getScript("/javascripts/"+newPage+".js", function(){});
 			}
 			else {
 				$('.content').load('/404/ .content');

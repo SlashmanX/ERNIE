@@ -19,11 +19,12 @@ var	users		=	[];
 var parseCookie =   connect.utils.parseCookie;
 
 var port 		= 	process.env.PORT || 13476;
-var	dbInfo		=	JSON.parse(private.getDBInfo('blacknight'));
+var	dbInfo		=	JSON.parse(private.getDBInfo(''));
+var	dbTables	=	JSON.parse(private.getDBTables());
 	
 // BLACKNIGHT
 var	REPORT_DATABASE		=	dbInfo['db'];
-var	EMPLOYEE_TABLE		=	dbInfo['employeeTable'];
+var	EMPLOYEE_TABLE		=	dbTables['employees'];
 
 
 var	SQLclient = mysql.createClient({
@@ -41,20 +42,70 @@ SQLclient.query('CREATE DATABASE '+REPORT_DATABASE, function(err) {
 });
 SQLclient.query('USE '+REPORT_DATABASE);
 
-SQLclient.query(
-  'CREATE TABLE IF NOT EXISTS '+EMPLOYEE_TABLE+' ('+
-	  '`id` int(11) not null auto_increment,'+
-	  '`name` varchar(255),'+
-	  '`position` text,'+
-	  '`email` text,'+
-	  '`username` varchar(255) not null,'+
-	  '`level` int(2) not null default "1",'+
-	  '`password` varchar(255),'+
-	  '`last_login` datetime,'+
-	  '`oauth_token` varchar(255),'+
-	  '`oauth_token_secret` varchar(255),'+
-	  'PRIMARY KEY (`id`)'+
-	') ENGINE=MyISAM DEFAULT CHARSET=latin1;'
+SQLclient.query('CREATE TABLE IF NOT EXISTS ernie_employees ('+
+   '`employee_id` int(11) not null,'+
+   '`name` varchar(255),'+
+   '`position` text,'+
+   '`email` text,'+
+   '`username` varchar(255) not null,'+
+   '`level` int(2) not null default "1",'+
+   '`password` varchar(255),'+
+   '`last_login` datetime,'+
+   '`oauth_token` varchar(255),'+
+   '`oauth_token_secret` varchar(255),'+
+   'PRIMARY KEY (`employee_id`)'+
+') ENGINE=MyISAM DEFAULT CHARSET=latin1;'
+);
+
+SQLclient.query('CREATE TABLE IF NOT EXISTS `ernie_projects` ('+
+   '`project_id` int(11) not null,'+
+   '`project_name` varchar(255),'+
+   '`project_manager` int(4) not null,'+
+   'PRIMARY KEY (`project_id`)'+
+') ENGINE=MyISAM DEFAULT CHARSET=latin1;'
+	
+);
+
+SQLclient.query("INSERT IGNORE INTO `ernie_projects` (`project_id`, `project_name`, `project_manager`) VALUES ('2011114', 'ThirdForce Arabic', '1'),('2010159', 'BOE KidDesk', '2');"
+);
+
+SQLclient.query('CREATE TABLE IF NOT EXISTS `ernie_timesheet_categories` ('+
+   '`id` smallint(4) not null auto_increment,'+
+   '`name` varchar(255),'+
+   '`db_name` varchar(255),'+
+   '`parent` smallint(4) not null default "0",'+
+   'PRIMARY KEY (`id`)'+
+') ENGINE=MyISAM DEFAULT CHARSET=latin1 AUTO_INCREMENT=9;'
+);
+
+SQLclient.query("INSERT IGNORE INTO `ernie_timesheet_categories` (`id`, `name`, `db_name`, `parent`) VALUES "+
+	"('1', 'Software Engineering', 'software_engineering', '0'),"+
+	"('2', 'Code Review', 'code_review', '1'),"+
+	"('3', 'Database Development', 'db_dev', '1'),"+
+	"('4', 'Software QA', 'software_qa', '0'),"+
+	"('5', 'QA Script Generation', 'qa_script_gen', '4'),"+
+	"('6', 'QA Functional Automated', 'qa_funct_auto', '4'),"+
+	"('7', 'Absent', 'absent', '0'),"+
+	"('8', 'Bank Holiday', 'bank_holiday', '7');"
+);
+
+SQLclient.query('CREATE TABLE IF NOT EXISTS `ernie_timesheet_entries` ('+
+   '`timesheet_id` int(11) not null auto_increment,'+
+   '`project_id` int(11),'+
+   '`employee_id` int(11),'+
+   '`task_id` int(11),'+
+   '`duration` decimal(10,0),'+
+   '`date_worked` date not null,'+
+   'PRIMARY KEY (`timesheet_id`)'+
+') ENGINE=MyISAM DEFAULT CHARSET=latin1 AUTO_INCREMENT=6;'
+);
+
+SQLclient.query("INSERT IGNORE INTO `ernie_timesheet_entries` (`timesheet_id`, `project_id`, `employee_id`, `task_id`, `duration`, `date_worked`) VALUES "+
+	"('1', '1', '1', '2', '4', '0000-00-00'),"+
+	"('2', '1', '2', '3', '2', '0000-00-00'),"+
+	"('3', '2', '1', '5', '3', '0000-00-00'),"+
+	"('4', '2', '2', '6', '6', '0000-00-00'),"+
+	"('5', '1', '1', '7', '5', '0000-00-00');"
 );
 
 // Configuration
@@ -131,7 +182,13 @@ app.get('/', routes.index);
 
 app.get('/reports/:id?', routes.reports);
 
+app.get('/projects/:id?', routes.projects);
+
+app.get('/timesheets/:id?', routes.timesheets);
+
 app.get('/main', routes.index);
+
+app.get('/graphs', routes.graph);
 
 app.get('/404', routes.error);
 
@@ -146,7 +203,7 @@ app.post('/login', function(req, res){
 	var userID = -1;
 	
 	
-	SQLclient.query('SELECT `id`, `name` FROM '+EMPLOYEE_TABLE+' WHERE (`username` = "'+ username +'" AND `password` = "'+password+'") LIMIT 1',
+	SQLclient.query('SELECT `employee_id`, `name` FROM '+EMPLOYEE_TABLE+' WHERE (`username` = "'+ username +'" AND `password` = "'+password+'") LIMIT 1',
 		function selectCb(err, results, fields) {
 			if (err) 
 			{
@@ -158,7 +215,7 @@ app.post('/login', function(req, res){
     		successful = (results !== undefined && results.length > 0);
     		if(successful)
     		{
-    			userID = results[0]['id'];
+    			userID = results[0]['employee_id'];
     			var days = 1;
     			res.cookie('userID', userID, { maxAge: daysToMillis(days)});
     			users[userID] = new User(userID, results[0]['name'], 'true', req.session.id);
@@ -279,6 +336,45 @@ socket.sockets.on('connection', function(client){
 		client.emit('updateCount', getUserCount());
 	});
 	
+	client.on('getProject', function(id){
+		var where = '1=1';
+	
+		if(id != -1)
+		{
+			where = '`project_id` = '+ id;
+		}
+		
+		SQLclient.query('SELECT projects.*, employee.employee_id, employee.name '+
+ 						'FROM '+dbTables['projects']+' projects INNER JOIN '+dbTables['employees'] +' employee '+
+						'ON projects.project_manager = employee.employee_id AND '+ where,
+  						function selectCb(err, results, fields) {
+    					if (err) {
+      					throw err;
+    					}
+    					var projects = {project : results}; 
+    					client.emit('getProject', json(projects));
+    				});
+	
+	
+	});
+	
+	client.on('getTasks', function(){
+	
+		console.log('in here');
+	
+		SQLclient.query('SELECT *'+
+ 						'FROM '+dbTables['tasks'],
+  						function selectCb(err, results, fields) {
+    					if (err) {
+      					throw err;
+    					}
+    					var tasks = {task : results}; 
+    					client.emit('getTasks', json(tasks));
+    				});
+	
+	
+	});
+	
 	client.on('setUserID', function(id){
 		myID = id;
 		if(typeof myID !== "undefined")
@@ -373,12 +469,12 @@ function getUsername(userID, callback)
 	if(typeof userID !== "undefined")
 	{
 		SQLclient.query(
-  						'SELECT `name` FROM '+EMPLOYEE_TABLE+' WHERE `id` = '+userID ,
+  						'SELECT `name` FROM '+EMPLOYEE_TABLE+' WHERE `employee_id` = '+userID ,
   						function selectCb(err, results, fields) {
     					if (err) {
       					throw err;
     					}
-    					console.log('username SQL: '+results[0]['name']);
+    					console.log('username SQL: '+results[0]['_name']);
     					callback(results[0]['name']);
     				});
     }

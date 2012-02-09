@@ -17,6 +17,19 @@ exports.reports = function(req, res){
   res.render('reports', { title: 'Reports'})
 };
 
+exports.projects = function(req, res){
+  res.render('projects', { title: 'Projects'})
+};
+
+exports.timesheets = function(req, res){
+  res.render('timesheets', { title: 'Timesheets'})
+};
+
+
+exports.graph = function(req, res){
+  res.render('graphs', { title: 'Graphs'})
+};
+
 exports.error = function(req, res){
   res.render('404', { title: '404 Error'})
 };

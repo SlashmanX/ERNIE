@@ -1491,6 +1491,8 @@
   , select: function () {
       var val = this.$menu.find('.active').attr('data-value')
       this.$element.val(val)
+      this.$element.attr('disabled', true);
+      this.$element.parentsUntil('.control-group').parent('div').removeClass('warning').children('p.help-block').text('');
       return this.hide()
     }
 

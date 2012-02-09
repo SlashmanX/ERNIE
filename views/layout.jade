@@ -4,11 +4,16 @@ html
   head
     title= title
     link(rel='stylesheet', href='/stylesheets/style.css')
+    
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    
     script(src="/socket.io/socket.io.js")
     script(src="http://code.jquery.com/jquery-1.7.1.min.js")
+    script(src="/javascripts/jquery.tools.min.js")
+    script(src="/javascripts/modernizr.js")
     script(src="/javascripts/jquery-cookie.js")
     script(src="/javascripts/jquery.inlog.js")
-    script(src="/javascripts/bootstrap.min.js")
+    script(src="/javascripts/bootstrap.js")
     script(src="/javascripts/hideshow.js")
     script(src="/javascripts/jquery.tablesorter.min.js")
     script(src="/javascripts/jquery.equalHeight.js")
@@ -17,6 +22,7 @@ html
     script(src="/javascripts/jquery.scrollTo-1.4.2.min.js")
     script(src="/javascripts/functions.js")
     script(src="/javascripts/jquery.loadingdotdotdot.js")
+    script(src="/javascripts/highcharts.js")
     script(src="/javascripts/ernieJS.js")
   body#body
     .outer

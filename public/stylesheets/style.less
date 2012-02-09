@@ -4,10 +4,6 @@
 body {
 	padding-top: 60px;
 }
-/*.navbar p{
-color: @white;
-padding-top: 10px;
-}*/
 
 #loading {
     position: fixed;
@@ -22,3 +18,20 @@ padding-top: 10px;
 .modal-backdrop.fade.in {
   .opacity(50);
 }
+
+table {
+  .table;
+  .table-bordered;
+  .table-striped;
+}
+
+.reset-project {
+  display:none;
+  &:hover {
+    color: @black;
+    cursor: pointer;
+  }
+}
+
+
+@import "/public/stylesheets/date-input.less";

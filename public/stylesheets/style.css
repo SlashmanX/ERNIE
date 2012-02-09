@@ -1585,7 +1585,7 @@ table .span12 {
   width: 14px;
   height: 14px;
   vertical-align: text-top;
-  background-image: url(../img/glyphicons-halflings.png);
+  background-image: url(/img/glyphicons-halflings.png);
   background-position: 14px 14px;
   background-repeat: no-repeat;
   *margin-right: .3em;
@@ -1598,7 +1598,7 @@ table .span12 {
   *margin-left: 0;
 }
 .icon-white {
-  background-image: url(../img/glyphicons-halflings-white.png);
+  background-image: url(/img/glyphicons-halflings-white.png);
 }
 .icon-glass {
   background-position: 0      0;
@@ -6020,10 +6020,6 @@ a.thumbnail:hover {
 body {
   padding-top: 60px;
 }
-/*.navbar p{
-color: @white;
-padding-top: 10px;
-}*/
 #loading {
   position: fixed;
   top: 10;
@@ -6038,4 +6034,209 @@ padding-top: 10px;
   filter: alpha(opacity=50);
   opacity: 0.5;
   filter: alpha(opacity=50);
+}
+table {
+  width: 100%;
+  margin-bottom: 18px;
+  border: 1px solid #ddd;
+  border-collapse: separate;
+  *border-collapse: collapsed;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+}
+table th, table td {
+  padding: 8px;
+  line-height: 18px;
+  text-align: left;
+  border-top: 1px solid #ddd;
+}
+table th {
+  font-weight: bold;
+  vertical-align: bottom;
+}
+table td {
+  vertical-align: top;
+}
+table thead:first-child tr th, table thead:first-child tr td {
+  border-top: 0;
+}
+table tbody + tbody {
+  border-top: 2px solid #ddd;
+}
+table th + th,
+table td + td,
+table th + td,
+table td + th {
+  border-left: 1px solid #ddd;
+}
+table thead:first-child tr:first-child th, table tbody:first-child tr:first-child th, table tbody:first-child tr:first-child td {
+  border-top: 0;
+}
+table thead:first-child tr:first-child th:first-child, table tbody:first-child tr:first-child td:first-child {
+  -webkit-border-radius: 4px 0 0 0;
+  -moz-border-radius: 4px 0 0 0;
+  border-radius: 4px 0 0 0;
+  -webkit-border-radius: 4px 0 0 0;
+  -moz-border-radius: 4px 0 0 0;
+  border-radius: 4px 0 0 0;
+}
+table thead:first-child tr:first-child th:last-child, table tbody:first-child tr:first-child td:last-child {
+  -webkit-border-radius: 0 4px 0 0;
+  -moz-border-radius: 0 4px 0 0;
+  border-radius: 0 4px 0 0;
+  -webkit-border-radius: 0 4px 0 0;
+  -moz-border-radius: 0 4px 0 0;
+  border-radius: 0 4px 0 0;
+}
+table thead:last-child tr:last-child th:first-child, table tbody:last-child tr:last-child td:first-child {
+  -webkit-border-radius: 0 0 0 4px;
+  -moz-border-radius: 0 0 0 4px;
+  border-radius: 0 0 0 4px;
+  -webkit-border-radius: 0 0 0 4px;
+  -moz-border-radius: 0 0 0 4px;
+  border-radius: 0 0 0 4px;
+}
+table thead:last-child tr:last-child th:last-child, table tbody:last-child tr:last-child td:last-child {
+  -webkit-border-radius: 0 0 4px 0;
+  -moz-border-radius: 0 0 4px 0;
+  border-radius: 0 0 4px 0;
+  -webkit-border-radius: 0 0 4px 0;
+  -moz-border-radius: 0 0 4px 0;
+  border-radius: 0 0 4px 0;
+}
+table tbody tr:nth-child(odd) td, table tbody tr:nth-child(odd) th {
+  background-color: #f9f9f9;
+}
+.reset-project {
+  display: none;
+}
+.reset-project:hover {
+  color: #000000;
+  cursor: pointer;
+}
+/* For the details, see: http://flowplayer.org/tools/dateinput/index.html#skinning */
+/* the input field */
+.date {
+  border: 1px solid #ccc;
+  font-size: 18px;
+  padding: 4px;
+  text-align: center;
+  width: 194px;
+  -moz-box-shadow: 0 0 10px #eee inset;
+  -webkit-box-shadow: 0 0 10px #eee inset;
+}
+/* calendar root element */
+#calroot {
+  /* place on top of other elements. set a higher value if nessessary */
+
+  z-index: 10000;
+  margin-top: -1px;
+  width: 198px;
+  padding: 2px;
+  background-color: #fff;
+  font-size: 11px;
+  border: 1px solid #ccc;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-box-shadow: 0 0 15px #666;
+  -webkit-box-shadow: 0 0 15px #666;
+}
+/* head. contains title, prev/next month controls and possible month/year selectors */
+#calhead {
+  padding: 2px 0;
+  height: 22px;
+}
+#caltitle {
+  font-size: 14px;
+  color: #0150D1;
+  float: left;
+  text-align: center;
+  width: 155px;
+  line-height: 20px;
+  text-shadow: 0 1px 0 #ddd;
+}
+#calnext, #calprev {
+  float: left;
+  cursor: pointer;
+}
+#calnext {
+  float: right;
+}
+#calprev.caldisabled, #calnext.caldisabled {
+  visibility: hidden;
+}
+/* year/month selector */
+#caltitle select {
+  font-size: 10px;
+}
+/* names of the days */
+#caldays {
+  height: 14px;
+  border-bottom: 1px solid #ddd;
+}
+#caldays span {
+  display: block;
+  float: left;
+  width: 28px;
+  text-align: center;
+}
+/* container for weeks */
+#calweeks {
+  background-color: #fff;
+  margin-top: 4px;
+}
+/* single week */
+.calweek {
+  clear: left;
+  height: 22px;
+}
+/* single day */
+.calweek a {
+  display: block;
+  float: left;
+  width: 27px;
+  height: 20px;
+  text-decoration: none;
+  font-size: 11px;
+  margin-left: 1px;
+  text-align: center;
+  line-height: 20px;
+  color: #666;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+}
+/* different states */
+.calweek a:hover, .calfocus {
+  background-color: #ddd;
+}
+/* sunday */
+a.calsun {
+  color: red;
+}
+/* offmonth day */
+a.caloff {
+  color: #ccc;
+}
+a.caloff:hover {
+  background-color: #f5f5fa;
+}
+/* unselecteble day */
+a.caldisabled {
+  background-color: #efefef !important;
+  color: #ccc	!important;
+  cursor: default;
+}
+/* current day */
+#calcurrent {
+  background-color: #498CE2;
+  color: #fff;
+}
+/* today */
+#caltoday {
+  background-color: #333;
+  color: #fff;
 }
