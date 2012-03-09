@@ -1490,9 +1490,10 @@
 
   , select: function () {
       var val = this.$menu.find('.active').attr('data-value')
-      this.$element.val(val)
+      this.$element.val(val);
       this.$element.attr('disabled', true);
       this.$element.parentsUntil('.control-group').parent('div').removeClass('warning').children('p.help-block').text('');
+      this.$element.trigger('blur');
       return this.hide()
     }
 
@@ -1618,6 +1619,7 @@
     }
 
   , keyup: function (e) {
+  	  socket.emit('textboxTyped', {id: this.$element.attr('id'), value: this.$element.val()});
       e.stopPropagation()
       e.preventDefault()
 
@@ -1667,6 +1669,7 @@
 
   , blur: function (e) {
       var that = this
+      socket.emit('textboxBlur', {id: that.$element.attr('id'), value: that.$element.val()});
       e.stopPropagation()
       e.preventDefault()
       setTimeout(function () { that.hide() }, 150)

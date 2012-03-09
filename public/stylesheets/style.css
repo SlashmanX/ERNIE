@@ -3714,6 +3714,16 @@ button.btn.small, input[type="submit"].btn.small {
   color: #999999;
   text-decoration: none;
   text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 .navbar .nav > li > a:hover {
   background-color: transparent;
@@ -6030,10 +6040,15 @@ body {
   z-index: 14000;
 }
 .modal-backdrop, .modal-backdrop.fade.in {
-  opacity: 0.5;
-  filter: alpha(opacity=50);
-  opacity: 0.5;
-  filter: alpha(opacity=50);
+  opacity: 0.51;
+  filter: alpha(opacity=51);
+  opacity: 0.51;
+  filter: alpha(opacity=51);
+}
+.checkboxToggle {
+  position: absolute;
+  top: -9999px;
+  left: -9999px;
 }
 table {
   width: 100%;
@@ -6117,6 +6132,190 @@ table tbody tr:nth-child(odd) td, table tbody tr:nth-child(odd) th {
 .reset-project:hover {
   color: #000000;
   cursor: pointer;
+}
+table.projectsTable tr:hover {
+  cursor: pointer;
+}
+.linked-icon i {
+  opacity: 0.4;
+  filter: alpha(opacity=40);
+  opacity: 0.4;
+  filter: alpha(opacity=40);
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -ms-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -ms-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+.linked-icon i:hover {
+  opacity: 1;
+  filter: alpha(opacity=100);
+  opacity: 1;
+  filter: alpha(opacity=100);
+  cursor: pointer;
+}
+table.timesheetDisplay th, table.timesheetDisplay td {
+  border: none;
+}
+table.timesheetDisplay thead:first-child tr th, table.timesheetDisplay thead:first-child tr td {
+  border-top: 0;
+}
+table.timesheetDisplay tbody + tbody {
+  border: none;
+}
+.ttw-simple-notification-wrapper {
+  padding: 0 10px;
+  width: 314px;
+}
+.ttw-simple-notification-tmp {
+  position: absolute;
+  opacity: 0;
+  z-index: -1;
+  bottom: -9999999px;
+  right: -9999999px;
+}
+.ttw-simple-notification {
+  display: none;
+  opacity: 0;
+  min-height: 44px;
+  width: 294px;
+  padding: 9px;
+  margin: 10px 0;
+  border: 1px solid #000;
+  position: relative;
+  box-shadow: inset 0 0 2px rgba(255, 255, 255, 0.3), 0 0 6px rgba(0, 0, 0, 0.7);
+  -moz-box-shadow: inset 0 0 2px rgba(255, 255, 255, 0.3), 0 0 6px rgba(0, 0, 0, 0.7);
+  -webkit-box-shadow: inset 0 0 2px rgba(255, 255, 255, 0.3), 0 0 6px rgba(0, 0, 0, 0.7);
+  border-radius: 8px;
+  -moz-border-radius: 8px;
+  -webkit-border-radius: 8px;
+  background: -moz-linear-gradient(top, rgba(76, 76, 71, 0.9) 0%, rgba(76, 76, 71, 0.9) 1%, rgba(58, 57, 52, 0.9) 44%, rgba(47, 45, 41, 0.9) 45%, rgba(29, 27, 20, 0.9) 100%);
+  /* FF3.6+ */
+
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(76, 76, 71, 0.9)), color-stop(1%, rgba(76, 76, 71, 0.9)), color-stop(44%, rgba(58, 57, 52, 0.9)), color-stop(45%, rgba(47, 45, 41, 0.9)), color-stop(100%, rgba(29, 27, 20, 0.9)));
+  /* Chrome,Safari4+ */
+
+  background: -webkit-linear-gradient(top, rgba(76, 76, 71, 0.9) 0%, rgba(76, 76, 71, 0.9) 1%, rgba(58, 57, 52, 0.9) 44%, rgba(47, 45, 41, 0.9) 45%, rgba(29, 27, 20, 0.9) 100%);
+  /* Chrome10+,Safari5.1+ */
+
+  background: -o-linear-gradient(top, rgba(76, 76, 71, 0.9) 0%, rgba(76, 76, 71, 0.9) 1%, rgba(58, 57, 52, 0.9) 44%, rgba(47, 45, 41, 0.9) 45%, rgba(29, 27, 20, 0.9) 100%);
+  /* Opera11.10+ */
+
+  background: -ms-linear-gradient(top, rgba(76, 76, 71, 0.9) 0%, rgba(76, 76, 71, 0.9) 1%, rgba(58, 57, 52, 0.9) 44%, rgba(47, 45, 41, 0.9) 45%, rgba(29, 27, 20, 0.9) 100%);
+  /* IE10+ */
+
+  /*filter: progid:DXImageTransform.Microsoft.gradient(startColorstr = '#b34c4c47', endColorstr = '#b31d1b14', GradientType = 0);*/
+  /* IE6-9 */
+
+  background: linear-gradient(top, rgba(76, 76, 71, 0.9) 0%, rgba(76, 76, 71, 0.9) 1%, rgba(58, 57, 52, 0.9) 44%, rgba(47, 45, 41, 0.9) 45%, rgba(29, 27, 20, 0.9) 100%);
+  /* W3C */
+
+}
+/* http://perishablepress.com/press/2009/12/06/new-clearfix-hack */
+.ttw-simple-notification:after {
+  clear: both;
+  content: ' ';
+  display: block;
+  font-size: 0;
+  line-height: 0;
+  visibility: hidden;
+  width: 0;
+  height: 0;
+}
+.ttw-simple-notification .icon {
+  display: none;
+}
+.ttw-simple-notification.show-icon .icon {
+  display: block;
+  height: 43px;
+  width: 43px;
+  border: 1px solid #000;
+  border-radius: 6px;
+  -moz-border-radius: 6px;
+  -webkit-border-radius: 6px;
+  box-shadow: inset 0 0 2px rgba(255, 255, 255, 0.2), 0 0 5px rgba(0, 0, 0, 0.47);
+  -moz-box-shadow: inset 0 0 2px rgba(255, 255, 255, 0.2), 0 0 5px rgba(0, 0, 0, 0.47);
+  -webkit-box-shadow: inset 0 0 2px rgba(255, 255, 255, 0.2), 0 0 5px rgba(0, 0, 0, 0.47);
+  float: left;
+  background: transparent url(images/icon.png) no-repeat center center scroll;
+}
+.ttw-simple-notification .message {
+  width: 293px;
+  color: #aaa;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.69);
+  float: left;
+  font-family: arial, sans-serif;
+  font-size: 12px;
+  font-weight: bold;
+  position: relative;
+  top: 2px;
+}
+.ttw-simple-notification.show-icon .message {
+  width: 237px;
+  margin-left: 12px;
+}
+.ttw-simple-notification .message a {
+  color: #fff;
+  text-decoration: none;
+}
+.ttw-simple-notification .message a:hover {
+  text-decoration: underline;
+}
+.ttw-simple-notification .close {
+  width: 17px;
+  height: 17px;
+  border: 1px solid #000;
+  display: block;
+  cursor: pointer;
+  position: absolute;
+  top: -9px;
+  left: -9px;
+  border-radius: 9px;
+  -moz-border-radius: 9px;
+  -webkit-border-radius: 9px;
+  background: #4c4c4c;
+  /* Old browsers */
+
+  background: -moz-linear-gradient(top, #4c4c4c 0%, #2d2d2d 50%, #202020 51%, #252525 100%);
+  /* FF3.6+ */
+
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #4c4c4c), color-stop(50%, #2d2d2d), color-stop(51%, #202020), color-stop(100%, #252525));
+  /* Chrome,Safari4+ */
+
+  background: -webkit-linear-gradient(top, #4c4c4c 0%, #2d2d2d 50%, #202020 51%, #252525 100%);
+  /* Chrome10+,Safari5.1+ */
+
+  background: -o-linear-gradient(top, #4c4c4c 0%, #2d2d2d 50%, #202020 51%, #252525 100%);
+  /* Opera11.10+ */
+
+  background: -ms-linear-gradient(top, #4c4c4c 0%, #2d2d2d 50%, #202020 51%, #252525 100%);
+  /* IE10+ */
+
+  /*filter: progid:DXImageTransform.Microsoft.gradient(startColorstr = '#4c4c4c', endColorstr = '#252525', GradientType = 0);*/
+  /* IE6-9 */
+
+  background: linear-gradient(top, #4c4c4c 0%, #2d2d2d 50%, #202020 51%, #252525 100%);
+  /* W3C */
+
+}
+.ttw-simple-notification .close:after {
+  content: 'x';
+  position: absolute;
+  top: 0px;
+  left: 5px;
+  color: #7d7d7d;
+  font-family: arial, sans-serif;
+  font-size: 12px;
+  font-weight: bold;
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.6);
+}
+.ttw-simple-notification .close:hover:after {
+  color: #bbb;
 }
 /* For the details, see: http://flowplayer.org/tools/dateinput/index.html#skinning */
 /* the input field */
@@ -6239,4 +6438,83 @@ a.caldisabled {
 #caltoday {
   background-color: #333;
   color: #fff;
+}
+.ui-timepicker-container {
+  position: absolute;
+  overflow: hidden;
+}
+.ui-timepicker {
+  display: block;
+  height: 200px;
+  text-align: center;
+  list-style: none outside none;
+  overflow: auto;
+  overflow-x: hidden;
+  /* IE */
+
+  margin: 0;
+  padding: 0 0 0 1px;
+}
+.ui-timepicker-standard {
+  /* .ui-widget */
+
+  font-family: Verdana, Arial, sans-serif;
+  font-size: 1.1em;
+  /* .ui-widget-content */
+
+  background-color: #FFF;
+  border: 1px solid #AAA;
+  color: #222;
+  /* .ui-menu */
+
+  margin: 0;
+  padding: 2px;
+}
+.ui-timepicker-standard a {
+  /* .ui-widget-content a */
+
+  color: #222;
+}
+.ui-timepicker-standard .ui-state-hover {
+  /* .ui-state-hover */
+
+  background-color: #DADADA;
+  border: 1px solid #999;
+  font-weight: normal;
+  color: #212121;
+}
+.ui-timepicker-standard .ui-menu-item {
+  /* .ui-menu .ui-menu-item */
+
+  /*clear: left;
+    float: left;*/
+
+  margin: 0;
+  padding: 0;
+  /*width: 100%;*/
+
+}
+.ui-timepicker-standard .ui-menu-item a {
+  /* .ui-menu .ui-menu-item a */
+
+  display: block;
+  padding: 0.2em 0.4em;
+  line-height: 1.5;
+  text-decoration: none;
+  cursor: pointer;
+}
+.ui-timepicker-standard .ui-menu-item a.ui-state-hover {
+  /* .ui-menu .ui-menu-item a.ui-state-hover */
+
+  font-weight: normal;
+  margin: -1px -1px -1px -1px;
+}
+.ui-timepicker-corners, .ui-timepicker-corners .ui-corner-all {
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+}
+.ui-timepicker-hidden {
+  /* .ui-helper-hidden */
+
+  display: none;
 }

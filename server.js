@@ -11,6 +11,7 @@ var classjs 	= 	require('./public/javascripts/class.js');
 var functions 	= 	require('./public/javascripts/functions.js');
 var	private		=	require('./private/config.js');
 var mysql 		= 	require('mysql');
+var	winston		=	require('winston');
 
 var app         =   module.exports  =   express.createServer();
 var json        =   JSON.stringify;
@@ -19,8 +20,43 @@ var	users		=	[];
 var parseCookie =   connect.utils.parseCookie;
 
 var port 		= 	process.env.PORT || 13476;
-var	dbInfo		=	JSON.parse(private.getDBInfo('blacknight'));
+var	dbInfo		=	JSON.parse(private.getDBInfo(''));
 var	dbTables	=	JSON.parse(private.getDBTables());
+
+//
+// Configure the logger for `access logs`
+//
+  winston.loggers.add('access', {
+    file: {
+      filename: 'logs/access.log'
+    }
+  });
+
+//
+// Configure the logger for `access logs`
+//
+  winston.loggers.add('error', {
+    file: {
+      filename: 'logs/error.log'
+    }
+  });
+  
+//
+// Configure the logger for `access logs`
+//
+  winston.loggers.add('change', {
+    file: {
+      filename: 'logs/change.log'
+    }
+  });
+  
+var accessLog = winston.loggers.get('access');
+var errorLog = winston.loggers.get('error');
+var changeLog = winston.loggers.get('change');
+
+accessLog.remove(winston.transports.Console);
+errorLog.remove(winston.transports.Console);
+changeLog.remove(winston.transports.Console);
 	
 // BLACKNIGHT
 var	REPORT_DATABASE		=	dbInfo['db'];
@@ -57,6 +93,14 @@ SQLclient.query('CREATE TABLE IF NOT EXISTS ernie_employees ('+
 ') ENGINE=MyISAM DEFAULT CHARSET=latin1;'
 );
 
+SQLclient.query("INSERT IGNORE INTO `ernie_employees` (`employee_id`, `name`, `position`, `email`, `username`, `level`, `password`, `last_login`, `oauth_token`, `oauth_token_secret`) VALUES "+
+"('1', 'Eoin Martin', 'Software Engineer', 'eoinmartin3007@gmail.com', 'emartin', '1', 'f1af63ecc773ae116adc40924d8ace107d6766e7', '', '', ''),"+
+"('2', 'Ryan Craven', 'Software Engineer', 'ryan@cpttremendous.com', '', '1', '', '', '', ''),"+
+"('3', 'Shane Dowdall', 'Supervisor', 'shane.dowdall@dkit.ie', '', '1', '', '', '', ''),"+
+"('4', 'Dermot Hannan', 'CEO', 'dhannan@brandttechnologies.com', '', '1', '', '', '', ''),"+
+"('5', 'Anthony McCann', 'Software Engineer', 'anthony.mccann90@gmail.com', 'amccann', '1', '412c685c48b297ef568d4f0423e5d300a5f0345f', '', '', '');"
+);
+
 SQLclient.query('CREATE TABLE IF NOT EXISTS `ernie_projects` ('+
    '`project_id` int(11) not null,'+
    '`project_name` varchar(255),'+
@@ -78,7 +122,7 @@ SQLclient.query('CREATE TABLE IF NOT EXISTS `ernie_timesheet_categories` ('+
 ') ENGINE=MyISAM DEFAULT CHARSET=latin1 AUTO_INCREMENT=9;'
 );
 
-SQLclient.query("INSERT IGNORE INTO `ernie_timesheet_categories` (`id`, `name`, `db_name`, `parent`) VALUES "+
+SQLclient.query("INSERT IGNORE INTO `ernie_timesheet_categories` (`id`, `task_name`, `db_name`, `parent`) VALUES "+
 	"('1', 'Software Engineering', 'software_engineering', '0'),"+
 	"('2', 'Code Review', 'code_review', '1'),"+
 	"('3', 'Database Development', 'db_dev', '1'),"+
@@ -86,7 +130,8 @@ SQLclient.query("INSERT IGNORE INTO `ernie_timesheet_categories` (`id`, `name`, 
 	"('5', 'QA Script Generation', 'qa_script_gen', '4'),"+
 	"('6', 'QA Functional Automated', 'qa_funct_auto', '4'),"+
 	"('7', 'Absent', 'absent', '0'),"+
-	"('8', 'Bank Holiday', 'bank_holiday', '7');"
+	"('8', 'Bank Holiday', 'bank_holiday', '7'),"+
+	"('9', 'Holiday', 'holiday', '7');"
 );
 
 SQLclient.query('CREATE TABLE IF NOT EXISTS `ernie_timesheet_entries` ('+
@@ -100,13 +145,13 @@ SQLclient.query('CREATE TABLE IF NOT EXISTS `ernie_timesheet_entries` ('+
 ') ENGINE=MyISAM DEFAULT CHARSET=latin1 AUTO_INCREMENT=6;'
 );
 
-SQLclient.query("INSERT IGNORE INTO `ernie_timesheet_entries` (`timesheet_id`, `project_id`, `employee_id`, `task_id`, `duration`, `date_worked`) VALUES "+
+/*SQLclient.query("INSERT IGNORE INTO `ernie_timesheet_entries` (`timesheet_id`, `project_id`, `employee_id`, `task_id`, `duration`, `date_worked`) VALUES "+
 	"('1', '1', '1', '2', '4', '0000-00-00'),"+
 	"('2', '1', '2', '3', '2', '0000-00-00'),"+
 	"('3', '2', '1', '5', '3', '0000-00-00'),"+
 	"('4', '2', '2', '6', '6', '0000-00-00'),"+
 	"('5', '1', '1', '7', '5', '0000-00-00');"
-);
+);*/
 
 // Configuration
 
@@ -186,6 +231,8 @@ app.get('/projects/:id?', routes.projects);
 
 app.get('/timesheets/:id?', routes.timesheets);
 
+app.get('/s/:sessionid?/', routes.session);
+
 app.get('/main', routes.index);
 
 app.get('/graphs', routes.graph);
@@ -228,6 +275,49 @@ app.post('/login', function(req, res){
 			console.log('Data: '+data);
 			res.end(data); // ALWAYS make sure to 'end' a post.
     	});
+
+});
+
+app.post('/submitTimesheet', function(req, res){
+
+	var emp_id = req.cookies.userid
+	var project_id = req.param('project_id', null);
+	var task_id = req.param('task_id', null);
+	
+	var date_worked = req.param('date_worked', null);
+	var dateParts = date_worked.split("/");
+	var sqlDate = dateParts[2] + dateParts[1] + dateParts[0];
+	
+	var start_time = req.param('start_time', null);
+	var end_time = req.param('end_time', null);
+	var comments = req.param('comment', null);
+	
+	var successful = false;
+	
+	// TODO: Change to '?' notation as in example
+	SQLclient.query('INSERT INTO `ernie_timesheet_entries` (`project_id`, `employee_id`, `task_id`, `date_worked`, `start_time`, `end_time`, `comments`) VALUES '+
+	'('+ project_id +', '+ emp_id +', '+ task_id +', "'+ sqlDate +'", "'+ start_time +':00", "'+ end_time +':00", "'+ comments +'");', function(err, info){
+	
+			if (err) 
+			{
+				throw err;
+				var date = new Date();
+				errorLog.error('MySQL Error', {date: date.toUTCString(), location: 'SubmitTimesheet', errorMsg: err});
+				successful = 'false';
+    		}
+    		
+    		else
+    		{
+    			successful = true;
+    		}
+    		
+    		res.contentType('application/json');
+			var data = json(successful);
+			res.header('Content-Length', data.length);
+			console.log('Data: '+data);
+			res.end(data);
+	
+	});
 
 });
 
@@ -305,6 +395,8 @@ socket.sockets.on('connection', function(client){
 			
 	
 			client.join(client.handshake.sessionID);
+			var date = new Date()
+			accessLog.info('User connected', {date: date.toUTCString(), userID: myID, userName: users[myID].getName()});
 			client.broadcast.emit('updateCount', getUserCount());
 			client.emit('updateCount', getUserCount());
 		
@@ -332,9 +424,65 @@ socket.sockets.on('connection', function(client){
 	
 	});
 	
+	client.on('getGraph', function(id){
+		SQLclient.query('SELECT timesheet.*, employee.*, COUNT(tasks.id), tasks.task_name, projects.project_id, projects.project_name '+
+ 						'FROM '+dbTables['employees']+' employee INNER JOIN '+dbTables['timesheets'] +' timesheet '+
+						'ON employee.employee_id = timesheet.employee_id '+
+						'INNER JOIN '+dbTables['tasks'] +' tasks '+
+						'ON timesheet.task_id = tasks.id '+
+						'INNER JOIN '+dbTables['projects'] +' projects '+
+						'ON timesheet.project_id = projects.project_id '+
+						'WHERE employee.employee_id = '+id+' GROUP BY tasks.id', 
+  						function selectCb(err, results, fields) {
+    					if (err) {
+      					throw err;
+    					}
+    					var tasks = {task : results}; 
+    					client.emit('getGraph', json(tasks));
+    				});
+	
+	});
+	
+	client.on('getTasksProjectBreakdown', function(data, callback){
+		
+	
+		SQLclient.query('SELECT timesheet.*, employee.employee_id, tasks.id, tasks.task_name, COUNT(projects.project_id), projects.project_name '+
+ 						'FROM '+dbTables['employees']+' employee INNER JOIN '+dbTables['timesheets'] +' timesheet '+
+						'ON employee.employee_id = timesheet.employee_id '+
+						'INNER JOIN '+dbTables['tasks'] +' tasks '+
+						'ON timesheet.task_id = tasks.id '+
+						'INNER JOIN '+dbTables['projects'] +' projects '+
+						'ON timesheet.project_id = projects.project_id '+
+						'WHERE timesheet.employee_id = '+data.employee+' AND timesheet.task_id = '+ data.task +' GROUP BY projects.project_id',
+  						function selectCb(err, results, fields) {
+    					if (err) {
+      					throw err;
+    					}
+    					console.log(results);
+    					var projects = {project : results}; 
+    					callback(json(projects));
+    					
+    					client.emit('graphReady');
+    				});
+	
+	});
+	
+	client.on('graphReady', function(){
+	
+		client.emit('graphReady');
+	
+	})
+	
 	client.on('updateCount', function(){
 		client.emit('updateCount', getUserCount());
 	});
+	
+	client.on('joinSession', function(sessionID){
+		client.join(sessionID);
+		users[myID].setRoomName(sessionID);
+		client.broadcast.to(sessionID).emit('notification', users[myID].getName() +' has joined your session');
+	
+	})
 	
 	client.on('getProject', function(id){
 		var where = '1=1';
@@ -358,9 +506,77 @@ socket.sockets.on('connection', function(client){
 	
 	});
 	
-	client.on('getTasks', function(){
+	client.on('createRoom', function(newRoom) {
+		
+		client.join(newRoom);
+		users[myID].setRoomName(newRoom);
+		client.emit('createRoom', newRoom);
 	
-		console.log('in here');
+	});
+	
+	client.on('generateReport', function(id){
+		var where = 'timesheet.employee_id = '+ myID;
+	
+		if(id != -1)
+		{
+			where = 'timesheet.employee_id = '+ id;
+		}
+		
+		SQLclient.query('SELECT timesheet.*, employee.*, tasks.id, tasks.task_name, projects.project_id, projects.project_name '+
+ 						'FROM '+dbTables['employees']+' employee INNER JOIN '+dbTables['timesheets'] +' timesheet '+
+						'ON employee.employee_id = timesheet.employee_id '+
+						'INNER JOIN '+dbTables['tasks'] +' tasks '+
+						'ON timesheet.task_id = tasks.id '+
+						'INNER JOIN '+dbTables['projects'] +' projects '+
+						'ON timesheet.project_id = projects.project_id '+
+						'WHERE '+ where +' AND timesheet.approved = 1', 
+  						function selectCb(err, results, fields) {
+    					if (err) {
+      					throw err;
+    					}
+    					var report = {timesheets : results}; 
+    					client.emit('generateReport', json(report));
+    				});
+	
+	
+	});
+	
+	client.on('getSessionID', function(){
+	
+		client.emit('getSessionID', users[myID].getSessionID());
+	
+	});
+	
+	client.on('getTimesheets', function(id){
+	
+		var where = 'timesheet.employee_id = '+ myID;
+	
+		if(id != -1)
+		{
+			where = 'timesheet.employee_id = '+ id;
+		}
+		
+		SQLclient.query('SELECT timesheet.*, employee.employee_id, employee.name, tasks.id, tasks.task_name, projects.project_id, projects.project_name '+
+ 						'FROM '+dbTables['timesheets']+' timesheet INNER JOIN '+dbTables['employees'] +' employee '+
+						'ON timesheet.project_manager = employee.employee_id '+
+						'INNER JOIN '+dbTables['tasks'] +' tasks '+
+						'ON timesheet.task_id = tasks.id '+
+						'INNER JOIN '+dbTables['projects'] +' projects '+
+						'ON timesheet.project_id = projects.project_id '+
+						'WHERE '+ where, 
+  						function selectCb(err, results, fields) {
+    					if (err) {
+      					throw err;
+    					}
+    					console.log(results);
+    					var timesheets = {timesheet : results}; 
+    					client.emit('getTimesheets', json(timesheets));
+    				});
+	
+	
+	});
+	
+	client.on('getTasks', function(){
 	
 		SQLclient.query('SELECT *'+
  						'FROM '+dbTables['tasks'],
@@ -373,6 +589,41 @@ socket.sockets.on('connection', function(client){
     				});
 	
 	
+	});
+	
+	// replace with 'trigger' clicks, sent from client, server sends back to other clients
+	
+	client.on('triggerClick', function(triggeredObject){
+	
+		console.log('triggering '+ triggeredObject +' to '+ users[myID].getRoomName());
+		
+		
+	
+		client.broadcast.to(users[myID].getRoomName()).emit('triggerClick', triggeredObject);
+		//client.emit('triggerClick', triggeredObject);
+	
+	
+	});
+	
+	client.on('textboxFocus', function(textbox){
+		var date = new Date()
+	
+		changeLog.info('Started Editing', {date: date.toUTCString(), userID: myID, userName: users[myID].getName(), inputID: textbox.id, initValue: textbox.value});
+		
+		client.broadcast.to(users[myID].getRoomName()).emit('textboxHasFocus', textbox);
+	});
+	
+	client.on('textboxTyped', function(textbox){
+		//console.log("TYPED: "+ textbox.id + " "+ textbox.value);
+		
+		client.broadcast.to(users[myID].getRoomName()).emit('textboxTyped', json(textbox));
+	});
+	
+	client.on('textboxBlur', function(textbox){
+	
+		changeLog.info('User '+ users[myID].getName() +' finished editing '+ textbox.id +' which now has a value of '+ textbox.value);
+		
+		client.broadcast.to(users[myID].getRoomName()).emit('textboxLostFocus', json(textbox));
 	});
 	
 	client.on('setUserID', function(id){
@@ -557,6 +808,7 @@ var User = Class.extend({
 			this.name 			= 	name;
 			this.loggedIn 		= 	loggedIn;
 			this.sessionID		=	sessionID;
+			this.roomName		=	'test';
 			this.numSessions	=	0;
 	},
     setId 		: function(id){
@@ -591,6 +843,14 @@ var User = Class.extend({
     },
     sessionCount	:	function(){
     		return this.numSessions;
+    },
+    setRoomName		:	function(roomName){
+    		this.roomName = roomName;
+    
+    },
+    getRoomName		:	function(){
+    		return this.roomName;
+    
     }
     
 });

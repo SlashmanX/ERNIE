@@ -16,7 +16,13 @@ body {
 }
 .modal-backdrop,
 .modal-backdrop.fade.in {
-  .opacity(50);
+  .opacity(51);
+}
+
+.checkboxToggle {
+   position: absolute;
+   top: -9999px;
+   left: -9999px;
 }
 
 table {
@@ -33,5 +39,40 @@ table {
   }
 }
 
+table.projectsTable tr:hover {
+	cursor: pointer;
+}
 
+.linked-icon i {
+	.opacity(40);
+	.transition(all 0.5s ease-in-out);
+	&:hover {
+		.opacity(100);
+		cursor:pointer;
+	}
+}
+
+table.timesheetDisplay {
+  // Cells
+  th,
+  td {
+    border: none;
+  }
+  // Remove top border from thead by default
+  thead:first-child tr th,
+  thead:first-child tr td {
+    border-top: 0;
+  }
+  // Account for multiple tbody instances
+  tbody + tbody {
+    border:none;
+  }
+
+}
+
+
+
+
+@import "/public/stylesheets/notifications.less";
 @import "/public/stylesheets/date-input.less";
+

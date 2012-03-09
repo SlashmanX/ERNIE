@@ -1,62 +1,127 @@
 var chart;
+var tasks;
 var colors = Highcharts.getOptions().colors;
+var categories = [];
+var totalTask= 0;
+var data = [];
+var drilldown = [];
+var chartType = 'pie';
+var gotProjects = false;
 $(document).ready(function() {
+
+	showLoadingBar();
+	//chart = new Highcharts.Chart({});
+	//chart.showLoading();
+	
+	socket.emit('getGraph', 1);
+	categories = [];
+	totalTask= 0;
+	data = [];
+	drilldown = [];
+	gotProjects = false;
+	$('#changeChart').on('click', function(event){
+		
+		event.preventDefault();
+		chartType = $('select#newType option:selected').val();
+		//alert(chartType);
+		changeType(chart, chartType);
+	
+	});
+	
+	$('#addToChart').on('click', function(event){
+		
+		event.preventDefault();
+		var series = chart.series[0];
+		
+	
+		series.addPoint({name: 'New Point', color: colors[Math.round(Math.random() * 10)], y: (Math.random() * 100)}, true);
+	
+	});
+      
+});
+
+function changeType(chart, newType)
+{
+	var serie;
+       
+   for(var i = 0; i < chart.series.length; i++)
+   {
+       serie = chart.series[i];
+       
+       //alert('adding series of type: '+ newType);
+
+       chart.addSeries({
+          type: newType,
+          name: serie.name,
+          color: serie.color,
+          data: serie.options.data
+       }, false);
+       
+       serie.remove(false);   
+   }
+       
+   chart.redraw();
+}
+
+socket.on('getGraph', function(graphJSON){
+	totalTask = 0
+	categories = [];
+
+	tasks = JSON.parse(graphJSON);
+	//alert(Object.keys(tasks.task[0]));
+	$.each(tasks.task, function(index, value){
+	
+		totalTask += this['COUNT(tasks.id)'];
+		this.projects = [];
+		
+		
+		socket.emit('getTasksProjectBreakdown', {task: this.task_id, employee: this.employee_id}, function(projectJSON){
+			tasks['task'][index]['totalProject'] = 0;
+		
+			var projectsS = JSON.parse(projectJSON);
+			$.each(projectsS.project, function(){
+			
+				tasks['task'][index]['projects'].push({name: this.project_name, count: this['COUNT(projects.project_id)']});
+				tasks['task'][index]['totalProject'] += this['COUNT(projects.project_id)'];
+				
+			
+			});
+			
+			var tempCategories = [];
+			var tempData = [];
+			var thisProjectTotal = tasks['task'][index]['totalProject'];
+			$.each(tasks['task'][index].projects, function() {
+				tempCategories.push(this.name);
+				tempData.push({name : this.name, y: Math.round((this.count/thisProjectTotal) * 100)});
+				tasks['task'][index].drilldown = {name: 'Project Breakdown for '+ tasks.task[index].task_name, categories: tempCategories, data: tempData, color: colors[1]};
+			});
+			
+			gotProjects = true;
+		
+		});
+		
+		categories.push(this.task_name);
+
+	});
+
+
+});
+	
+socket.on('graphReady', function(){
+	data = [];
+	drilldown = [];
+	$.each(tasks.task, function(index, value) {
+		this['y'] = Math.round((this['COUNT(tasks.id)'] / totalTask) * 100);
+		data.push({name: this['task_name'], y: this['y'], color: colors[index], drilldown: this.drilldown});
+		
+	});
+    var name = 'User Workload by Task and Project';
    
-   var categories = ['MSIE', 'Firefox', 'Chrome', 'Safari', 'Opera'],
-      name = 'Browser brands',
-      data = [{ 
-            y: 55.11,
-            color: colors[0],
-            drilldown: {
-               name: 'MSIE versions',
-               categories: ['MSIE 6.0', 'MSIE 7.0', 'MSIE 8.0', 'MSIE 9.0'],
-               data: [10.85, 7.35, 33.06, 2.81],
-               color: colors[0]
-            }
-         }, {
-             y: 21.63,
-            color: colors[1],
-            drilldown: {
-               name: 'Firefox versions',
-               categories: ['Firefox 2.0', 'Firefox 3.0', 'Firefox 3.5', 'Firefox 3.6', 'Firefox 4.0'],
-               data: [0.20, 0.83, 1.58, 13.12, 5.43],
-               color: colors[1]
-            }
-         }, {
-            y: 11.94,
-            color: colors[2],
-            drilldown: {
-               name: 'Chrome versions',
-               categories: ['Chrome 5.0', 'Chrome 6.0', 'Chrome 7.0', 'Chrome 8.0', 'Chrome 9.0', 
-                  'Chrome 10.0', 'Chrome 11.0', 'Chrome 12.0'],
-               data: [0.12, 0.19, 0.12, 0.36, 0.32, 9.91, 0.50, 0.22],
-               color: colors[2]
-            }
-         }, {
-            y: 7.15,
-            color: colors[3],
-            drilldown: {
-               name: 'Safari versions',
-               categories: ['Safari 5.0', 'Safari 4.0', 'Safari Win 5.0', 'Safari 4.1', 'Safari/Maxthon', 
-                  'Safari 3.1', 'Safari 4.1'],
-               data: [4.55, 1.42, 0.23, 0.21, 0.20, 0.19, 0.14],
-               color: colors[3]
-            }
-         }, {
-            y: 2.14,
-            color: colors[4],
-            drilldown: {
-               name: 'Opera versions',
-               categories: ['Opera 9.x', 'Opera 10.x', 'Opera 11.x'],
-               data: [ 0.12, 0.37, 1.65],
-               color: colors[4]
-            }
-         }];
-   
-   function setChart(name, categories, data, color) {
+   function setChart(type, name, categories, data, color) {
       chart.xAxis[0].setCategories(categories);
       chart.series[0].remove();
       chart.addSeries({
+      	 type: type,
          name: name,
          data: data,
          color: color || 'white'
@@ -66,33 +131,35 @@ $(document).ready(function() {
    chart = new Highcharts.Chart({
       chart: {
          renderTo: 'graphContainer',
-         type: 'column'
+         type: 'pie',
       },
       title: {
-         text: 'Browser market share, April, 2011'
+         text: 'User Workload by Task, E&oacute;in Martin'
       },
       subtitle: {
-         text: 'Click the columns to view versions. Click again to view brands.'
+         text: 'Click the columns to view projects. Click again to view tasks.'
       },
       xAxis: {
          categories: categories                     
       },
       yAxis: {
          title: {
-            text: 'Total percent market share'
+            text: '% Time spent on task'
          }
       },
       plotOptions: {
-         column: {
+         pie: {
+         	showInLegend: true,
+         	allowPointSelect: true,
             cursor: 'pointer',
             point: {
                events: {
                   click: function() {
                      var drilldown = this.drilldown;
                      if (drilldown) { // drill down
-                        setChart(drilldown.name, drilldown.categories, drilldown.data, drilldown.color);
+                        setChart(chartType, drilldown.name, drilldown.categories, drilldown.data, drilldown.color);
                      } else { // restore
-                        setChart(name, categories, data);
+                        setChart(chartType, name, categories, data);
                      }
                   }
                }
@@ -104,10 +171,38 @@ $(document).ready(function() {
                   fontWeight: 'bold'
                },
                formatter: function() {
-                  return this.y +'%';
+               	  var point = this.point;
+                  return point.name;
                }
-            }               
-         }
+            }             
+         },
+         column: {
+         	allowPointSelect: true,
+            cursor: 'pointer',
+            point: {
+               events: {
+                  click: function() {
+                     var drilldown = this.drilldown;
+                     if (drilldown) { // drill down
+                        setChart(chartType, drilldown.name, drilldown.categories, drilldown.data, drilldown.color);
+                     } else { // restore
+                        setChart(chartType, name, categories, data);
+                     }
+                  }
+               }
+            },
+            dataLabels: {
+               enabled: false,
+               color: colors[0],
+               style: {
+                  fontWeight: 'bold'
+               },
+               formatter: function() {
+               	  var point = this.point;
+                  return point.name;
+               }
+            }             
+         },
       },
       navigator: {
             enabled: false
@@ -115,11 +210,11 @@ $(document).ready(function() {
       tooltip: {
          formatter: function() {
             var point = this.point,
-               s = this.x +':<b>'+ this.y +'% market share</b><br/>';
+               s = point.name +': <b>'+ this.y +'% of time</b><br/>';
             if (point.drilldown) {
-               s += 'Click to view '+ point.category +' versions';
+               s += 'Click to view project breakdown';
             } else {
-               s += 'Click to return to browser brands';
+               s += 'Click to return to task breakdown';
             }
             return s;
          }
@@ -130,9 +225,9 @@ $(document).ready(function() {
          color: 'white'
       }],
       exporting: {
-         enabled: false
+         enabled: true
       }
    });
    
-   
+   hideLoadingBar();
 });

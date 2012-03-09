@@ -25,6 +25,11 @@ exports.timesheets = function(req, res){
   res.render('timesheets', { title: 'Timesheets'})
 };
 
+exports.session = function(req, res){
+  var sessionID = req.params.sessionid;
+  res.render('s', { title: 'Sessions'})
+};
+
 
 exports.graph = function(req, res){
   res.render('graphs', { title: 'Graphs'})

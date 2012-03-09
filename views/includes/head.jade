@@ -2,6 +2,7 @@
 - var userID = userID
 - var userName = userName
 - var loggedIn = loggedIn
+.jbar-container
 header.navbar.navbar-fixed-top
 	.navbar-inner
 		nav.container-fluid
@@ -13,42 +14,17 @@ header.navbar.navbar-fixed-top
 			.nav-collapse
 				ul.nav
 					li#home
-						a(href="#") Home
+						a(href="/") Home
 					if(loggedIn == 'true')
-					
-						ul.nav#reports.forceLogIn
-							li.dropdown
-								a.dropdown-toggle(href="#", data-toggle="dropdown") Reports
-									b.caret
-								ul.dropdown-menu
-									li
-										a(href="#") New
-									li
-										a(href="#") Edit
-									li
-										a(href="#") K.P.I
-						ul.nav#employees.forceLogIn
-							li.dropdown
-								a.dropdown-toggle(href="#", data-toggle="dropdown") Employees
-									b.caret
-								ul.dropdown-menu
-									li
-										a(href="#") View All
-									li
-										a(href="#") New
-									li
-										a(href="#") Edit
-						ul.nav#projects.forceLogIn
-							li.dropdown
-								a.dropdown-toggle(href="#", data-toggle="dropdown") Projects
-									b.caret
-								ul.dropdown-menu
-									li
-										a(href="#") View All
-									li
-										a(href="#") New
-									li
-										a(href="#") Edit
+						li#reports.forceLogIn
+							a(href="/reports/") Reports
+						li#timesheets.forceLogIn
+							a(href="/timesheets/") Timesheets
+						li#projects.forceLogIn
+							a(href="/projects/") Projects
+						li#projects.forceLogIn
+							a(href="/graphs/") Graphs
+						
 				if(loggedIn == 'true')
 					ul.nav.pull-right#user
 						li.dropdown.forceLogIn
@@ -56,14 +32,17 @@ header.navbar.navbar-fixed-top
 								b.caret
 							ul.dropdown-menu
 								li
-									a(href="#") Profile
+									a(href="/user/profile/") Profile
+								li#sessionStart
+									a(href="/session/start/") Start Session
 								li.divider
 								li#userLogOut
-									a(href="#") Log Out
+									a(href="/logout/") Log Out
 					p.pull-right.forceLogIn.navbar-text
 						a#userCount(href="#") 
 							span#onlineUsers 0
 							|  Users Online
+						| Logged in as #{userName}
 				
 
 div#loading Loading....
@@ -73,5 +52,19 @@ div.modal.hide.fade#onlineUsersModal
 		h3 Online Users
 	div.modal-body
 		p Loading Users...
+	div.modal-footer
+		a(href="#", data-dismiss="modal").btn.btn-primary Close
+		
+div.modal.hide.fade#sessionIDModal
+	div.modal-header
+		a.close(data-dismiss="modal") &times;
+		h3 Sessions
+	div.modal-body
+		h4 Share Current Session
+		input.x-large.span5#sessionURL(readonly="readonly")
+		h4 Create bi-directional Session
+		label(for="newRoomName") Name of Session: 
+		input#newRoomName(type="text") 
+		a#createRoom(href="#") Create Room
 	div.modal-footer
 		a(href="#", data-dismiss="modal").btn.btn-primary Close

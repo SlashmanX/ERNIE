@@ -4,54 +4,12 @@ section.content
 			a(href="#add", data-toggle="tab") Add
 		li
 			a(href="#review", data-toggle="tab") Review
-		li
-			a(href="#messages", data-toggle="tab") Messages
-		li
-			a(href="#settings", data-toggle="tab") Settings
 
 
 	.tab-content
 		#add.tab-pane.fade.in.active
-			form.form-horizontal
-				fieldset
-					legend Add New Timesheet Entry
-					div.control-group
-						label.control-label(for="projectInput") Project
-						div.controls
-							.input-append
-								input#projectInput.input-xlarge.(type="text", data-provide="typeahead")
-								span.hide.add-on.reset-project &times;
-							p.help-block Start typing the name or ID of the project then select from the dropdown provided.
-							
-					div.control-group
-						label.control-label(for="taskMain") Task
-						div.controls.form-inline
-							select#taskMain
-							select#taskSub
-					.control-group
-						label.control-label(for="date_worked") Date:
-						div.controls
-							input#date_worked(type="date")
-					.control-group
-						label.control-label(for="startTime") Start:
-						.controls.form-inline
-							input#startTime(type="text")
-							label.control-label(for="endTime") End: 
-							input#endTime(type="text")
-
-					div.control-group
-						label.control-label(for="textarea") Comments
-						div.controls
-							textarea.input-xlarge#textarea(rows="3")
-					
-					div.form-actions
-						button.btn.btn-primary.btn-large(type="submit") Submit Timesheet
-						button.btn(type="reset") Cancel
+			include includes/timesheets_add
 		#review.tab-pane.fade 
-			p Profile
-		#messages.tab-pane.fade 
-			p Message
-		#settings.tab-pane.fade 
-			p Settings
+			include includes/timesheets_review
 		
 	hr
