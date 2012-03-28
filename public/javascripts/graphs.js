@@ -4,21 +4,58 @@ var colors = Highcharts.getOptions().colors;
 var categories = [];
 var totalTask= 0;
 var data = [];
+var tempData = [];
 var drilldown = [];
 var chartType = 'pie';
 var gotProjects = false;
 $(document).ready(function() {
 
+	graphsBind();
+});
+function graphsBind()
+{
 	showLoadingBar();
-	//chart = new Highcharts.Chart({});
-	//chart.showLoading();
-	
-	socket.emit('getGraph', 1);
 	categories = [];
 	totalTask= 0;
 	data = [];
 	drilldown = [];
+	tempData = [];
 	gotProjects = false;
+	socket.emit('getGraph', 1, function(graphJSON){
+		totalTask = 0;
+		tempData = [];
+		categories = [];
+		tasks = JSON.parse(graphJSON);
+		//alert(Object.keys(tasks.task[0]));
+		$.each(tasks.task, function(index, value){
+
+			totalTask += this['COUNT(tasks.id)'];
+			this.projects = [];
+			socket.emit('getTasksProjectBreakdown', {task: this.task_id, employee: this.employee_id}, function(projectJSON){
+				tasks['task'][index]['totalProject'] = 0;
+				var projectsS = JSON.parse(projectJSON);
+				$.each(projectsS.project, function(){
+					tasks['task'][index]['projects'].push({name: this.project_name, count: this['COUNT(projects.project_id)']});
+					tasks['task'][index]['totalProject'] += this['COUNT(projects.project_id)'];
+				});
+				var tempCategories = [];
+				tempData = [];
+				var thisProjectTotal = tasks['task'][index]['totalProject'];
+				$.each(tasks['task'][index].projects, function() {
+					tempCategories.push(this.name);
+
+					// Drilldowns must go in 'data' object
+					// tempData.push({name : this.name, y: Math.round((this.count/thisProjectTotal) * 100), drilldown : {name: 'Test drill', categories: ['Test'], data: [{name : 'Test 1', y: 100}], color: colors[2]}});
+
+					tempData.push({name : this.name, y: Math.round((this.count/thisProjectTotal) * 100)});
+					tasks['task'][index].drilldown = {name: 'Project Breakdown for '+ tasks.task[index].task_name, categories: tempCategories, data: tempData, color: colors[1]};
+				});
+				gotProjects = true;
+			});
+			categories.push(this.task_name);
+
+		});
+});
 	$('#changeChart').on('click', function(event){
 		
 		event.preventDefault();
@@ -37,9 +74,7 @@ $(document).ready(function() {
 		series.addPoint({name: 'New Point', color: colors[Math.round(Math.random() * 10)], y: (Math.random() * 100)}, true);
 	
 	});
-      
-});
-
+}
 function changeType(chart, newType)
 {
 	var serie;
@@ -63,49 +98,6 @@ function changeType(chart, newType)
    chart.redraw();
 }
 
-socket.on('getGraph', function(graphJSON){
-	totalTask = 0
-	categories = [];
-
-	tasks = JSON.parse(graphJSON);
-	//alert(Object.keys(tasks.task[0]));
-	$.each(tasks.task, function(index, value){
-	
-		totalTask += this['COUNT(tasks.id)'];
-		this.projects = [];
-		
-		
-		socket.emit('getTasksProjectBreakdown', {task: this.task_id, employee: this.employee_id}, function(projectJSON){
-			tasks['task'][index]['totalProject'] = 0;
-		
-			var projectsS = JSON.parse(projectJSON);
-			$.each(projectsS.project, function(){
-			
-				tasks['task'][index]['projects'].push({name: this.project_name, count: this['COUNT(projects.project_id)']});
-				tasks['task'][index]['totalProject'] += this['COUNT(projects.project_id)'];
-				
-			
-			});
-			
-			var tempCategories = [];
-			var tempData = [];
-			var thisProjectTotal = tasks['task'][index]['totalProject'];
-			$.each(tasks['task'][index].projects, function() {
-				tempCategories.push(this.name);
-				tempData.push({name : this.name, y: Math.round((this.count/thisProjectTotal) * 100)});
-				tasks['task'][index].drilldown = {name: 'Project Breakdown for '+ tasks.task[index].task_name, categories: tempCategories, data: tempData, color: colors[1]};
-			});
-			
-			gotProjects = true;
-		
-		});
-		
-		categories.push(this.task_name);
-
-	});
-
-
-});
 	
 socket.on('graphReady', function(){
 	data = [];
@@ -113,10 +105,8 @@ socket.on('graphReady', function(){
 	$.each(tasks.task, function(index, value) {
 		this['y'] = Math.round((this['COUNT(tasks.id)'] / totalTask) * 100);
 		data.push({name: this['task_name'], y: this['y'], color: colors[index], drilldown: this.drilldown});
-		
 	});
     var name = 'User Workload by Task and Project';
-   
    function setChart(type, name, categories, data, color) {
       chart.xAxis[0].setCategories(categories);
       chart.series[0].remove();
@@ -127,20 +117,19 @@ socket.on('graphReady', function(){
          color: color || 'white'
       });
    }
-   
    chart = new Highcharts.Chart({
       chart: {
          renderTo: 'graphContainer',
          type: 'pie',
       },
       title: {
-         text: 'User Workload by Task, E&oacute;in Martin'
+         text: 'User Workload by Task, CEO John'
       },
       subtitle: {
          text: 'Click the columns to view projects. Click again to view tasks.'
       },
       xAxis: {
-         categories: categories                     
+         categories: categories
       },
       yAxis: {
          title: {
@@ -174,7 +163,7 @@ socket.on('graphReady', function(){
                	  var point = this.point;
                   return point.name;
                }
-            }             
+            }
          },
          column: {
          	allowPointSelect: true,

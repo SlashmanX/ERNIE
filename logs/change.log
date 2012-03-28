@@ -56,3 +56,1340 @@
 {"level":"info","message":"User CEO John finished editing date_worked which now has a value of 22/02/2012"}
 {"level":"info","message":"User CEO John finished editing date_worked which now has a value of 22/02/2012"}
 {"level":"info","message":"User Employee Anthony finished editing projectInput which now has a value of "}
+{"date":"Tue, 13 Mar 2012 14:20:46 GMT","userID":"1","userName":"CEO John","inputID":"projectInput","level":"info","message":"Started Editing"}
+{"level":"info","message":"User CEO John finished editing projectInput which now has a value of 2011114 - ThirdForce Arabic"}
+{"date":"Tue, 13 Mar 2012 14:20:51 GMT","userID":"1","userName":"CEO John","inputID":"date_worked","level":"info","message":"Started Editing"}
+{"level":"info","message":"User CEO John finished editing date_worked which now has a value of "}
+{"date":"Thu, 15 Mar 2012 14:41:01 GMT","userID":"1","userName":"CEO John","level":"info","message":"Started Editing"}
+{"level":"info","message":"User CEO John finished editing undefined which now has a value of "}
+{"date":"Thu, 15 Mar 2012 14:41:33 GMT","userID":"1","userName":"CEO John","level":"info","message":"Started Editing"}
+{"level":"info","message":"User CEO John finished editing undefined which now has a value of "}
+{"date":"Thu, 15 Mar 2012 14:42:37 GMT","userID":"1","userName":"CEO John","inputID":"startTime","level":"info","message":"Started Editing"}
+{"level":"info","message":"User CEO John finished editing startTime which now has a value of 09:15"}
+{"date":"Thu, 15 Mar 2012 14:42:40 GMT","userID":"1","userName":"CEO John","inputID":"endTime","level":"info","message":"Started Editing"}
+{"level":"info","message":"User CEO John finished editing endTime which now has a value of 09:15"}
+{"date":"Thu, 15 Mar 2012 14:42:44 GMT","userID":"1","userName":"CEO John","inputID":"startTime","level":"info","message":"Started Editing"}
+{"date":"Thu, 15 Mar 2012 14:42:47 GMT","userID":"5","userName":"Employee Anthony","inputID":"startTime","level":"info","message":"Started Editing"}
+{"level":"info","message":"User Employee Anthony finished editing startTime which now has a value of 09:jk"}
+{"date":"Thu, 15 Mar 2012 14:42:51 GMT","userID":"5","userName":"Employee Anthony","inputID":"endTime","level":"info","message":"Started Editing"}
+{"level":"info","message":"User CEO John finished editing startTime which now has a value of 09:jk"}
+{"level":"info","message":"User Employee Anthony finished editing endTime which now has a value of 09:09"}
+{"date":"Thu, 15 Mar 2012 14:49:33 GMT","userID":"5","userName":"Employee Anthony","inputID":"projectInput","level":"info","message":"Started Editing"}
+{"date":"Thu, 15 Mar 2012 14:51:07 GMT","userID":"1","userName":"CEO John","inputID":"startTime","level":"info","message":"Started Editing"}
+{"level":"info","message":"User CEO John finished editing startTime which now has a value of 09:jk"}
+{"level":"info","message":"User Employee Anthony finished editing projectInput which now has a value of b"}
+{"date":"Wed, 21 Mar 2012 13:13:29 GMT","userID":"1","userName":"CEO John","inputID":"projectInput","level":"info","message":"Started Editing"}
+{"level":"info","message":"User CEO John finished editing projectInput which now has a value of 2011114 - ThirdForce Arabic"}
+{"date":"Wed, 21 Mar 2012 13:13:41 GMT","userID":"1","userName":"CEO John","inputID":"date_worked","level":"info","message":"Started Editing"}
+{"level":"info","message":"User CEO John finished editing date_worked which now has a value of "}
+{"date":"Wed, 21 Mar 2012 14:00:21 GMT","userID":"1","userName":"CEO John","inputID":"startTime","level":"info","message":"Started Editing"}
+{"date":"Wed, 21 Mar 2012 14:00:21 GMT","userID":"1","userName":"CEO John","inputID":"startTime","level":"info","message":"Started Editing"}
+{"date":"Wed, 21 Mar 2012 14:00:22 GMT","userID":"5","userName":"Employee Anthony","inputID":"startTime","level":"info","message":"Started Editing"}
+{"date":"Wed, 21 Mar 2012 14:00:22 GMT","userID":"5","userName":"Employee Anthony","inputID":"startTime","level":"info","message":"Started Editing"}
+{"level":"info","message":"User Employee Anthony finished editing startTime which now has a value of 09:00"}
+{"level":"info","message":"User Employee Anthony finished editing startTime which now has a value of 09:00"}
+{"date":"Wed, 21 Mar 2012 14:00:24 GMT","userID":"5","userName":"Employee Anthony","inputID":"endTime","level":"info","message":"Started Editing"}
+{"date":"Wed, 21 Mar 2012 14:00:24 GMT","userID":"5","userName":"Employee Anthony","inputID":"endTime","level":"info","message":"Started Editing"}
+{"level":"info","message":"User Employee Anthony finished editing endTime which now has a value of 09:15"}
+{"level":"info","message":"User Employee Anthony finished editing endTime which now has a value of 09:15"}
+{"date":"Wed, 21 Mar 2012 14:00:26 GMT","userID":"5","userName":"Employee Anthony","inputID":"startTime","level":"info","message":"Started Editing"}
+{"date":"Wed, 21 Mar 2012 14:00:26 GMT","userID":"5","userName":"Employee Anthony","inputID":"startTime","level":"info","message":"Started Editing"}
+{"level":"info","message":"User CEO John finished editing startTime which now has a value of 09:00dg"}
+{"level":"info","message":"User CEO John finished editing startTime which now has a value of 09:00dg"}
+{"date":"Wed, 21 Mar 2012 14:00:28 GMT","userID":"1","userName":"CEO John","inputID":"endTime","level":"info","message":"Started Editing"}
+{"date":"Wed, 21 Mar 2012 14:00:28 GMT","userID":"1","userName":"CEO John","inputID":"endTime","level":"info","message":"Started Editing"}
+{"level":"info","message":"User CEO John finished editing endTime which now has a value of 09:15"}
+{"level":"info","message":"User CEO John finished editing endTime which now has a value of 09:15"}
+{"date":"Wed, 21 Mar 2012 14:00:29 GMT","userID":"1","userName":"CEO John","inputID":"startTime","level":"info","message":"Started Editing"}
+{"date":"Wed, 21 Mar 2012 14:00:29 GMT","userID":"1","userName":"CEO John","inputID":"startTime","level":"info","message":"Started Editing"}
+{"level":"info","message":"User CEO John finished editing startTime which now has a value of 09:00"}
+{"level":"info","message":"User CEO John finished editing startTime which now has a value of 09:00"}
+{"date":"Wed, 21 Mar 2012 14:01:19 GMT","userID":"1","userName":"CEO John","inputID":"startTime","level":"info","message":"Started Editing"}
+{"date":"Wed, 21 Mar 2012 14:01:19 GMT","userID":"1","userName":"CEO John","inputID":"startTime","level":"info","message":"Started Editing"}
+{"date":"Wed, 21 Mar 2012 14:11:17 GMT","userID":"1","userName":"CEO John","inputID":"projectInput","level":"info","message":"Started Editing"}
+{"level":"info","message":"User CEO John finished editing projectInput which now has a value of 2011114 - ThirdForce Arabic"}
+{"date":"Wed, 21 Mar 2012 14:11:21 GMT","userID":"1","userName":"CEO John","inputID":"projectInput","level":"info","message":"Started Editing"}
+{"level":"info","message":"User CEO John finished editing projectInput which now has a value of "}
+{"date":"Wed, 21 Mar 2012 14:12:12 GMT","userID":"1","userName":"CEO John","inputID":"projectInput","level":"info","message":"Started Editing"}
+{"date":"Wed, 21 Mar 2012 14:14:50 GMT","userID":"1","userName":"CEO John","inputID":"projectInput","level":"info","message":"Started Editing"}
+{"level":"info","message":"User CEO John finished editing projectInput which now has a value of "}
+{"date":"Wed, 21 Mar 2012 14:14:53 GMT","userID":"1","userName":"CEO John","inputID":"projectInput","level":"info","message":"Started Editing"}
+{"level":"info","message":"User CEO John finished editing projectInput which now has a value of 2"}
+{"date":"Wed, 21 Mar 2012 14:15:10 GMT","userID":"1","userName":"CEO John","inputID":"newSessionName","level":"info","message":"Started Editing"}
+{"level":"info","message":"User CEO John finished editing newSessionName which now has a value of Hello"}
+{"date":"Wed, 21 Mar 2012 14:15:13 GMT","userID":"1","userName":"CEO John","inputID":"sessionURL","level":"info","message":"Started Editing"}
+{"date":"Wed, 21 Mar 2012 14:15:30 GMT","userID":"1","userName":"CEO John","level":"info","message":"Started Editing"}
+{"level":"info","message":"User CEO John finished editing undefined which now has a value of "}
+{"date":"Wed, 21 Mar 2012 14:15:32 GMT","userID":"1","userName":"CEO John","level":"info","message":"Started Editing"}
+{"date":"Wed, 21 Mar 2012 14:15:37 GMT","userID":"5","userName":"Employee Anthony","level":"info","message":"Started Editing"}
+{"level":"info","message":"User CEO John finished editing undefined which now has a value of "}
+{"date":"Wed, 21 Mar 2012 14:15:44 GMT","userID":"1","userName":"CEO John","inputID":"projectInput","level":"info","message":"Started Editing"}
+{"level":"info","message":"User CEO John finished editing projectInput which now has a value of 2"}
+{"date":"Wed, 21 Mar 2012 14:15:50 GMT","userID":"1","userName":"CEO John","inputID":"projectInput","level":"info","message":"Started Editing"}
+{"date":"Wed, 21 Mar 2012 14:15:50 GMT","userID":"1","userName":"CEO John","inputID":"projectInput","level":"info","message":"Started Editing"}
+{"level":"info","message":"User CEO John finished editing projectInput which now has a value of 2"}
+{"level":"info","message":"User CEO John finished editing projectInput which now has a value of 2"}
+{"date":"Wed, 21 Mar 2012 14:15:55 GMT","userID":"1","userName":"CEO John","inputID":"date_worked","level":"info","message":"Started Editing"}
+{"date":"Wed, 21 Mar 2012 14:15:55 GMT","userID":"1","userName":"CEO John","inputID":"date_worked","level":"info","message":"Started Editing"}
+{"level":"info","message":"User CEO John finished editing date_worked which now has a value of "}
+{"level":"info","message":"User CEO John finished editing date_worked which now has a value of "}
+{"date":"Wed, 21 Mar 2012 14:16:20 GMT","userID":"1","userName":"CEO John","level":"info","message":"Started Editing"}
+{"level":"info","message":"User CEO John finished editing undefined which now has a value of "}
+{"date":"Wed, 21 Mar 2012 14:16:26 GMT","userID":"1","userName":"CEO John","inputID":"newSessionName","level":"info","message":"Started Editing"}
+{"level":"info","message":"User CEO John finished editing newSessionName which now has a value of WhyForm"}
+{"date":"Wed, 21 Mar 2012 14:16:30 GMT","userID":"1","userName":"CEO John","inputID":"sessionURL","level":"info","message":"Started Editing"}
+{"date":"Wed, 21 Mar 2012 14:17:45 GMT","userID":"1","userName":"CEO John","inputID":"newSessionName","level":"info","message":"Started Editing"}
+{"level":"info","message":"User CEO John finished editing newSessionName which now has a value of Fixed"}
+{"date":"Wed, 21 Mar 2012 14:17:48 GMT","userID":"1","userName":"CEO John","inputID":"sessionURL","level":"info","message":"Started Editing"}
+{"date":"Wed, 21 Mar 2012 14:17:59 GMT","userID":"1","userName":"CEO John","inputID":"projectInput","level":"info","message":"Started Editing"}
+{"date":"Wed, 21 Mar 2012 14:17:59 GMT","userID":"1","userName":"CEO John","inputID":"projectInput","level":"info","message":"Started Editing"}
+{"level":"info","message":"User CEO John finished editing projectInput which now has a value of 2011114 - ThirdForce Arabic"}
+{"level":"info","message":"User CEO John finished editing projectInput which now has a value of 2011114 - ThirdForce Arabic"}
+{"date":"Wed, 21 Mar 2012 14:18:10 GMT","userID":"1","userName":"CEO John","inputID":"startTime","level":"info","message":"Started Editing"}
+{"date":"Wed, 21 Mar 2012 14:18:10 GMT","userID":"1","userName":"CEO John","inputID":"startTime","level":"info","message":"Started Editing"}
+{"date":"Wed, 21 Mar 2012 14:18:12 GMT","userID":"5","userName":"Employee Anthony","inputID":"startTime","level":"info","message":"Started Editing"}
+{"date":"Wed, 21 Mar 2012 14:18:12 GMT","userID":"5","userName":"Employee Anthony","inputID":"startTime","level":"info","message":"Started Editing"}
+{"level":"info","message":"User CEO John finished editing startTime which now has a value of 09:00"}
+{"level":"info","message":"User CEO John finished editing startTime which now has a value of 09:00"}
+{"date":"Wed, 21 Mar 2012 14:20:11 GMT","userID":"1","userName":"CEO John","inputID":"newSessionName","level":"info","message":"Started Editing"}
+{"date":"Wed, 21 Mar 2012 14:20:13 GMT","userID":"1","userName":"CEO John","inputID":"sessionURL","level":"info","message":"Started Editing"}
+{"level":"info","message":"User CEO John finished editing newSessionName which now has a value of "}
+{"level":"info","message":"User Employee Anthony finished editing startTime which now has a value of 09:00"}
+{"level":"info","message":"User Employee Anthony finished editing startTime which now has a value of 09:00"}
+{"date":"Wed, 21 Mar 2012 14:20:22 GMT","userID":"1","userName":"CEO John","inputID":"projectInput","level":"info","message":"Started Editing"}
+{"date":"Wed, 21 Mar 2012 14:20:22 GMT","userID":"1","userName":"CEO John","inputID":"projectInput","level":"info","message":"Started Editing"}
+{"level":"info","message":"User CEO John finished editing projectInput which now has a value of 2011114 - ThirdForce Arabic"}
+{"level":"info","message":"User CEO John finished editing projectInput which now has a value of 2011114 - ThirdForce Arabic"}
+{"date":"Wed, 21 Mar 2012 14:20:31 GMT","userID":"1","userName":"CEO John","inputID":"date_worked","level":"info","message":"Started Editing"}
+{"date":"Wed, 21 Mar 2012 14:20:31 GMT","userID":"1","userName":"CEO John","inputID":"date_worked","level":"info","message":"Started Editing"}
+{"level":"info","message":"User CEO John finished editing date_worked which now has a value of "}
+{"level":"info","message":"User CEO John finished editing date_worked which now has a value of "}
+{"date":"Wed, 21 Mar 2012 14:20:34 GMT","userID":"1","userName":"CEO John","inputID":"startTime","level":"info","message":"Started Editing"}
+{"date":"Wed, 21 Mar 2012 14:20:34 GMT","userID":"1","userName":"CEO John","inputID":"startTime","level":"info","message":"Started Editing"}
+{"level":"info","message":"User CEO John finished editing startTime which now has a value of 09:00dfgfdg"}
+{"level":"info","message":"User CEO John finished editing startTime which now has a value of 09:00dfgfdg"}
+{"date":"Wed, 21 Mar 2012 14:20:38 GMT","userID":"1","userName":"CEO John","inputID":"endTime","level":"info","message":"Started Editing"}
+{"date":"Wed, 21 Mar 2012 14:20:38 GMT","userID":"1","userName":"CEO John","inputID":"endTime","level":"info","message":"Started Editing"}
+{"level":"info","message":"User CEO John finished editing endTime which now has a value of 09:15dfgfdggdfg"}
+{"level":"info","message":"User CEO John finished editing endTime which now has a value of 09:15dfgfdggdfg"}
+{"date":"Wed, 21 Mar 2012 14:20:44 GMT","userID":"1","userName":"CEO John","inputID":"startTime","level":"info","message":"Started Editing"}
+{"date":"Wed, 21 Mar 2012 14:20:44 GMT","userID":"1","userName":"CEO John","inputID":"startTime","level":"info","message":"Started Editing"}
+{"level":"info","message":"User CEO John finished editing startTime which now has a value of 09:00dfgfdg"}
+{"level":"info","message":"User CEO John finished editing startTime which now has a value of 09:00dfgfdg"}
+{"date":"Wed, 21 Mar 2012 14:21:44 GMT","userID":"1","userName":"CEO John","inputID":"newSessionName","level":"info","message":"Started Editing"}
+{"date":"Wed, 21 Mar 2012 14:21:45 GMT","userID":"1","userName":"CEO John","inputID":"sessionURL","level":"info","message":"Started Editing"}
+{"level":"info","message":"User CEO John finished editing newSessionName which now has a value of "}
+{"date":"Wed, 21 Mar 2012 14:21:54 GMT","userID":"1","userName":"CEO John","inputID":"projectInput","level":"info","message":"Started Editing"}
+{"date":"Wed, 21 Mar 2012 14:21:54 GMT","userID":"1","userName":"CEO John","inputID":"projectInput","level":"info","message":"Started Editing"}
+{"level":"info","message":"User CEO John finished editing projectInput which now has a value of 2011114 - ThirdForce Arabic"}
+{"level":"info","message":"User CEO John finished editing projectInput which now has a value of 2011114 - ThirdForce Arabic"}
+{"date":"Wed, 21 Mar 2012 14:21:59 GMT","userID":"1","userName":"CEO John","inputID":"startTime","level":"info","message":"Started Editing"}
+{"date":"Wed, 21 Mar 2012 14:21:59 GMT","userID":"1","userName":"CEO John","inputID":"startTime","level":"info","message":"Started Editing"}
+{"level":"info","message":"User CEO John finished editing startTime which now has a value of 09:00dskljdsf"}
+{"level":"info","message":"User CEO John finished editing startTime which now has a value of 09:00dskljdsf"}
+{"date":"Wed, 21 Mar 2012 14:22:02 GMT","userID":"1","userName":"CEO John","inputID":"endTime","level":"info","message":"Started Editing"}
+{"date":"Wed, 21 Mar 2012 14:22:02 GMT","userID":"1","userName":"CEO John","inputID":"endTime","level":"info","message":"Started Editing"}
+{"level":"info","message":"User CEO John finished editing endTime which now has a value of 09:15"}
+{"level":"info","message":"User CEO John finished editing endTime which now has a value of 09:15"}
+{"date":"Wed, 21 Mar 2012 14:22:05 GMT","userID":"1","userName":"CEO John","inputID":"newSessionName","level":"info","message":"Started Editing"}
+{"date":"Wed, 21 Mar 2012 14:22:05 GMT","userID":"1","userName":"CEO John","inputID":"newSessionName","level":"info","message":"Started Editing"}
+{"level":"info","message":"User CEO John finished editing newSessionName which now has a value of jkllkjlkj"}
+{"level":"info","message":"User CEO John finished editing newSessionName which now has a value of jkllkjlkj"}
+{"date":"Wed, 21 Mar 2012 14:22:14 GMT","userID":"1","userName":"CEO John","inputID":"endTime","level":"info","message":"Started Editing"}
+{"date":"Wed, 21 Mar 2012 14:22:14 GMT","userID":"1","userName":"CEO John","inputID":"endTime","level":"info","message":"Started Editing"}
+{"level":"info","message":"User CEO John finished editing endTime which now has a value of 09:15jklj"}
+{"level":"info","message":"User CEO John finished editing endTime which now has a value of 09:15jklj"}
+{"date":"Wed, 21 Mar 2012 14:22:16 GMT","userID":"1","userName":"CEO John","inputID":"startTime","level":"info","message":"Started Editing"}
+{"date":"Wed, 21 Mar 2012 14:22:16 GMT","userID":"1","userName":"CEO John","inputID":"startTime","level":"info","message":"Started Editing"}
+{"level":"info","message":"User CEO John finished editing startTime which now has a value of 09:00dskljdsfjklj"}
+{"level":"info","message":"User CEO John finished editing startTime which now has a value of 09:00dskljdsfjklj"}
+{"date":"Wed, 21 Mar 2012 14:22:18 GMT","userID":"1","userName":"CEO John","inputID":"date_worked","level":"info","message":"Started Editing"}
+{"date":"Wed, 21 Mar 2012 14:22:18 GMT","userID":"1","userName":"CEO John","inputID":"date_worked","level":"info","message":"Started Editing"}
+{"level":"info","message":"User CEO John finished editing date_worked which now has a value of "}
+{"level":"info","message":"User CEO John finished editing date_worked which now has a value of "}
+{"date":"Wed, 21 Mar 2012 14:22:39 GMT","userID":"1","userName":"CEO John","inputID":"newSessionName","level":"info","message":"Started Editing"}
+{"level":"info","message":"User CEO John finished editing newSessionName which now has a value of damn"}
+{"date":"Wed, 21 Mar 2012 14:22:43 GMT","userID":"1","userName":"CEO John","inputID":"sessionURL","level":"info","message":"Started Editing"}
+{"date":"Wed, 21 Mar 2012 14:22:50 GMT","userID":"1","userName":"CEO John","inputID":"projectInput","level":"info","message":"Started Editing"}
+{"date":"Wed, 21 Mar 2012 14:22:50 GMT","userID":"1","userName":"CEO John","inputID":"projectInput","level":"info","message":"Started Editing"}
+{"level":"info","message":"User CEO John finished editing projectInput which now has a value of 2011114 - ThirdForce Arabic"}
+{"level":"info","message":"User CEO John finished editing projectInput which now has a value of 2011114 - ThirdForce Arabic"}
+{"date":"Wed, 21 Mar 2012 14:22:57 GMT","userID":"1","userName":"CEO John","inputID":"date_worked","level":"info","message":"Started Editing"}
+{"date":"Wed, 21 Mar 2012 14:22:57 GMT","userID":"1","userName":"CEO John","inputID":"date_worked","level":"info","message":"Started Editing"}
+{"level":"info","message":"User CEO John finished editing date_worked which now has a value of "}
+{"level":"info","message":"User CEO John finished editing date_worked which now has a value of "}
+{"date":"Wed, 21 Mar 2012 14:23:02 GMT","userID":"1","userName":"CEO John","inputID":"date_worked","level":"info","message":"Started Editing"}
+{"date":"Wed, 21 Mar 2012 14:23:02 GMT","userID":"1","userName":"CEO John","inputID":"date_worked","level":"info","message":"Started Editing"}
+{"level":"info","message":"User CEO John finished editing date_worked which now has a value of 06/03/2012"}
+{"level":"info","message":"User CEO John finished editing date_worked which now has a value of 06/03/2012"}
+{"date":"Wed, 21 Mar 2012 14:23:05 GMT","userID":"1","userName":"CEO John","inputID":"startTime","level":"info","message":"Started Editing"}
+{"date":"Wed, 21 Mar 2012 14:23:05 GMT","userID":"1","userName":"CEO John","inputID":"startTime","level":"info","message":"Started Editing"}
+{"level":"info","message":"User CEO John finished editing startTime which now has a value of 09:00iou"}
+{"level":"info","message":"User CEO John finished editing startTime which now has a value of 09:00iou"}
+{"date":"Wed, 21 Mar 2012 14:23:09 GMT","userID":"1","userName":"CEO John","inputID":"endTime","level":"info","message":"Started Editing"}
+{"date":"Wed, 21 Mar 2012 14:23:09 GMT","userID":"1","userName":"CEO John","inputID":"endTime","level":"info","message":"Started Editing"}
+{"level":"info","message":"User CEO John finished editing endTime which now has a value of lol09:15"}
+{"level":"info","message":"User CEO John finished editing endTime which now has a value of lol09:15"}
+{"date":"Wed, 21 Mar 2012 14:23:25 GMT","userID":"1","userName":"CEO John","inputID":"projectInput","level":"info","message":"Started Editing"}
+{"date":"Wed, 21 Mar 2012 14:23:25 GMT","userID":"1","userName":"CEO John","inputID":"projectInput","level":"info","message":"Started Editing"}
+{"level":"info","message":"User CEO John finished editing projectInput which now has a value of 2010159 - BOE KidDesk"}
+{"level":"info","message":"User CEO John finished editing projectInput which now has a value of 2010159 - BOE KidDesk"}
+{"date":"Wed, 21 Mar 2012 14:24:24 GMT","userID":"1","userName":"CEO John","inputID":"newSessionName","level":"info","message":"Started Editing"}
+{"date":"Wed, 21 Mar 2012 14:24:25 GMT","userID":"1","userName":"CEO John","inputID":"sessionURL","level":"info","message":"Started Editing"}
+{"level":"info","message":"User CEO John finished editing newSessionName which now has a value of "}
+{"date":"Wed, 21 Mar 2012 14:24:31 GMT","userID":"1","userName":"CEO John","inputID":"projectInput","level":"info","message":"Started Editing"}
+{"date":"Wed, 21 Mar 2012 14:24:31 GMT","userID":"1","userName":"CEO John","inputID":"projectInput","level":"info","message":"Started Editing"}
+{"level":"info","message":"User CEO John finished editing projectInput which now has a value of 2011114 - ThirdForce Arabic"}
+{"level":"info","message":"User CEO John finished editing projectInput which now has a value of 2011114 - ThirdForce Arabic"}
+{"date":"Wed, 21 Mar 2012 14:24:42 GMT","userID":"1","userName":"CEO John","inputID":"projectInput","level":"info","message":"Started Editing"}
+{"date":"Wed, 21 Mar 2012 14:24:42 GMT","userID":"1","userName":"CEO John","inputID":"projectInput","level":"info","message":"Started Editing"}
+{"level":"info","message":"User CEO John finished editing projectInput which now has a value of 2011114 - ThirdForce Arabic"}
+{"level":"info","message":"User CEO John finished editing projectInput which now has a value of 2011114 - ThirdForce Arabic"}
+{"date":"Wed, 21 Mar 2012 14:25:35 GMT","userID":"1","userName":"CEO John","inputID":"newSessionName","level":"info","message":"Started Editing"}
+{"date":"Wed, 21 Mar 2012 14:25:36 GMT","userID":"1","userName":"CEO John","inputID":"sessionURL","level":"info","message":"Started Editing"}
+{"level":"info","message":"User CEO John finished editing newSessionName which now has a value of "}
+{"date":"Wed, 21 Mar 2012 14:25:49 GMT","userID":"1","userName":"CEO John","inputID":"projectInput","level":"info","message":"Started Editing"}
+{"date":"Wed, 21 Mar 2012 14:25:49 GMT","userID":"1","userName":"CEO John","inputID":"projectInput","level":"info","message":"Started Editing"}
+{"level":"info","message":"User CEO John finished editing projectInput which now has a value of 2011114 - ThirdForce Arabic"}
+{"level":"info","message":"User CEO John finished editing projectInput which now has a value of 2011114 - ThirdForce Arabic"}
+{"date":"Wed, 21 Mar 2012 14:25:55 GMT","userID":"1","userName":"CEO John","inputID":"date_worked","level":"info","message":"Started Editing"}
+{"date":"Wed, 21 Mar 2012 14:25:55 GMT","userID":"1","userName":"CEO John","inputID":"date_worked","level":"info","message":"Started Editing"}
+{"level":"info","message":"User CEO John finished editing date_worked which now has a value of "}
+{"level":"info","message":"User CEO John finished editing date_worked which now has a value of "}
+{"date":"Wed, 21 Mar 2012 14:26:17 GMT","userID":"1","userName":"CEO John","inputID":"newSessionName","level":"info","message":"Started Editing"}
+{"level":"info","message":"User CEO John finished editing newSessionName which now has a value of new"}
+{"date":"Wed, 21 Mar 2012 14:26:26 GMT","userID":"1","userName":"CEO John","inputID":"sessionURL","level":"info","message":"Started Editing"}
+{"date":"Wed, 21 Mar 2012 14:26:33 GMT","userID":"1","userName":"CEO John","inputID":"projectInput","level":"info","message":"Started Editing"}
+{"date":"Wed, 21 Mar 2012 14:26:33 GMT","userID":"1","userName":"CEO John","inputID":"projectInput","level":"info","message":"Started Editing"}
+{"level":"info","message":"User CEO John finished editing projectInput which now has a value of 2011114 - ThirdForce Arabic"}
+{"level":"info","message":"User CEO John finished editing projectInput which now has a value of 2011114 - ThirdForce Arabic"}
+{"date":"Wed, 21 Mar 2012 14:26:37 GMT","userID":"1","userName":"CEO John","inputID":"date_worked","level":"info","message":"Started Editing"}
+{"date":"Wed, 21 Mar 2012 14:26:37 GMT","userID":"1","userName":"CEO John","inputID":"date_worked","level":"info","message":"Started Editing"}
+{"level":"info","message":"User CEO John finished editing date_worked which now has a value of "}
+{"level":"info","message":"User CEO John finished editing date_worked which now has a value of "}
+{"date":"Wed, 21 Mar 2012 14:26:40 GMT","userID":"1","userName":"CEO John","inputID":"startTime","level":"info","message":"Started Editing"}
+{"date":"Wed, 21 Mar 2012 14:26:40 GMT","userID":"1","userName":"CEO John","inputID":"startTime","level":"info","message":"Started Editing"}
+{"level":"info","message":"User CEO John finished editing startTime which now has a value of 09:00jkjnm"}
+{"level":"info","message":"User CEO John finished editing startTime which now has a value of 09:00jkjnm"}
+{"date":"Wed, 21 Mar 2012 14:26:43 GMT","userID":"1","userName":"CEO John","inputID":"endTime","level":"info","message":"Started Editing"}
+{"date":"Wed, 21 Mar 2012 14:26:43 GMT","userID":"1","userName":"CEO John","inputID":"endTime","level":"info","message":"Started Editing"}
+{"level":"info","message":"User CEO John finished editing endTime which now has a value of 09:15bnbnbn"}
+{"level":"info","message":"User CEO John finished editing endTime which now has a value of 09:15bnbnbn"}
+{"date":"Wed, 21 Mar 2012 14:26:46 GMT","userID":"1","userName":"CEO John","inputID":"date_worked","level":"info","message":"Started Editing"}
+{"date":"Wed, 21 Mar 2012 14:26:46 GMT","userID":"1","userName":"CEO John","inputID":"date_worked","level":"info","message":"Started Editing"}
+{"level":"info","message":"User CEO John finished editing date_worked which now has a value of 13/03/2012"}
+{"level":"info","message":"User CEO John finished editing date_worked which now has a value of 13/03/2012"}
+{"date":"Wed, 21 Mar 2012 14:26:51 GMT","userID":"5","userName":"Employee Anthony","inputID":"date_worked","level":"info","message":"Started Editing"}
+{"date":"Wed, 21 Mar 2012 14:26:51 GMT","userID":"5","userName":"Employee Anthony","inputID":"date_worked","level":"info","message":"Started Editing"}
+{"date":"Wed, 21 Mar 2012 14:26:54 GMT","userID":"1","userName":"CEO John","inputID":"date_worked","level":"info","message":"Started Editing"}
+{"date":"Wed, 21 Mar 2012 14:26:54 GMT","userID":"1","userName":"CEO John","inputID":"date_worked","level":"info","message":"Started Editing"}
+{"level":"info","message":"User Employee Anthony finished editing date_worked which now has a value of 05/03/2012"}
+{"level":"info","message":"User Employee Anthony finished editing date_worked which now has a value of 05/03/2012"}
+{"level":"info","message":"User CEO John finished editing date_worked which now has a value of 02/03/2012"}
+{"level":"info","message":"User CEO John finished editing date_worked which now has a value of 02/03/2012"}
+{"date":"Wed, 21 Mar 2012 14:27:00 GMT","userID":"1","userName":"CEO John","inputID":"projectInput","level":"info","message":"Started Editing"}
+{"date":"Wed, 21 Mar 2012 14:27:00 GMT","userID":"1","userName":"CEO John","inputID":"projectInput","level":"info","message":"Started Editing"}
+{"level":"info","message":"User CEO John finished editing projectInput which now has a value of 2010159 - BOE KidDesk"}
+{"level":"info","message":"User CEO John finished editing projectInput which now has a value of 2010159 - BOE KidDesk"}
+{"date":"Wed, 21 Mar 2012 14:30:58 GMT","userID":"1","userName":"CEO John","inputID":"newSessionName","level":"info","message":"Started Editing"}
+{"date":"Wed, 21 Mar 2012 14:31:00 GMT","userID":"1","userName":"CEO John","inputID":"sessionURL","level":"info","message":"Started Editing"}
+{"level":"info","message":"User CEO John finished editing newSessionName which now has a value of "}
+{"date":"Wed, 21 Mar 2012 14:32:27 GMT","userID":"1","userName":"CEO John","inputID":"newSessionName","level":"info","message":"Started Editing"}
+{"level":"info","message":"User CEO John finished editing newSessionName which now has a value of new"}
+{"date":"Wed, 21 Mar 2012 14:32:30 GMT","userID":"1","userName":"CEO John","inputID":"sessionURL","level":"info","message":"Started Editing"}
+{"date":"Wed, 21 Mar 2012 14:34:04 GMT","userID":"5","userName":"Employee Anthony","inputID":"newSessionName","level":"info","message":"Started Editing"}
+{"date":"Wed, 21 Mar 2012 14:34:07 GMT","userID":"1","userName":"CEO John","inputID":"newSessionName","level":"info","message":"Started Editing"}
+{"level":"info","message":"User CEO John finished editing newSessionName which now has a value of new"}
+{"date":"Wed, 21 Mar 2012 14:34:16 GMT","userID":"1","userName":"CEO John","inputID":"sessionURL","level":"info","message":"Started Editing"}
+{"date":"Wed, 21 Mar 2012 14:34:48 GMT","userID":"1","userName":"CEO John","inputID":"newSessionName","level":"info","message":"Started Editing"}
+{"level":"info","message":"User CEO John finished editing newSessionName which now has a value of new"}
+{"date":"Wed, 21 Mar 2012 14:34:53 GMT","userID":"1","userName":"CEO John","inputID":"sessionURL","level":"info","message":"Started Editing"}
+{"date":"Wed, 21 Mar 2012 14:36:13 GMT","userID":"5","userName":"Employee Anthony","inputID":"newSessionName","level":"info","message":"Started Editing"}
+{"level":"info","message":"User Employee Anthony finished editing newSessionName which now has a value of "}
+{"date":"Wed, 21 Mar 2012 14:46:27 GMT","userID":"1","userName":"CEO John","inputID":"newSessionName","level":"info","message":"Started Editing"}
+{"level":"info","message":"User CEO John finished editing newSessionName which now has a value of NewPage"}
+{"date":"Wed, 21 Mar 2012 14:46:58 GMT","userID":"1","userName":"CEO John","inputID":"newSessionName","level":"info","message":"Started Editing"}
+{"level":"info","message":"User CEO John finished editing newSessionName which now has a value of NewPAge"}
+{"date":"Wed, 21 Mar 2012 14:47:00 GMT","userID":"1","userName":"CEO John","inputID":"sessionURL","level":"info","message":"Started Editing"}
+{"date":"Wed, 21 Mar 2012 14:49:12 GMT","userID":"1","userName":"CEO John","inputID":"newSessionName","level":"info","message":"Started Editing"}
+{"date":"Wed, 21 Mar 2012 14:49:13 GMT","userID":"1","userName":"CEO John","inputID":"sessionURL","level":"info","message":"Started Editing"}
+{"level":"info","message":"User CEO John finished editing newSessionName which now has a value of "}
+{"date":"Wed, 21 Mar 2012 14:50:09 GMT","userID":"1","userName":"CEO John","inputID":"newSessionName","level":"info","message":"Started Editing"}
+{"level":"info","message":"User CEO John finished editing newSessionName which now has a value of NewPAge"}
+{"date":"Wed, 21 Mar 2012 14:50:12 GMT","userID":"1","userName":"CEO John","inputID":"sessionURL","level":"info","message":"Started Editing"}
+{"date":"Wed, 21 Mar 2012 14:50:20 GMT","userID":"5","userName":"Employee Anthony","inputID":"taskMain","level":"info","message":"Started Editing"}
+{"level":"info","message":"User Employee Anthony finished editing taskMain which now has a value of 7"}
+{"date":"Wed, 21 Mar 2012 14:50:24 GMT","userID":"5","userName":"Employee Anthony","inputID":"taskSub","level":"info","message":"Started Editing"}
+{"level":"info","message":"User Employee Anthony finished editing taskSub which now has a value of 9"}
+{"date":"Wed, 21 Mar 2012 14:50:26 GMT","userID":"5","userName":"Employee Anthony","inputID":"projectInput","level":"info","message":"Started Editing"}
+{"level":"info","message":"User Employee Anthony finished editing projectInput which now has a value of 2011114 - ThirdForce Arabic"}
+{"date":"Wed, 21 Mar 2012 14:55:56 GMT","userID":"1","userName":"CEO John","inputID":"projectInput","level":"info","message":"Started Editing"}
+{"level":"info","message":"User CEO John finished editing projectInput which now has a value of 2011114 - ThirdForce Arabic"}
+{"date":"Wed, 21 Mar 2012 14:55:57 GMT","userID":"1","userName":"CEO John","inputID":"projectInput","level":"info","message":"Started Editing"}
+{"level":"info","message":"User CEO John finished editing projectInput which now has a value of f"}
+{"level":"info","message":"User CEO John finished editing projectInput which now has a value of 2011114 - ThirdForce Arabic"}
+{"date":"Wed, 21 Mar 2012 14:56:06 GMT","userID":"5","userName":"Employee Anthony","inputID":"projectInput","level":"info","message":"Started Editing"}
+{"level":"info","message":"User Employee Anthony finished editing projectInput which now has a value of 56+"}
+{"date":"Wed, 21 Mar 2012 14:56:38 GMT","userID":"1","userName":"CEO John","inputID":"projectInput","level":"info","message":"Started Editing"}
+{"level":"info","message":"User CEO John finished editing projectInput which now has a value of 56+"}
+{"date":"Wed, 21 Mar 2012 14:56:40 GMT","userID":"1","userName":"CEO John","inputID":"projectInput","level":"info","message":"Started Editing"}
+{"level":"info","message":"User CEO John finished editing projectInput which now has a value of 56+"}
+{"date":"Wed, 21 Mar 2012 14:56:42 GMT","userID":"1","userName":"CEO John","inputID":"projectInput","level":"info","message":"Started Editing"}
+{"level":"info","message":"User CEO John finished editing projectInput which now has a value of dgfd"}
+{"date":"Wed, 21 Mar 2012 14:56:46 GMT","userID":"1","userName":"CEO John","inputID":"projectInput","level":"info","message":"Started Editing"}
+{"level":"info","message":"User CEO John finished editing projectInput which now has a value of "}
+{"date":"Wed, 21 Mar 2012 14:56:47 GMT","userID":"1","userName":"CEO John","inputID":"projectInput","level":"info","message":"Started Editing"}
+{"level":"info","message":"User CEO John finished editing projectInput which now has a value of 2011114 - ThirdForce Arabic"}
+{"date":"Wed, 21 Mar 2012 14:56:54 GMT","userID":"5","userName":"Employee Anthony","inputID":"projectInput","level":"info","message":"Started Editing"}
+{"level":"info","message":"User Employee Anthony finished editing projectInput which now has a value of 2011114 - ThirdForce Arabic"}
+{"date":"Wed, 21 Mar 2012 14:56:58 GMT","userID":"5","userName":"Employee Anthony","inputID":"projectInput","level":"info","message":"Started Editing"}
+{"level":"info","message":"User Employee Anthony finished editing projectInput which now has a value of kij"}
+{"date":"Wed, 21 Mar 2012 14:58:34 GMT","userID":"1","userName":"CEO John","inputID":"newSessionName","level":"info","message":"Started Editing"}
+{"date":"Wed, 21 Mar 2012 14:58:36 GMT","userID":"1","userName":"CEO John","inputID":"sessionURL","level":"info","message":"Started Editing"}
+{"date":"Wed, 21 Mar 2012 14:58:45 GMT","userID":"1","userName":"CEO John","inputID":"projectInput","level":"info","message":"Started Editing"}
+{"date":"Wed, 21 Mar 2012 14:58:52 GMT","userID":"1","userName":"CEO John","inputID":"projectInput","level":"info","message":"Started Editing"}
+{"date":"Wed, 21 Mar 2012 14:58:54 GMT","userID":"1","userName":"CEO John","inputID":"projectInput","level":"info","message":"Started Editing"}
+{"date":"Wed, 21 Mar 2012 14:59:06 GMT","userID":"1","userName":"CEO John","inputID":"projectInput","level":"info","message":"Started Editing"}
+{"date":"Wed, 21 Mar 2012 14:59:10 GMT","userID":"1","userName":"CEO John","inputID":"projectInput","level":"info","message":"Started Editing"}
+{"date":"Wed, 21 Mar 2012 14:59:23 GMT","userID":"1","userName":"CEO John","inputID":"newSessionName","level":"info","message":"Started Editing"}
+{"date":"Wed, 21 Mar 2012 14:59:25 GMT","userID":"1","userName":"CEO John","inputID":"sessionURL","level":"info","message":"Started Editing"}
+{"date":"Wed, 21 Mar 2012 14:59:32 GMT","userID":"1","userName":"CEO John","inputID":"projectInput","level":"info","message":"Started Editing"}
+{"date":"Wed, 21 Mar 2012 14:59:37 GMT","userID":"1","userName":"CEO John","inputID":"date_worked","level":"info","message":"Started Editing"}
+{"date":"Wed, 21 Mar 2012 15:00:21 GMT","userID":"1","userName":"CEO John","inputID":"newSessionName","level":"info","message":"Started Editing"}
+{"date":"Wed, 21 Mar 2012 15:00:22 GMT","userID":"1","userName":"CEO John","inputID":"sessionURL","level":"info","message":"Started Editing"}
+{"level":"info","message":"User CEO John finished editing newSessionName which now has a value of "}
+{"date":"Wed, 21 Mar 2012 15:00:27 GMT","userID":"1","userName":"CEO John","inputID":"projectInput","level":"info","message":"Started Editing"}
+{"level":"info","message":"User CEO John finished editing projectInput which now has a value of werwer"}
+{"date":"Wed, 21 Mar 2012 15:00:32 GMT","userID":"1","userName":"CEO John","inputID":"taskMain","level":"info","message":"Started Editing"}
+{"level":"info","message":"User CEO John finished editing taskMain which now has a value of 1"}
+{"date":"Wed, 21 Mar 2012 15:00:34 GMT","userID":"1","userName":"CEO John","inputID":"projectInput","level":"info","message":"Started Editing"}
+{"level":"info","message":"User CEO John finished editing projectInput which now has a value of 2011114 - ThirdForce Arabic"}
+{"date":"Wed, 21 Mar 2012 15:00:46 GMT","userID":"5","userName":"Employee Anthony","inputID":"projectInput","level":"info","message":"Started Editing"}
+{"date":"Wed, 21 Mar 2012 15:00:46 GMT","userID":"5","userName":"Employee Anthony","inputID":"projectInput","level":"info","message":"Started Editing"}
+{"level":"info","message":"User Employee Anthony finished editing projectInput which now has a value of 2011114 - ThirdForce Arabic"}
+{"level":"info","message":"User Employee Anthony finished editing projectInput which now has a value of 2011114 - ThirdForce Arabic"}
+{"date":"Wed, 21 Mar 2012 15:03:30 GMT","userID":"1","userName":"CEO John","inputID":"newSessionName","level":"info","message":"Started Editing"}
+{"date":"Wed, 21 Mar 2012 15:03:31 GMT","userID":"1","userName":"CEO John","inputID":"sessionURL","level":"info","message":"Started Editing"}
+{"level":"info","message":"User CEO John finished editing newSessionName which now has a value of "}
+{"date":"Wed, 21 Mar 2012 15:03:39 GMT","userID":"1","userName":"CEO John","inputID":"projectInput","level":"info","message":"Started Editing"}
+{"level":"info","message":"User CEO John finished editing projectInput which now has a value of 2011114 - ThirdForce Arabic"}
+{"date":"Wed, 21 Mar 2012 15:03:45 GMT","userID":"5","userName":"Employee Anthony","inputID":"projectInput","level":"info","message":"Started Editing"}
+{"date":"Wed, 21 Mar 2012 15:03:45 GMT","userID":"5","userName":"Employee Anthony","inputID":"projectInput","level":"info","message":"Started Editing"}
+{"level":"info","message":"User Employee Anthony finished editing projectInput which now has a value of 2011114 - ThirdForce Arabic"}
+{"level":"info","message":"User Employee Anthony finished editing projectInput which now has a value of 2011114 - ThirdForce Arabic"}
+{"date":"Wed, 21 Mar 2012 15:03:47 GMT","userID":"5","userName":"Employee Anthony","inputID":"projectInput","level":"info","message":"Started Editing"}
+{"date":"Wed, 21 Mar 2012 15:03:47 GMT","userID":"5","userName":"Employee Anthony","inputID":"projectInput","level":"info","message":"Started Editing"}
+{"date":"Wed, 21 Mar 2012 15:05:09 GMT","userID":"1","userName":"CEO John","inputID":"newSessionName","level":"info","message":"Started Editing"}
+{"level":"info","message":"User CEO John finished editing newSessionName which now has a value of new"}
+{"date":"Wed, 21 Mar 2012 15:05:15 GMT","userID":"1","userName":"CEO John","inputID":"sessionURL","level":"info","message":"Started Editing"}
+{"date":"Wed, 21 Mar 2012 15:05:35 GMT","userID":"1","userName":"CEO John","inputID":"projectInput","level":"info","message":"Started Editing"}
+{"date":"Wed, 21 Mar 2012 15:05:35 GMT","userID":"1","userName":"CEO John","inputID":"projectInput","level":"info","message":"Started Editing"}
+{"level":"info","message":"User CEO John finished editing projectInput which now has a value of 2011114 - ThirdForce Arabic"}
+{"level":"info","message":"User CEO John finished editing projectInput which now has a value of 2011114 - ThirdForce Arabic"}
+{"date":"Wed, 21 Mar 2012 15:05:41 GMT","userID":"1","userName":"CEO John","inputID":"projectInput","level":"info","message":"Started Editing"}
+{"date":"Wed, 21 Mar 2012 15:05:41 GMT","userID":"1","userName":"CEO John","inputID":"projectInput","level":"info","message":"Started Editing"}
+{"level":"info","message":"User CEO John finished editing projectInput which now has a value of adasdasd"}
+{"level":"info","message":"User CEO John finished editing projectInput which now has a value of adasdasd"}
+{"date":"Wed, 21 Mar 2012 15:08:17 GMT","userID":"1","userName":"CEO John","inputID":"newSessionName","level":"info","message":"Started Editing"}
+{"date":"Wed, 21 Mar 2012 15:08:18 GMT","userID":"1","userName":"CEO John","inputID":"sessionURL","level":"info","message":"Started Editing"}
+{"level":"info","message":"User CEO John finished editing newSessionName which now has a value of "}
+{"date":"Wed, 21 Mar 2012 15:08:27 GMT","userID":"1","userName":"CEO John","inputID":"projectInput","level":"info","message":"Started Editing"}
+{"date":"Wed, 21 Mar 2012 15:08:27 GMT","userID":"1","userName":"CEO John","inputID":"projectInput","level":"info","message":"Started Editing"}
+{"level":"info","message":"User CEO John finished editing projectInput which now has a value of 2011114 - ThirdForce Arabic"}
+{"level":"info","message":"User CEO John finished editing projectInput which now has a value of 2011114 - ThirdForce Arabic"}
+{"date":"Wed, 21 Mar 2012 15:08:34 GMT","userID":"1","userName":"CEO John","inputID":"projectInput","level":"info","message":"Started Editing"}
+{"date":"Wed, 21 Mar 2012 15:08:34 GMT","userID":"1","userName":"CEO John","inputID":"projectInput","level":"info","message":"Started Editing"}
+{"level":"info","message":"User CEO John finished editing projectInput which now has a value of testing"}
+{"level":"info","message":"User CEO John finished editing projectInput which now has a value of testing"}
+{"date":"Wed, 21 Mar 2012 15:08:41 GMT","userID":"5","userName":"Employee Anthony","inputID":"projectInput","level":"info","message":"Started Editing"}
+{"date":"Wed, 21 Mar 2012 15:08:41 GMT","userID":"5","userName":"Employee Anthony","inputID":"projectInput","level":"info","message":"Started Editing"}
+{"level":"info","message":"User Employee Anthony finished editing projectInput which now has a value of 2011114 - ThirdForce Arabic"}
+{"level":"info","message":"User Employee Anthony finished editing projectInput which now has a value of 2011114 - ThirdForce Arabic"}
+{"date":"Wed, 21 Mar 2012 15:08:45 GMT","userID":"1","userName":"CEO John","inputID":"projectInput","level":"info","message":"Started Editing"}
+{"date":"Wed, 21 Mar 2012 15:08:45 GMT","userID":"1","userName":"CEO John","inputID":"projectInput","level":"info","message":"Started Editing"}
+{"level":"info","message":"User CEO John finished editing projectInput which now has a value of 2011114 - ThirdForce Arabic"}
+{"level":"info","message":"User CEO John finished editing projectInput which now has a value of 2011114 - ThirdForce Arabic"}
+{"date":"Wed, 21 Mar 2012 15:10:40 GMT","userID":"1","userName":"CEO John","inputID":"projectInput","level":"info","message":"Started Editing"}
+{"date":"Wed, 21 Mar 2012 15:10:41 GMT","userID":"1","userName":"CEO John","inputID":"projectInput","level":"info","message":"Started Editing"}
+{"level":"info","message":"User CEO John finished editing projectInput which now has a value of 2011114 - ThirdForce Arabic"}
+{"level":"info","message":"User CEO John finished editing projectInput which now has a value of 2011114 - ThirdForce Arabic"}
+{"date":"Wed, 21 Mar 2012 15:12:45 GMT","userID":"1","userName":"CEO John","inputID":"projectInput","level":"info","message":"Started Editing"}
+{"date":"Wed, 21 Mar 2012 15:12:45 GMT","userID":"1","userName":"CEO John","inputID":"projectInput","level":"info","message":"Started Editing"}
+{"level":"info","message":"User CEO John finished editing projectInput which now has a value of 2011114 - ThirdForce Arabic"}
+{"level":"info","message":"User CEO John finished editing projectInput which now has a value of 2011114 - ThirdForce Arabic"}
+{"date":"Wed, 21 Mar 2012 15:12:47 GMT","userID":"1","userName":"CEO John","inputID":"projectInput","level":"info","message":"Started Editing"}
+{"level":"info","message":"User CEO John finished editing projectInput which now has a value of 2011114 - ThirdForce Arabic"}
+{"date":"Wed, 21 Mar 2012 15:13:21 GMT","userID":"1","userName":"CEO John","inputID":"projectInput","level":"info","message":"Started Editing"}
+{"level":"info","message":"User CEO John finished editing projectInput which now has a value of "}
+{"date":"Wed, 21 Mar 2012 15:13:48 GMT","userID":"1","userName":"CEO John","inputID":"projectInput","level":"info","message":"Started Editing"}
+{"level":"info","message":"User CEO John finished editing projectInput which now has a value of 2011114 - ThirdForce Arabic"}
+{"date":"Wed, 21 Mar 2012 15:13:55 GMT","userID":"1","userName":"CEO John","inputID":"projectInput","level":"info","message":"Started Editing"}
+{"level":"info","message":"User CEO John finished editing projectInput which now has a value of 2010159 - BOE KidDesk"}
+{"date":"Wed, 21 Mar 2012 15:14:01 GMT","userID":"1","userName":"CEO John","inputID":"projectInput","level":"info","message":"Started Editing"}
+{"level":"info","message":"User CEO John finished editing projectInput which now has a value of 2011114 - ThirdForce Arabic"}
+{"date":"Wed, 21 Mar 2012 15:14:09 GMT","userID":"1","userName":"CEO John","inputID":"projectInput","level":"info","message":"Started Editing"}
+{"level":"info","message":"User CEO John finished editing projectInput which now has a value of 2010159 - BOE KidDesk"}
+{"date":"Wed, 21 Mar 2012 15:14:15 GMT","userID":"1","userName":"CEO John","inputID":"projectInput","level":"info","message":"Started Editing"}
+{"level":"info","message":"User CEO John finished editing projectInput which now has a value of 2010159 - BOE KidDesk"}
+{"date":"Wed, 21 Mar 2012 15:14:20 GMT","userID":"1","userName":"CEO John","inputID":"projectInput","level":"info","message":"Started Editing"}
+{"level":"info","message":"User CEO John finished editing projectInput which now has a value of 2010159 - BOE KidDesk"}
+{"level":"info","message":"User CEO John finished editing projectInput which now has a value of "}
+{"date":"Wed, 21 Mar 2012 15:14:30 GMT","userID":"1","userName":"CEO John","inputID":"projectInput","level":"info","message":"Started Editing"}
+{"date":"Wed, 21 Mar 2012 15:14:34 GMT","userID":"1","userName":"CEO John","inputID":"projectInput","level":"info","message":"Started Editing"}
+{"level":"info","message":"User CEO John finished editing projectInput which now has a value of 2011114 - ThirdForce Arabic"}
+{"date":"Wed, 21 Mar 2012 15:15:06 GMT","userID":"1","userName":"CEO John","inputID":"projectInput","level":"info","message":"Started Editing"}
+{"level":"info","message":"User CEO John finished editing projectInput which now has a value of 2011114 - ThirdForce Arabic"}
+{"date":"Wed, 21 Mar 2012 15:15:14 GMT","userID":"1","userName":"CEO John","inputID":"projectInput","level":"info","message":"Started Editing"}
+{"level":"info","message":"User CEO John finished editing projectInput which now has a value of 2011114 - ThirdForce Arabic"}
+{"date":"Wed, 21 Mar 2012 15:15:20 GMT","userID":"1","userName":"CEO John","inputID":"projectInput","level":"info","message":"Started Editing"}
+{"level":"info","message":"User CEO John finished editing projectInput which now has a value of rewr"}
+{"date":"Wed, 21 Mar 2012 15:15:24 GMT","userID":"1","userName":"CEO John","inputID":"projectInput","level":"info","message":"Started Editing"}
+{"level":"info","message":"User CEO John finished editing projectInput which now has a value of 2010159 - BOE KidDesk"}
+{"date":"Wed, 21 Mar 2012 15:15:32 GMT","userID":"1","userName":"CEO John","inputID":"newSessionName","level":"info","message":"Started Editing"}
+{"date":"Wed, 21 Mar 2012 15:15:35 GMT","userID":"1","userName":"CEO John","inputID":"sessionURL","level":"info","message":"Started Editing"}
+{"level":"info","message":"User CEO John finished editing newSessionName which now has a value of "}
+{"date":"Wed, 21 Mar 2012 15:15:41 GMT","userID":"1","userName":"CEO John","inputID":"projectInput","level":"info","message":"Started Editing"}
+{"level":"info","message":"User CEO John finished editing projectInput which now has a value of 2011114 - ThirdForce Arabic"}
+{"date":"Wed, 21 Mar 2012 15:15:47 GMT","userID":"1","userName":"CEO John","inputID":"projectInput","level":"info","message":"Started Editing"}
+{"level":"info","message":"User CEO John finished editing projectInput which now has a value of erwer"}
+{"date":"Wed, 21 Mar 2012 15:15:54 GMT","userID":"5","userName":"Employee Anthony","inputID":"projectInput","level":"info","message":"Started Editing"}
+{"date":"Wed, 21 Mar 2012 15:15:54 GMT","userID":"5","userName":"Employee Anthony","inputID":"projectInput","level":"info","message":"Started Editing"}
+{"level":"info","message":"User Employee Anthony finished editing projectInput which now has a value of 2010159 - BOE KidDesk"}
+{"level":"info","message":"User Employee Anthony finished editing projectInput which now has a value of 2010159 - BOE KidDesk"}
+{"date":"Wed, 21 Mar 2012 15:17:38 GMT","userID":"1","userName":"CEO John","inputID":"projectInput","level":"info","message":"Started Editing"}
+{"level":"info","message":"User CEO John finished editing projectInput which now has a value of "}
+{"date":"Wed, 21 Mar 2012 15:17:44 GMT","userID":"1","userName":"CEO John","inputID":"projectInput","level":"info","message":"Started Editing"}
+{"level":"info","message":"User CEO John finished editing projectInput which now has a value of 2010159 - BOE KidDesk"}
+{"date":"Wed, 21 Mar 2012 15:17:49 GMT","userID":"1","userName":"CEO John","inputID":"date_worked","level":"info","message":"Started Editing"}
+{"level":"info","message":"User CEO John finished editing date_worked which now has a value of "}
+{"date":"Wed, 21 Mar 2012 15:18:39 GMT","userID":"1","userName":"CEO John","inputID":"projectInput","level":"info","message":"Started Editing"}
+{"level":"info","message":"User CEO John finished editing projectInput which now has a value of 2010159 - BOE KidDesk"}
+{"date":"Wed, 21 Mar 2012 15:18:43 GMT","userID":"1","userName":"CEO John","inputID":"taskSub","level":"info","message":"Started Editing"}
+{"level":"info","message":"User CEO John finished editing taskSub which now has a value of 3"}
+{"date":"Wed, 21 Mar 2012 15:18:44 GMT","userID":"1","userName":"CEO John","inputID":"date_worked","level":"info","message":"Started Editing"}
+{"level":"info","message":"User CEO John finished editing date_worked which now has a value of "}
+{"date":"Wed, 21 Mar 2012 15:18:47 GMT","userID":"1","userName":"CEO John","inputID":"date_worked","level":"info","message":"Started Editing"}
+{"level":"info","message":"User CEO John finished editing date_worked which now has a value of 01/03/2012"}
+{"date":"Wed, 21 Mar 2012 15:19:19 GMT","userID":"1","userName":"CEO John","inputID":"projectInput","level":"info","message":"Started Editing"}
+{"level":"info","message":"User CEO John finished editing projectInput which now has a value of 2010159 - BOE KidDesk"}
+{"date":"Wed, 21 Mar 2012 15:19:22 GMT","userID":"1","userName":"CEO John","inputID":"date_worked","level":"info","message":"Started Editing"}
+{"level":"info","message":"User CEO John finished editing date_worked which now has a value of "}
+{"date":"Wed, 21 Mar 2012 15:24:25 GMT","userID":"1","userName":"CEO John","level":"info","message":"Started Editing"}
+{"date":"Wed, 21 Mar 2012 15:24:31 GMT","userID":"5","userName":"Employee Anthony","level":"info","message":"Started Editing"}
+{"date":"Wed, 21 Mar 2012 15:24:31 GMT","userID":"5","userName":"Employee Anthony","level":"info","message":"Started Editing"}
+{"level":"info","message":"User CEO John finished editing undefined which now has a value of "}
+{"date":"Thu, 22 Mar 2012 14:18:59 GMT","userID":"5","userName":"Employee Anthony","inputID":"taskMain","level":"info","message":"Started Editing"}
+{"level":"info","message":"User Employee Anthony finished editing taskMain which now has a value of null"}
+{"level":"info","message":"User Employee Anthony finished editing taskMain which now has a value of null"}
+{"level":"info","message":"User Employee Anthony finished editing taskMain which now has a value of null"}
+{"date":"Thu, 22 Mar 2012 14:19:00 GMT","userID":"5","userName":"Employee Anthony","inputID":"taskSub","level":"info","message":"Started Editing"}
+{"date":"Thu, 22 Mar 2012 14:19:00 GMT","userID":"5","userName":"Employee Anthony","inputID":"taskSub","level":"info","message":"Started Editing"}
+{"date":"Thu, 22 Mar 2012 14:19:00 GMT","userID":"5","userName":"Employee Anthony","inputID":"taskSub","level":"info","message":"Started Editing"}
+{"level":"info","message":"User Employee Anthony finished editing taskSub which now has a value of null"}
+{"level":"info","message":"User Employee Anthony finished editing taskSub which now has a value of null"}
+{"level":"info","message":"User Employee Anthony finished editing taskSub which now has a value of null"}
+{"level":"info","message":"User Employee Anthony finished editing taskSub which now has a value of null"}
+{"date":"Thu, 22 Mar 2012 14:19:30 GMT","userID":"1","userName":"CEO John","inputID":"taskMain","level":"info","message":"Started Editing"}
+{"date":"Thu, 22 Mar 2012 14:19:30 GMT","userID":"1","userName":"CEO John","inputID":"taskMain","level":"info","message":"Started Editing"}
+{"date":"Thu, 22 Mar 2012 14:19:30 GMT","userID":"1","userName":"CEO John","inputID":"taskMain","level":"info","message":"Started Editing"}
+{"date":"Thu, 22 Mar 2012 14:19:30 GMT","userID":"1","userName":"CEO John","inputID":"taskMain","level":"info","message":"Started Editing"}
+{"date":"Thu, 22 Mar 2012 14:19:30 GMT","userID":"1","userName":"CEO John","inputID":"taskMain","level":"info","message":"Started Editing"}
+{"date":"Thu, 22 Mar 2012 14:19:30 GMT","userID":"1","userName":"CEO John","inputID":"taskMain","level":"info","message":"Started Editing"}
+{"date":"Thu, 22 Mar 2012 14:19:30 GMT","userID":"1","userName":"CEO John","inputID":"taskMain","level":"info","message":"Started Editing"}
+{"date":"Thu, 22 Mar 2012 14:19:30 GMT","userID":"1","userName":"CEO John","inputID":"taskMain","level":"info","message":"Started Editing"}
+{"date":"Thu, 22 Mar 2012 14:19:30 GMT","userID":"1","userName":"CEO John","inputID":"taskMain","level":"info","message":"Started Editing"}
+{"date":"Thu, 22 Mar 2012 14:19:30 GMT","userID":"1","userName":"CEO John","inputID":"taskMain","level":"info","message":"Started Editing"}
+{"date":"Thu, 22 Mar 2012 14:19:30 GMT","userID":"1","userName":"CEO John","inputID":"taskMain","level":"info","message":"Started Editing"}
+{"level":"info","message":"User CEO John finished editing taskMain which now has a value of 7"}
+{"level":"info","message":"User CEO John finished editing taskMain which now has a value of 7"}
+{"level":"info","message":"User CEO John finished editing taskMain which now has a value of 7"}
+{"level":"info","message":"User CEO John finished editing taskMain which now has a value of 7"}
+{"level":"info","message":"User CEO John finished editing taskMain which now has a value of 7"}
+{"level":"info","message":"User CEO John finished editing taskMain which now has a value of 7"}
+{"level":"info","message":"User CEO John finished editing taskMain which now has a value of 7"}
+{"level":"info","message":"User CEO John finished editing taskMain which now has a value of 7"}
+{"level":"info","message":"User CEO John finished editing taskMain which now has a value of 7"}
+{"level":"info","message":"User CEO John finished editing taskMain which now has a value of 7"}
+{"level":"info","message":"User CEO John finished editing taskMain which now has a value of 7"}
+{"date":"Thu, 22 Mar 2012 14:19:39 GMT","userID":"1","userName":"CEO John","inputID":"date_worked","level":"info","message":"Started Editing"}
+{"date":"Thu, 22 Mar 2012 14:19:39 GMT","userID":"1","userName":"CEO John","inputID":"date_worked","level":"info","message":"Started Editing"}
+{"date":"Thu, 22 Mar 2012 14:19:39 GMT","userID":"1","userName":"CEO John","inputID":"date_worked","level":"info","message":"Started Editing"}
+{"date":"Thu, 22 Mar 2012 14:19:39 GMT","userID":"1","userName":"CEO John","inputID":"date_worked","level":"info","message":"Started Editing"}
+{"date":"Thu, 22 Mar 2012 14:19:39 GMT","userID":"1","userName":"CEO John","inputID":"date_worked","level":"info","message":"Started Editing"}
+{"date":"Thu, 22 Mar 2012 14:19:39 GMT","userID":"1","userName":"CEO John","inputID":"date_worked","level":"info","message":"Started Editing"}
+{"date":"Thu, 22 Mar 2012 14:19:39 GMT","userID":"1","userName":"CEO John","inputID":"date_worked","level":"info","message":"Started Editing"}
+{"date":"Thu, 22 Mar 2012 14:19:39 GMT","userID":"1","userName":"CEO John","inputID":"date_worked","level":"info","message":"Started Editing"}
+{"date":"Thu, 22 Mar 2012 14:19:39 GMT","userID":"1","userName":"CEO John","inputID":"date_worked","level":"info","message":"Started Editing"}
+{"date":"Thu, 22 Mar 2012 14:19:39 GMT","userID":"1","userName":"CEO John","inputID":"date_worked","level":"info","message":"Started Editing"}
+{"date":"Thu, 22 Mar 2012 14:19:39 GMT","userID":"1","userName":"CEO John","inputID":"date_worked","level":"info","message":"Started Editing"}
+{"level":"info","message":"User CEO John finished editing date_worked which now has a value of "}
+{"level":"info","message":"User CEO John finished editing date_worked which now has a value of "}
+{"level":"info","message":"User CEO John finished editing date_worked which now has a value of "}
+{"level":"info","message":"User CEO John finished editing date_worked which now has a value of "}
+{"level":"info","message":"User CEO John finished editing date_worked which now has a value of "}
+{"level":"info","message":"User CEO John finished editing date_worked which now has a value of "}
+{"level":"info","message":"User CEO John finished editing date_worked which now has a value of "}
+{"level":"info","message":"User CEO John finished editing date_worked which now has a value of "}
+{"level":"info","message":"User CEO John finished editing date_worked which now has a value of "}
+{"level":"info","message":"User CEO John finished editing date_worked which now has a value of "}
+{"level":"info","message":"User CEO John finished editing date_worked which now has a value of "}
+{"date":"Thu, 22 Mar 2012 14:23:19 GMT","userID":"1","userName":"CEO John","inputID":"projectInput","level":"info","message":"Started Editing"}
+{"date":"Thu, 22 Mar 2012 14:23:19 GMT","userID":"1","userName":"CEO John","inputID":"projectInput","level":"info","message":"Started Editing"}
+{"date":"Thu, 22 Mar 2012 14:23:19 GMT","userID":"1","userName":"CEO John","inputID":"projectInput","level":"info","message":"Started Editing"}
+{"date":"Thu, 22 Mar 2012 14:23:19 GMT","userID":"1","userName":"CEO John","inputID":"projectInput","level":"info","message":"Started Editing"}
+{"date":"Thu, 22 Mar 2012 14:23:19 GMT","userID":"1","userName":"CEO John","inputID":"projectInput","level":"info","message":"Started Editing"}
+{"date":"Thu, 22 Mar 2012 14:23:19 GMT","userID":"1","userName":"CEO John","inputID":"projectInput","level":"info","message":"Started Editing"}
+{"date":"Thu, 22 Mar 2012 14:23:19 GMT","userID":"1","userName":"CEO John","inputID":"projectInput","level":"info","message":"Started Editing"}
+{"date":"Thu, 22 Mar 2012 14:23:19 GMT","userID":"1","userName":"CEO John","inputID":"projectInput","level":"info","message":"Started Editing"}
+{"date":"Thu, 22 Mar 2012 14:23:19 GMT","userID":"1","userName":"CEO John","inputID":"projectInput","level":"info","message":"Started Editing"}
+{"date":"Thu, 22 Mar 2012 14:23:19 GMT","userID":"1","userName":"CEO John","inputID":"projectInput","level":"info","message":"Started Editing"}
+{"date":"Thu, 22 Mar 2012 14:23:19 GMT","userID":"1","userName":"CEO John","inputID":"projectInput","level":"info","message":"Started Editing"}
+{"date":"Thu, 22 Mar 2012 14:23:19 GMT","userID":"1","userName":"CEO John","inputID":"projectInput","level":"info","message":"Started Editing"}
+{"date":"Thu, 22 Mar 2012 14:23:19 GMT","userID":"1","userName":"CEO John","inputID":"projectInput","level":"info","message":"Started Editing"}
+{"level":"info","message":"User CEO John finished editing projectInput which now has a value of 2011114 - ThirdForce Arabic"}
+{"level":"info","message":"User CEO John finished editing projectInput which now has a value of 2011114 - ThirdForce Arabic"}
+{"level":"info","message":"User CEO John finished editing projectInput which now has a value of 2011114 - ThirdForce Arabic"}
+{"level":"info","message":"User CEO John finished editing projectInput which now has a value of 2011114 - ThirdForce Arabic"}
+{"level":"info","message":"User CEO John finished editing projectInput which now has a value of 2011114 - ThirdForce Arabic"}
+{"level":"info","message":"User CEO John finished editing projectInput which now has a value of 2011114 - ThirdForce Arabic"}
+{"level":"info","message":"User CEO John finished editing projectInput which now has a value of 2011114 - ThirdForce Arabic"}
+{"level":"info","message":"User CEO John finished editing projectInput which now has a value of 2011114 - ThirdForce Arabic"}
+{"level":"info","message":"User CEO John finished editing projectInput which now has a value of 2011114 - ThirdForce Arabic"}
+{"level":"info","message":"User CEO John finished editing projectInput which now has a value of 2011114 - ThirdForce Arabic"}
+{"level":"info","message":"User CEO John finished editing projectInput which now has a value of 2011114 - ThirdForce Arabic"}
+{"level":"info","message":"User CEO John finished editing projectInput which now has a value of 2011114 - ThirdForce Arabic"}
+{"level":"info","message":"User CEO John finished editing projectInput which now has a value of 2011114 - ThirdForce Arabic"}
+{"date":"Thu, 22 Mar 2012 14:23:22 GMT","userID":"1","userName":"CEO John","inputID":"taskMain","level":"info","message":"Started Editing"}
+{"date":"Thu, 22 Mar 2012 14:23:22 GMT","userID":"1","userName":"CEO John","inputID":"taskMain","level":"info","message":"Started Editing"}
+{"date":"Thu, 22 Mar 2012 14:23:22 GMT","userID":"1","userName":"CEO John","inputID":"taskMain","level":"info","message":"Started Editing"}
+{"date":"Thu, 22 Mar 2012 14:23:22 GMT","userID":"1","userName":"CEO John","inputID":"taskMain","level":"info","message":"Started Editing"}
+{"date":"Thu, 22 Mar 2012 14:23:22 GMT","userID":"1","userName":"CEO John","inputID":"taskMain","level":"info","message":"Started Editing"}
+{"date":"Thu, 22 Mar 2012 14:23:22 GMT","userID":"1","userName":"CEO John","inputID":"taskMain","level":"info","message":"Started Editing"}
+{"date":"Thu, 22 Mar 2012 14:23:22 GMT","userID":"1","userName":"CEO John","inputID":"taskMain","level":"info","message":"Started Editing"}
+{"date":"Thu, 22 Mar 2012 14:23:22 GMT","userID":"1","userName":"CEO John","inputID":"taskMain","level":"info","message":"Started Editing"}
+{"date":"Thu, 22 Mar 2012 14:23:22 GMT","userID":"1","userName":"CEO John","inputID":"taskMain","level":"info","message":"Started Editing"}
+{"date":"Thu, 22 Mar 2012 14:23:22 GMT","userID":"1","userName":"CEO John","inputID":"taskMain","level":"info","message":"Started Editing"}
+{"date":"Thu, 22 Mar 2012 14:23:22 GMT","userID":"1","userName":"CEO John","inputID":"taskMain","level":"info","message":"Started Editing"}
+{"date":"Thu, 22 Mar 2012 14:23:22 GMT","userID":"1","userName":"CEO John","inputID":"taskMain","level":"info","message":"Started Editing"}
+{"date":"Thu, 22 Mar 2012 14:23:22 GMT","userID":"1","userName":"CEO John","inputID":"taskMain","level":"info","message":"Started Editing"}
+{"level":"info","message":"User CEO John finished editing taskMain which now has a value of 7"}
+{"level":"info","message":"User CEO John finished editing taskMain which now has a value of 7"}
+{"level":"info","message":"User CEO John finished editing taskMain which now has a value of 7"}
+{"level":"info","message":"User CEO John finished editing taskMain which now has a value of 7"}
+{"level":"info","message":"User CEO John finished editing taskMain which now has a value of 7"}
+{"level":"info","message":"User CEO John finished editing taskMain which now has a value of 7"}
+{"level":"info","message":"User CEO John finished editing taskMain which now has a value of 7"}
+{"level":"info","message":"User CEO John finished editing taskMain which now has a value of 7"}
+{"level":"info","message":"User CEO John finished editing taskMain which now has a value of 7"}
+{"level":"info","message":"User CEO John finished editing taskMain which now has a value of 7"}
+{"level":"info","message":"User CEO John finished editing taskMain which now has a value of 7"}
+{"level":"info","message":"User CEO John finished editing taskMain which now has a value of 7"}
+{"level":"info","message":"User CEO John finished editing taskMain which now has a value of 7"}
+{"date":"Thu, 22 Mar 2012 14:23:25 GMT","userID":"1","userName":"CEO John","inputID":"date_worked","level":"info","message":"Started Editing"}
+{"date":"Thu, 22 Mar 2012 14:23:25 GMT","userID":"1","userName":"CEO John","inputID":"date_worked","level":"info","message":"Started Editing"}
+{"date":"Thu, 22 Mar 2012 14:23:25 GMT","userID":"1","userName":"CEO John","inputID":"date_worked","level":"info","message":"Started Editing"}
+{"date":"Thu, 22 Mar 2012 14:23:25 GMT","userID":"1","userName":"CEO John","inputID":"date_worked","level":"info","message":"Started Editing"}
+{"date":"Thu, 22 Mar 2012 14:23:25 GMT","userID":"1","userName":"CEO John","inputID":"date_worked","level":"info","message":"Started Editing"}
+{"date":"Thu, 22 Mar 2012 14:23:25 GMT","userID":"1","userName":"CEO John","inputID":"date_worked","level":"info","message":"Started Editing"}
+{"date":"Thu, 22 Mar 2012 14:23:25 GMT","userID":"1","userName":"CEO John","inputID":"date_worked","level":"info","message":"Started Editing"}
+{"date":"Thu, 22 Mar 2012 14:23:25 GMT","userID":"1","userName":"CEO John","inputID":"date_worked","level":"info","message":"Started Editing"}
+{"date":"Thu, 22 Mar 2012 14:23:25 GMT","userID":"1","userName":"CEO John","inputID":"date_worked","level":"info","message":"Started Editing"}
+{"date":"Thu, 22 Mar 2012 14:23:25 GMT","userID":"1","userName":"CEO John","inputID":"date_worked","level":"info","message":"Started Editing"}
+{"date":"Thu, 22 Mar 2012 14:23:25 GMT","userID":"1","userName":"CEO John","inputID":"date_worked","level":"info","message":"Started Editing"}
+{"date":"Thu, 22 Mar 2012 14:23:25 GMT","userID":"1","userName":"CEO John","inputID":"date_worked","level":"info","message":"Started Editing"}
+{"date":"Thu, 22 Mar 2012 14:23:25 GMT","userID":"1","userName":"CEO John","inputID":"date_worked","level":"info","message":"Started Editing"}
+{"level":"info","message":"User CEO John finished editing date_worked which now has a value of "}
+{"level":"info","message":"User CEO John finished editing date_worked which now has a value of "}
+{"level":"info","message":"User CEO John finished editing date_worked which now has a value of "}
+{"level":"info","message":"User CEO John finished editing date_worked which now has a value of "}
+{"level":"info","message":"User CEO John finished editing date_worked which now has a value of "}
+{"level":"info","message":"User CEO John finished editing date_worked which now has a value of "}
+{"level":"info","message":"User CEO John finished editing date_worked which now has a value of "}
+{"level":"info","message":"User CEO John finished editing date_worked which now has a value of "}
+{"level":"info","message":"User CEO John finished editing date_worked which now has a value of "}
+{"level":"info","message":"User CEO John finished editing date_worked which now has a value of "}
+{"level":"info","message":"User CEO John finished editing date_worked which now has a value of "}
+{"level":"info","message":"User CEO John finished editing date_worked which now has a value of "}
+{"level":"info","message":"User CEO John finished editing date_worked which now has a value of "}
+{"date":"Thu, 22 Mar 2012 14:23:27 GMT","userID":"1","userName":"CEO John","inputID":"startTime","level":"info","message":"Started Editing"}
+{"date":"Thu, 22 Mar 2012 14:23:27 GMT","userID":"1","userName":"CEO John","inputID":"startTime","level":"info","message":"Started Editing"}
+{"date":"Thu, 22 Mar 2012 14:23:27 GMT","userID":"1","userName":"CEO John","inputID":"startTime","level":"info","message":"Started Editing"}
+{"date":"Thu, 22 Mar 2012 14:23:27 GMT","userID":"1","userName":"CEO John","inputID":"startTime","level":"info","message":"Started Editing"}
+{"date":"Thu, 22 Mar 2012 14:23:27 GMT","userID":"1","userName":"CEO John","inputID":"startTime","level":"info","message":"Started Editing"}
+{"date":"Thu, 22 Mar 2012 14:23:27 GMT","userID":"1","userName":"CEO John","inputID":"startTime","level":"info","message":"Started Editing"}
+{"date":"Thu, 22 Mar 2012 14:23:27 GMT","userID":"1","userName":"CEO John","inputID":"startTime","level":"info","message":"Started Editing"}
+{"date":"Thu, 22 Mar 2012 14:23:27 GMT","userID":"1","userName":"CEO John","inputID":"startTime","level":"info","message":"Started Editing"}
+{"date":"Thu, 22 Mar 2012 14:23:27 GMT","userID":"1","userName":"CEO John","inputID":"startTime","level":"info","message":"Started Editing"}
+{"date":"Thu, 22 Mar 2012 14:23:27 GMT","userID":"1","userName":"CEO John","inputID":"startTime","level":"info","message":"Started Editing"}
+{"date":"Thu, 22 Mar 2012 14:23:27 GMT","userID":"1","userName":"CEO John","inputID":"startTime","level":"info","message":"Started Editing"}
+{"date":"Thu, 22 Mar 2012 14:23:27 GMT","userID":"1","userName":"CEO John","inputID":"startTime","level":"info","message":"Started Editing"}
+{"date":"Thu, 22 Mar 2012 14:23:27 GMT","userID":"1","userName":"CEO John","inputID":"startTime","level":"info","message":"Started Editing"}
+{"level":"info","message":"User CEO John finished editing startTime which now has a value of 09:00"}
+{"level":"info","message":"User CEO John finished editing startTime which now has a value of 09:00"}
+{"level":"info","message":"User CEO John finished editing startTime which now has a value of 09:00"}
+{"level":"info","message":"User CEO John finished editing startTime which now has a value of 09:00"}
+{"level":"info","message":"User CEO John finished editing startTime which now has a value of 09:00"}
+{"level":"info","message":"User CEO John finished editing startTime which now has a value of 09:00"}
+{"level":"info","message":"User CEO John finished editing startTime which now has a value of 09:00"}
+{"level":"info","message":"User CEO John finished editing startTime which now has a value of 09:00"}
+{"level":"info","message":"User CEO John finished editing startTime which now has a value of 09:00"}
+{"level":"info","message":"User CEO John finished editing startTime which now has a value of 09:00"}
+{"level":"info","message":"User CEO John finished editing startTime which now has a value of 09:00"}
+{"level":"info","message":"User CEO John finished editing startTime which now has a value of 09:00"}
+{"level":"info","message":"User CEO John finished editing startTime which now has a value of 09:00"}
+{"date":"Thu, 22 Mar 2012 14:23:31 GMT","userID":"1","userName":"CEO John","inputID":"projectInput","level":"info","message":"Started Editing"}
+{"date":"Thu, 22 Mar 2012 14:23:31 GMT","userID":"1","userName":"CEO John","inputID":"projectInput","level":"info","message":"Started Editing"}
+{"date":"Thu, 22 Mar 2012 14:23:31 GMT","userID":"1","userName":"CEO John","inputID":"projectInput","level":"info","message":"Started Editing"}
+{"date":"Thu, 22 Mar 2012 14:23:31 GMT","userID":"1","userName":"CEO John","inputID":"projectInput","level":"info","message":"Started Editing"}
+{"date":"Thu, 22 Mar 2012 14:23:31 GMT","userID":"1","userName":"CEO John","inputID":"projectInput","level":"info","message":"Started Editing"}
+{"date":"Thu, 22 Mar 2012 14:23:31 GMT","userID":"1","userName":"CEO John","inputID":"projectInput","level":"info","message":"Started Editing"}
+{"date":"Thu, 22 Mar 2012 14:23:31 GMT","userID":"1","userName":"CEO John","inputID":"projectInput","level":"info","message":"Started Editing"}
+{"date":"Thu, 22 Mar 2012 14:23:31 GMT","userID":"1","userName":"CEO John","inputID":"projectInput","level":"info","message":"Started Editing"}
+{"date":"Thu, 22 Mar 2012 14:23:31 GMT","userID":"1","userName":"CEO John","inputID":"projectInput","level":"info","message":"Started Editing"}
+{"date":"Thu, 22 Mar 2012 14:23:31 GMT","userID":"1","userName":"CEO John","inputID":"projectInput","level":"info","message":"Started Editing"}
+{"date":"Thu, 22 Mar 2012 14:23:31 GMT","userID":"1","userName":"CEO John","inputID":"projectInput","level":"info","message":"Started Editing"}
+{"date":"Thu, 22 Mar 2012 14:23:31 GMT","userID":"1","userName":"CEO John","inputID":"projectInput","level":"info","message":"Started Editing"}
+{"date":"Thu, 22 Mar 2012 14:23:31 GMT","userID":"1","userName":"CEO John","inputID":"projectInput","level":"info","message":"Started Editing"}
+{"level":"info","message":"User CEO John finished editing projectInput which now has a value of 2010159 - BOE KidDesk"}
+{"level":"info","message":"User CEO John finished editing projectInput which now has a value of 2010159 - BOE KidDesk"}
+{"level":"info","message":"User CEO John finished editing projectInput which now has a value of 2010159 - BOE KidDesk"}
+{"level":"info","message":"User CEO John finished editing projectInput which now has a value of 2010159 - BOE KidDesk"}
+{"level":"info","message":"User CEO John finished editing projectInput which now has a value of 2010159 - BOE KidDesk"}
+{"level":"info","message":"User CEO John finished editing projectInput which now has a value of 2010159 - BOE KidDesk"}
+{"level":"info","message":"User CEO John finished editing projectInput which now has a value of 2010159 - BOE KidDesk"}
+{"level":"info","message":"User CEO John finished editing projectInput which now has a value of 2010159 - BOE KidDesk"}
+{"level":"info","message":"User CEO John finished editing projectInput which now has a value of 2010159 - BOE KidDesk"}
+{"level":"info","message":"User CEO John finished editing projectInput which now has a value of 2010159 - BOE KidDesk"}
+{"level":"info","message":"User CEO John finished editing projectInput which now has a value of 2010159 - BOE KidDesk"}
+{"level":"info","message":"User CEO John finished editing projectInput which now has a value of 2010159 - BOE KidDesk"}
+{"level":"info","message":"User CEO John finished editing projectInput which now has a value of 2010159 - BOE KidDesk"}
+{"date":"Thu, 22 Mar 2012 14:23:34 GMT","userID":"1","userName":"CEO John","inputID":"taskMain","level":"info","message":"Started Editing"}
+{"date":"Thu, 22 Mar 2012 14:23:34 GMT","userID":"1","userName":"CEO John","inputID":"taskMain","level":"info","message":"Started Editing"}
+{"date":"Thu, 22 Mar 2012 14:23:34 GMT","userID":"1","userName":"CEO John","inputID":"taskMain","level":"info","message":"Started Editing"}
+{"date":"Thu, 22 Mar 2012 14:23:34 GMT","userID":"1","userName":"CEO John","inputID":"taskMain","level":"info","message":"Started Editing"}
+{"date":"Thu, 22 Mar 2012 14:23:34 GMT","userID":"1","userName":"CEO John","inputID":"taskMain","level":"info","message":"Started Editing"}
+{"date":"Thu, 22 Mar 2012 14:23:34 GMT","userID":"1","userName":"CEO John","inputID":"taskMain","level":"info","message":"Started Editing"}
+{"date":"Thu, 22 Mar 2012 14:23:34 GMT","userID":"1","userName":"CEO John","inputID":"taskMain","level":"info","message":"Started Editing"}
+{"date":"Thu, 22 Mar 2012 14:23:34 GMT","userID":"1","userName":"CEO John","inputID":"taskMain","level":"info","message":"Started Editing"}
+{"date":"Thu, 22 Mar 2012 14:23:34 GMT","userID":"1","userName":"CEO John","inputID":"taskMain","level":"info","message":"Started Editing"}
+{"date":"Thu, 22 Mar 2012 14:23:34 GMT","userID":"1","userName":"CEO John","inputID":"taskMain","level":"info","message":"Started Editing"}
+{"date":"Thu, 22 Mar 2012 14:23:34 GMT","userID":"1","userName":"CEO John","inputID":"taskMain","level":"info","message":"Started Editing"}
+{"date":"Thu, 22 Mar 2012 14:23:34 GMT","userID":"1","userName":"CEO John","inputID":"taskMain","level":"info","message":"Started Editing"}
+{"date":"Thu, 22 Mar 2012 14:23:34 GMT","userID":"1","userName":"CEO John","inputID":"taskMain","level":"info","message":"Started Editing"}
+{"level":"info","message":"User CEO John finished editing taskMain which now has a value of 4"}
+{"level":"info","message":"User CEO John finished editing taskMain which now has a value of 4"}
+{"level":"info","message":"User CEO John finished editing taskMain which now has a value of 4"}
+{"level":"info","message":"User CEO John finished editing taskMain which now has a value of 4"}
+{"level":"info","message":"User CEO John finished editing taskMain which now has a value of 4"}
+{"level":"info","message":"User CEO John finished editing taskMain which now has a value of 4"}
+{"level":"info","message":"User CEO John finished editing taskMain which now has a value of 4"}
+{"level":"info","message":"User CEO John finished editing taskMain which now has a value of 4"}
+{"level":"info","message":"User CEO John finished editing taskMain which now has a value of 4"}
+{"level":"info","message":"User CEO John finished editing taskMain which now has a value of 4"}
+{"level":"info","message":"User CEO John finished editing taskMain which now has a value of 4"}
+{"level":"info","message":"User CEO John finished editing taskMain which now has a value of 4"}
+{"level":"info","message":"User CEO John finished editing taskMain which now has a value of 4"}
+{"date":"Thu, 22 Mar 2012 14:23:37 GMT","userID":"1","userName":"CEO John","inputID":"date_worked","level":"info","message":"Started Editing"}
+{"date":"Thu, 22 Mar 2012 14:23:37 GMT","userID":"1","userName":"CEO John","inputID":"date_worked","level":"info","message":"Started Editing"}
+{"date":"Thu, 22 Mar 2012 14:23:37 GMT","userID":"1","userName":"CEO John","inputID":"date_worked","level":"info","message":"Started Editing"}
+{"date":"Thu, 22 Mar 2012 14:23:37 GMT","userID":"1","userName":"CEO John","inputID":"date_worked","level":"info","message":"Started Editing"}
+{"date":"Thu, 22 Mar 2012 14:23:37 GMT","userID":"1","userName":"CEO John","inputID":"date_worked","level":"info","message":"Started Editing"}
+{"date":"Thu, 22 Mar 2012 14:23:37 GMT","userID":"1","userName":"CEO John","inputID":"date_worked","level":"info","message":"Started Editing"}
+{"date":"Thu, 22 Mar 2012 14:23:37 GMT","userID":"1","userName":"CEO John","inputID":"date_worked","level":"info","message":"Started Editing"}
+{"date":"Thu, 22 Mar 2012 14:23:37 GMT","userID":"1","userName":"CEO John","inputID":"date_worked","level":"info","message":"Started Editing"}
+{"date":"Thu, 22 Mar 2012 14:23:37 GMT","userID":"1","userName":"CEO John","inputID":"date_worked","level":"info","message":"Started Editing"}
+{"date":"Thu, 22 Mar 2012 14:23:37 GMT","userID":"1","userName":"CEO John","inputID":"date_worked","level":"info","message":"Started Editing"}
+{"date":"Thu, 22 Mar 2012 14:23:37 GMT","userID":"1","userName":"CEO John","inputID":"date_worked","level":"info","message":"Started Editing"}
+{"date":"Thu, 22 Mar 2012 14:23:37 GMT","userID":"1","userName":"CEO John","inputID":"date_worked","level":"info","message":"Started Editing"}
+{"date":"Thu, 22 Mar 2012 14:23:37 GMT","userID":"1","userName":"CEO John","inputID":"date_worked","level":"info","message":"Started Editing"}
+{"level":"info","message":"User CEO John finished editing date_worked which now has a value of "}
+{"level":"info","message":"User CEO John finished editing date_worked which now has a value of "}
+{"level":"info","message":"User CEO John finished editing date_worked which now has a value of "}
+{"level":"info","message":"User CEO John finished editing date_worked which now has a value of "}
+{"level":"info","message":"User CEO John finished editing date_worked which now has a value of "}
+{"level":"info","message":"User CEO John finished editing date_worked which now has a value of "}
+{"level":"info","message":"User CEO John finished editing date_worked which now has a value of "}
+{"level":"info","message":"User CEO John finished editing date_worked which now has a value of "}
+{"level":"info","message":"User CEO John finished editing date_worked which now has a value of "}
+{"level":"info","message":"User CEO John finished editing date_worked which now has a value of "}
+{"level":"info","message":"User CEO John finished editing date_worked which now has a value of "}
+{"level":"info","message":"User CEO John finished editing date_worked which now has a value of "}
+{"level":"info","message":"User CEO John finished editing date_worked which now has a value of "}
+{"date":"Thu, 22 Mar 2012 14:23:43 GMT","userID":"1","userName":"CEO John","inputID":"taskMain","level":"info","message":"Started Editing"}
+{"date":"Thu, 22 Mar 2012 14:23:43 GMT","userID":"1","userName":"CEO John","inputID":"taskMain","level":"info","message":"Started Editing"}
+{"date":"Thu, 22 Mar 2012 14:23:43 GMT","userID":"1","userName":"CEO John","inputID":"taskMain","level":"info","message":"Started Editing"}
+{"date":"Thu, 22 Mar 2012 14:23:43 GMT","userID":"1","userName":"CEO John","inputID":"taskMain","level":"info","message":"Started Editing"}
+{"date":"Thu, 22 Mar 2012 14:23:43 GMT","userID":"1","userName":"CEO John","inputID":"taskMain","level":"info","message":"Started Editing"}
+{"date":"Thu, 22 Mar 2012 14:23:43 GMT","userID":"1","userName":"CEO John","inputID":"taskMain","level":"info","message":"Started Editing"}
+{"date":"Thu, 22 Mar 2012 14:23:43 GMT","userID":"1","userName":"CEO John","inputID":"taskMain","level":"info","message":"Started Editing"}
+{"date":"Thu, 22 Mar 2012 14:23:43 GMT","userID":"1","userName":"CEO John","inputID":"taskMain","level":"info","message":"Started Editing"}
+{"date":"Thu, 22 Mar 2012 14:23:43 GMT","userID":"1","userName":"CEO John","inputID":"taskMain","level":"info","message":"Started Editing"}
+{"date":"Thu, 22 Mar 2012 14:23:43 GMT","userID":"1","userName":"CEO John","inputID":"taskMain","level":"info","message":"Started Editing"}
+{"date":"Thu, 22 Mar 2012 14:23:43 GMT","userID":"1","userName":"CEO John","inputID":"taskMain","level":"info","message":"Started Editing"}
+{"date":"Thu, 22 Mar 2012 14:23:43 GMT","userID":"1","userName":"CEO John","inputID":"taskMain","level":"info","message":"Started Editing"}
+{"date":"Thu, 22 Mar 2012 14:23:43 GMT","userID":"1","userName":"CEO John","inputID":"taskMain","level":"info","message":"Started Editing"}
+{"level":"info","message":"User CEO John finished editing taskMain which now has a value of 1"}
+{"level":"info","message":"User CEO John finished editing taskMain which now has a value of 1"}
+{"level":"info","message":"User CEO John finished editing taskMain which now has a value of 1"}
+{"level":"info","message":"User CEO John finished editing taskMain which now has a value of 1"}
+{"level":"info","message":"User CEO John finished editing taskMain which now has a value of 1"}
+{"level":"info","message":"User CEO John finished editing taskMain which now has a value of 1"}
+{"level":"info","message":"User CEO John finished editing taskMain which now has a value of 1"}
+{"level":"info","message":"User CEO John finished editing taskMain which now has a value of 1"}
+{"level":"info","message":"User CEO John finished editing taskMain which now has a value of 1"}
+{"level":"info","message":"User CEO John finished editing taskMain which now has a value of 1"}
+{"level":"info","message":"User CEO John finished editing taskMain which now has a value of 1"}
+{"level":"info","message":"User CEO John finished editing taskMain which now has a value of 1"}
+{"level":"info","message":"User CEO John finished editing taskMain which now has a value of 1"}
+{"date":"Thu, 22 Mar 2012 14:24:45 GMT","userID":"1","userName":"CEO John","inputID":"newType","level":"info","message":"Started Editing"}
+{"date":"Thu, 22 Mar 2012 14:24:45 GMT","userID":"1","userName":"CEO John","inputID":"newType","level":"info","message":"Started Editing"}
+{"date":"Thu, 22 Mar 2012 14:24:45 GMT","userID":"1","userName":"CEO John","inputID":"newType","level":"info","message":"Started Editing"}
+{"date":"Thu, 22 Mar 2012 14:24:45 GMT","userID":"1","userName":"CEO John","inputID":"newType","level":"info","message":"Started Editing"}
+{"date":"Thu, 22 Mar 2012 14:24:45 GMT","userID":"1","userName":"CEO John","inputID":"newType","level":"info","message":"Started Editing"}
+{"date":"Thu, 22 Mar 2012 14:24:45 GMT","userID":"1","userName":"CEO John","inputID":"newType","level":"info","message":"Started Editing"}
+{"date":"Thu, 22 Mar 2012 14:24:45 GMT","userID":"1","userName":"CEO John","inputID":"newType","level":"info","message":"Started Editing"}
+{"date":"Thu, 22 Mar 2012 14:24:45 GMT","userID":"1","userName":"CEO John","inputID":"newType","level":"info","message":"Started Editing"}
+{"date":"Thu, 22 Mar 2012 14:24:45 GMT","userID":"1","userName":"CEO John","inputID":"newType","level":"info","message":"Started Editing"}
+{"date":"Thu, 22 Mar 2012 14:24:45 GMT","userID":"1","userName":"CEO John","inputID":"newType","level":"info","message":"Started Editing"}
+{"date":"Thu, 22 Mar 2012 14:24:45 GMT","userID":"1","userName":"CEO John","inputID":"newType","level":"info","message":"Started Editing"}
+{"date":"Thu, 22 Mar 2012 14:24:45 GMT","userID":"1","userName":"CEO John","inputID":"newType","level":"info","message":"Started Editing"}
+{"date":"Thu, 22 Mar 2012 14:24:45 GMT","userID":"1","userName":"CEO John","inputID":"newType","level":"info","message":"Started Editing"}
+{"level":"info","message":"User CEO John finished editing newType which now has a value of bar"}
+{"level":"info","message":"User CEO John finished editing newType which now has a value of bar"}
+{"level":"info","message":"User CEO John finished editing newType which now has a value of bar"}
+{"level":"info","message":"User CEO John finished editing newType which now has a value of bar"}
+{"level":"info","message":"User CEO John finished editing newType which now has a value of bar"}
+{"level":"info","message":"User CEO John finished editing newType which now has a value of bar"}
+{"level":"info","message":"User CEO John finished editing newType which now has a value of bar"}
+{"level":"info","message":"User CEO John finished editing newType which now has a value of bar"}
+{"level":"info","message":"User CEO John finished editing newType which now has a value of bar"}
+{"level":"info","message":"User CEO John finished editing newType which now has a value of bar"}
+{"level":"info","message":"User CEO John finished editing newType which now has a value of bar"}
+{"level":"info","message":"User CEO John finished editing newType which now has a value of bar"}
+{"level":"info","message":"User CEO John finished editing newType which now has a value of bar"}
+{"date":"Thu, 22 Mar 2012 14:24:57 GMT","userID":"1","userName":"CEO John","inputID":"newType","level":"info","message":"Started Editing"}
+{"date":"Thu, 22 Mar 2012 14:24:57 GMT","userID":"1","userName":"CEO John","inputID":"newType","level":"info","message":"Started Editing"}
+{"date":"Thu, 22 Mar 2012 14:24:57 GMT","userID":"1","userName":"CEO John","inputID":"newType","level":"info","message":"Started Editing"}
+{"date":"Thu, 22 Mar 2012 14:24:57 GMT","userID":"1","userName":"CEO John","inputID":"newType","level":"info","message":"Started Editing"}
+{"date":"Thu, 22 Mar 2012 14:24:57 GMT","userID":"1","userName":"CEO John","inputID":"newType","level":"info","message":"Started Editing"}
+{"date":"Thu, 22 Mar 2012 14:24:57 GMT","userID":"1","userName":"CEO John","inputID":"newType","level":"info","message":"Started Editing"}
+{"date":"Thu, 22 Mar 2012 14:24:57 GMT","userID":"1","userName":"CEO John","inputID":"newType","level":"info","message":"Started Editing"}
+{"date":"Thu, 22 Mar 2012 14:24:57 GMT","userID":"1","userName":"CEO John","inputID":"newType","level":"info","message":"Started Editing"}
+{"date":"Thu, 22 Mar 2012 14:24:57 GMT","userID":"1","userName":"CEO John","inputID":"newType","level":"info","message":"Started Editing"}
+{"date":"Thu, 22 Mar 2012 14:24:57 GMT","userID":"1","userName":"CEO John","inputID":"newType","level":"info","message":"Started Editing"}
+{"date":"Thu, 22 Mar 2012 14:24:57 GMT","userID":"1","userName":"CEO John","inputID":"newType","level":"info","message":"Started Editing"}
+{"date":"Thu, 22 Mar 2012 14:24:57 GMT","userID":"1","userName":"CEO John","inputID":"newType","level":"info","message":"Started Editing"}
+{"date":"Thu, 22 Mar 2012 14:24:57 GMT","userID":"1","userName":"CEO John","inputID":"newType","level":"info","message":"Started Editing"}
+{"level":"info","message":"User CEO John finished editing newType which now has a value of pie"}
+{"level":"info","message":"User CEO John finished editing newType which now has a value of pie"}
+{"level":"info","message":"User CEO John finished editing newType which now has a value of pie"}
+{"level":"info","message":"User CEO John finished editing newType which now has a value of pie"}
+{"level":"info","message":"User CEO John finished editing newType which now has a value of pie"}
+{"level":"info","message":"User CEO John finished editing newType which now has a value of pie"}
+{"level":"info","message":"User CEO John finished editing newType which now has a value of pie"}
+{"level":"info","message":"User CEO John finished editing newType which now has a value of pie"}
+{"level":"info","message":"User CEO John finished editing newType which now has a value of pie"}
+{"level":"info","message":"User CEO John finished editing newType which now has a value of pie"}
+{"level":"info","message":"User CEO John finished editing newType which now has a value of pie"}
+{"level":"info","message":"User CEO John finished editing newType which now has a value of pie"}
+{"level":"info","message":"User CEO John finished editing newType which now has a value of pie"}
+{"date":"Thu, 22 Mar 2012 14:30:04 GMT","userID":"1","userName":"CEO John","level":"info","message":"Started Editing"}
+{"date":"Thu, 22 Mar 2012 14:30:04 GMT","userID":"1","userName":"CEO John","level":"info","message":"Started Editing"}
+{"date":"Thu, 22 Mar 2012 14:30:04 GMT","userID":"1","userName":"CEO John","level":"info","message":"Started Editing"}
+{"date":"Thu, 22 Mar 2012 14:30:04 GMT","userID":"1","userName":"CEO John","level":"info","message":"Started Editing"}
+{"date":"Thu, 22 Mar 2012 14:30:04 GMT","userID":"1","userName":"CEO John","level":"info","message":"Started Editing"}
+{"date":"Thu, 22 Mar 2012 14:30:04 GMT","userID":"1","userName":"CEO John","level":"info","message":"Started Editing"}
+{"date":"Thu, 22 Mar 2012 14:30:04 GMT","userID":"1","userName":"CEO John","level":"info","message":"Started Editing"}
+{"date":"Thu, 22 Mar 2012 14:30:04 GMT","userID":"1","userName":"CEO John","level":"info","message":"Started Editing"}
+{"date":"Thu, 22 Mar 2012 14:30:04 GMT","userID":"1","userName":"CEO John","level":"info","message":"Started Editing"}
+{"date":"Thu, 22 Mar 2012 14:30:04 GMT","userID":"1","userName":"CEO John","level":"info","message":"Started Editing"}
+{"date":"Thu, 22 Mar 2012 14:30:04 GMT","userID":"1","userName":"CEO John","level":"info","message":"Started Editing"}
+{"date":"Thu, 22 Mar 2012 14:30:04 GMT","userID":"1","userName":"CEO John","level":"info","message":"Started Editing"}
+{"date":"Thu, 22 Mar 2012 14:30:04 GMT","userID":"1","userName":"CEO John","level":"info","message":"Started Editing"}
+{"level":"info","message":"User CEO John finished editing undefined which now has a value of "}
+{"level":"info","message":"User CEO John finished editing undefined which now has a value of "}
+{"level":"info","message":"User CEO John finished editing undefined which now has a value of "}
+{"level":"info","message":"User CEO John finished editing undefined which now has a value of "}
+{"level":"info","message":"User CEO John finished editing undefined which now has a value of "}
+{"level":"info","message":"User CEO John finished editing undefined which now has a value of "}
+{"level":"info","message":"User CEO John finished editing undefined which now has a value of "}
+{"level":"info","message":"User CEO John finished editing undefined which now has a value of "}
+{"level":"info","message":"User CEO John finished editing undefined which now has a value of "}
+{"level":"info","message":"User CEO John finished editing undefined which now has a value of "}
+{"level":"info","message":"User CEO John finished editing undefined which now has a value of "}
+{"level":"info","message":"User CEO John finished editing undefined which now has a value of "}
+{"level":"info","message":"User CEO John finished editing undefined which now has a value of "}
+{"date":"Thu, 22 Mar 2012 14:30:25 GMT","userID":"1","userName":"CEO John","level":"info","message":"Started Editing"}
+{"date":"Thu, 22 Mar 2012 14:30:25 GMT","userID":"1","userName":"CEO John","level":"info","message":"Started Editing"}
+{"date":"Thu, 22 Mar 2012 14:30:25 GMT","userID":"1","userName":"CEO John","level":"info","message":"Started Editing"}
+{"date":"Thu, 22 Mar 2012 14:30:25 GMT","userID":"1","userName":"CEO John","level":"info","message":"Started Editing"}
+{"date":"Thu, 22 Mar 2012 14:30:25 GMT","userID":"1","userName":"CEO John","level":"info","message":"Started Editing"}
+{"date":"Thu, 22 Mar 2012 14:30:25 GMT","userID":"1","userName":"CEO John","level":"info","message":"Started Editing"}
+{"date":"Thu, 22 Mar 2012 14:30:25 GMT","userID":"1","userName":"CEO John","level":"info","message":"Started Editing"}
+{"date":"Thu, 22 Mar 2012 14:30:25 GMT","userID":"1","userName":"CEO John","level":"info","message":"Started Editing"}
+{"date":"Thu, 22 Mar 2012 14:30:25 GMT","userID":"1","userName":"CEO John","level":"info","message":"Started Editing"}
+{"date":"Thu, 22 Mar 2012 14:30:25 GMT","userID":"1","userName":"CEO John","level":"info","message":"Started Editing"}
+{"date":"Thu, 22 Mar 2012 14:30:25 GMT","userID":"1","userName":"CEO John","level":"info","message":"Started Editing"}
+{"date":"Thu, 22 Mar 2012 14:30:25 GMT","userID":"1","userName":"CEO John","level":"info","message":"Started Editing"}
+{"date":"Thu, 22 Mar 2012 14:30:25 GMT","userID":"1","userName":"CEO John","level":"info","message":"Started Editing"}
+{"level":"info","message":"User CEO John finished editing undefined which now has a value of "}
+{"level":"info","message":"User CEO John finished editing undefined which now has a value of "}
+{"level":"info","message":"User CEO John finished editing undefined which now has a value of "}
+{"level":"info","message":"User CEO John finished editing undefined which now has a value of "}
+{"level":"info","message":"User CEO John finished editing undefined which now has a value of "}
+{"level":"info","message":"User CEO John finished editing undefined which now has a value of "}
+{"level":"info","message":"User CEO John finished editing undefined which now has a value of "}
+{"level":"info","message":"User CEO John finished editing undefined which now has a value of "}
+{"level":"info","message":"User CEO John finished editing undefined which now has a value of "}
+{"level":"info","message":"User CEO John finished editing undefined which now has a value of "}
+{"level":"info","message":"User CEO John finished editing undefined which now has a value of "}
+{"level":"info","message":"User CEO John finished editing undefined which now has a value of "}
+{"level":"info","message":"User CEO John finished editing undefined which now has a value of "}
+{"date":"Thu, 22 Mar 2012 14:30:36 GMT","userID":"1","userName":"CEO John","inputID":"newSessionName","level":"info","message":"Started Editing"}
+{"date":"Thu, 22 Mar 2012 14:30:36 GMT","userID":"1","userName":"CEO John","inputID":"newSessionName","level":"info","message":"Started Editing"}
+{"date":"Thu, 22 Mar 2012 14:30:36 GMT","userID":"1","userName":"CEO John","inputID":"newSessionName","level":"info","message":"Started Editing"}
+{"date":"Thu, 22 Mar 2012 14:30:36 GMT","userID":"1","userName":"CEO John","inputID":"newSessionName","level":"info","message":"Started Editing"}
+{"date":"Thu, 22 Mar 2012 14:30:36 GMT","userID":"1","userName":"CEO John","inputID":"newSessionName","level":"info","message":"Started Editing"}
+{"date":"Thu, 22 Mar 2012 14:30:36 GMT","userID":"1","userName":"CEO John","inputID":"newSessionName","level":"info","message":"Started Editing"}
+{"date":"Thu, 22 Mar 2012 14:30:36 GMT","userID":"1","userName":"CEO John","inputID":"newSessionName","level":"info","message":"Started Editing"}
+{"date":"Thu, 22 Mar 2012 14:30:36 GMT","userID":"1","userName":"CEO John","inputID":"newSessionName","level":"info","message":"Started Editing"}
+{"date":"Thu, 22 Mar 2012 14:30:36 GMT","userID":"1","userName":"CEO John","inputID":"newSessionName","level":"info","message":"Started Editing"}
+{"date":"Thu, 22 Mar 2012 14:30:36 GMT","userID":"1","userName":"CEO John","inputID":"newSessionName","level":"info","message":"Started Editing"}
+{"date":"Thu, 22 Mar 2012 14:30:36 GMT","userID":"1","userName":"CEO John","inputID":"newSessionName","level":"info","message":"Started Editing"}
+{"date":"Thu, 22 Mar 2012 14:30:36 GMT","userID":"1","userName":"CEO John","inputID":"newSessionName","level":"info","message":"Started Editing"}
+{"date":"Thu, 22 Mar 2012 14:30:36 GMT","userID":"1","userName":"CEO John","inputID":"newSessionName","level":"info","message":"Started Editing"}
+{"level":"info","message":"User CEO John finished editing newSessionName which now has a value of test3"}
+{"level":"info","message":"User CEO John finished editing newSessionName which now has a value of test3"}
+{"level":"info","message":"User CEO John finished editing newSessionName which now has a value of test3"}
+{"level":"info","message":"User CEO John finished editing newSessionName which now has a value of test3"}
+{"level":"info","message":"User CEO John finished editing newSessionName which now has a value of test3"}
+{"level":"info","message":"User CEO John finished editing newSessionName which now has a value of test3"}
+{"level":"info","message":"User CEO John finished editing newSessionName which now has a value of test3"}
+{"level":"info","message":"User CEO John finished editing newSessionName which now has a value of test3"}
+{"level":"info","message":"User CEO John finished editing newSessionName which now has a value of test3"}
+{"level":"info","message":"User CEO John finished editing newSessionName which now has a value of test3"}
+{"level":"info","message":"User CEO John finished editing newSessionName which now has a value of test3"}
+{"level":"info","message":"User CEO John finished editing newSessionName which now has a value of test3"}
+{"level":"info","message":"User CEO John finished editing newSessionName which now has a value of test3"}
+{"date":"Thu, 22 Mar 2012 14:30:43 GMT","userID":"1","userName":"CEO John","inputID":"sessionURL","level":"info","message":"Started Editing"}
+{"date":"Thu, 22 Mar 2012 14:30:43 GMT","userID":"1","userName":"CEO John","inputID":"sessionURL","level":"info","message":"Started Editing"}
+{"date":"Thu, 22 Mar 2012 14:30:43 GMT","userID":"1","userName":"CEO John","inputID":"sessionURL","level":"info","message":"Started Editing"}
+{"date":"Thu, 22 Mar 2012 14:30:43 GMT","userID":"1","userName":"CEO John","inputID":"sessionURL","level":"info","message":"Started Editing"}
+{"date":"Thu, 22 Mar 2012 14:30:43 GMT","userID":"1","userName":"CEO John","inputID":"sessionURL","level":"info","message":"Started Editing"}
+{"date":"Thu, 22 Mar 2012 14:30:43 GMT","userID":"1","userName":"CEO John","inputID":"sessionURL","level":"info","message":"Started Editing"}
+{"date":"Thu, 22 Mar 2012 14:30:43 GMT","userID":"1","userName":"CEO John","inputID":"sessionURL","level":"info","message":"Started Editing"}
+{"date":"Thu, 22 Mar 2012 14:30:43 GMT","userID":"1","userName":"CEO John","inputID":"sessionURL","level":"info","message":"Started Editing"}
+{"date":"Thu, 22 Mar 2012 14:30:43 GMT","userID":"1","userName":"CEO John","inputID":"sessionURL","level":"info","message":"Started Editing"}
+{"date":"Thu, 22 Mar 2012 14:30:43 GMT","userID":"1","userName":"CEO John","inputID":"sessionURL","level":"info","message":"Started Editing"}
+{"date":"Thu, 22 Mar 2012 14:30:43 GMT","userID":"1","userName":"CEO John","inputID":"sessionURL","level":"info","message":"Started Editing"}
+{"date":"Thu, 22 Mar 2012 14:30:43 GMT","userID":"1","userName":"CEO John","inputID":"sessionURL","level":"info","message":"Started Editing"}
+{"date":"Thu, 22 Mar 2012 14:30:43 GMT","userID":"1","userName":"CEO John","inputID":"sessionURL","level":"info","message":"Started Editing"}
+{"date":"Sun, 25 Mar 2012 17:17:42 GMT","userID":"1","userName":"CEO John","level":"info","message":"Started Editing"}
+{"date":"Sun, 25 Mar 2012 17:17:48 GMT","userID":"5","userName":"Employee Anthony","level":"info","message":"Started Editing"}
+{"level":"info","message":"User CEO John finished editing undefined which now has a value of "}
+{"date":"Sun, 25 Mar 2012 17:18:13 GMT","userID":"1","userName":"CEO John","inputID":"projectInput","level":"info","message":"Started Editing"}
+{"level":"info","message":"User CEO John finished editing projectInput which now has a value of 2011114 - ThirdForce Arabic"}
+{"date":"Sun, 25 Mar 2012 17:18:23 GMT","userID":"1","userName":"CEO John","inputID":"taskMain","level":"info","message":"Started Editing"}
+{"level":"info","message":"User Employee Anthony finished editing undefined which now has a value of "}
+{"date":"Sun, 25 Mar 2012 17:18:26 GMT","userID":"5","userName":"Employee Anthony","inputID":"taskMain","level":"info","message":"Started Editing"}
+{"level":"info","message":"User Employee Anthony finished editing taskMain which now has a value of 4"}
+{"date":"Sun, 25 Mar 2012 17:18:30 GMT","userID":"5","userName":"Employee Anthony","inputID":"date_worked","level":"info","message":"Started Editing"}
+{"date":"Sun, 25 Mar 2012 17:18:30 GMT","userID":"1","userName":"CEO John","inputID":"date_worked","level":"info","message":"Started Editing"}
+{"level":"info","message":"User Employee Anthony finished editing date_worked which now has a value of "}
+{"date":"Sun, 25 Mar 2012 17:18:41 GMT","userID":"1","userName":"CEO John","inputID":"startTime","level":"info","message":"Started Editing"}
+{"date":"Sun, 25 Mar 2012 17:18:43 GMT","userID":"5","userName":"Employee Anthony","inputID":"startTime","level":"info","message":"Started Editing"}
+{"level":"info","message":"User CEO John finished editing startTime which now has a value of 09:00"}
+{"date":"Sun, 25 Mar 2012 17:18:48 GMT","userID":"1","userName":"CEO John","inputID":"endTime","level":"info","message":"Started Editing"}
+{"date":"Sun, 25 Mar 2012 17:18:49 GMT","userID":"5","userName":"Employee Anthony","inputID":"startTime","level":"info","message":"Started Editing"}
+{"level":"info","message":"User Employee Anthony finished editing startTime which now has a value of 09:00"}
+{"level":"info","message":"User CEO John finished editing endTime which now has a value of 09:1fdd"}
+{"date":"Sun, 25 Mar 2012 17:18:55 GMT","userID":"1","userName":"CEO John","level":"info","message":"Started Editing"}
+{"level":"info","message":"User CEO John finished editing undefined which now has a value of "}
+{"date":"Sun, 25 Mar 2012 17:19:01 GMT","userID":"1","userName":"CEO John","level":"info","message":"Started Editing"}
+{"level":"info","message":"User CEO John finished editing undefined which now has a value of "}
+{"date":"Sun, 25 Mar 2012 17:19:06 GMT","userID":"1","userName":"CEO John","level":"info","message":"Started Editing"}
+{"date":"Sun, 25 Mar 2012 17:19:16 GMT","userID":"5","userName":"Employee Anthony","level":"info","message":"Started Editing"}
+{"level":"info","message":"User Employee Anthony finished editing undefined which now has a value of "}
+{"date":"Sun, 25 Mar 2012 17:19:24 GMT","userID":"5","userName":"Employee Anthony","level":"info","message":"Started Editing"}
+{"level":"info","message":"User Employee Anthony finished editing undefined which now has a value of "}
+{"level":"info","message":"User CEO John finished editing undefined which now has a value of "}
+{"date":"Sun, 25 Mar 2012 17:20:03 GMT","userID":"1","userName":"CEO John","inputID":"projectInput","level":"info","message":"Started Editing"}
+{"level":"info","message":"User CEO John finished editing projectInput which now has a value of 2011114 - ThirdForce Arabic"}
+{"date":"Sun, 25 Mar 2012 17:20:26 GMT","userID":"1","userName":"CEO John","inputID":"taskSub","level":"info","message":"Started Editing"}
+{"level":"info","message":"User CEO John finished editing taskSub which now has a value of 6"}
+{"date":"Sun, 25 Mar 2012 17:20:27 GMT","userID":"1","userName":"CEO John","inputID":"taskMain","level":"info","message":"Started Editing"}
+{"level":"info","message":"User CEO John finished editing taskMain which now has a value of 1"}
+{"date":"Sun, 25 Mar 2012 17:20:44 GMT","userID":"1","userName":"CEO John","inputID":"taskMain","level":"info","message":"Started Editing"}
+{"level":"info","message":"User CEO John finished editing taskMain which now has a value of 1"}
+{"date":"Sun, 25 Mar 2012 17:20:45 GMT","userID":"1","userName":"CEO John","level":"info","message":"Started Editing"}
+{"level":"info","message":"User CEO John finished editing undefined which now has a value of "}
+{"date":"Sun, 25 Mar 2012 17:21:34 GMT","userID":"5","userName":"Employee Anthony","inputID":"newSessionName","level":"info","message":"Started Editing"}
+{"level":"info","message":"User Employee Anthony finished editing newSessionName which now has a value of Let's Get Drunk"}
+{"date":"Sun, 25 Mar 2012 17:22:27 GMT","userID":"5","userName":"Employee Anthony","inputID":"startNewSession","level":"info","message":"Started Editing"}
+{"date":"Sun, 25 Mar 2012 17:22:27 GMT","userID":"5","userName":"Employee Anthony","inputID":"sessionURL","level":"info","message":"Started Editing"}
+{"level":"info","message":"User Employee Anthony finished editing startNewSession which now has a value of Start"}
+{"date":"Sun, 25 Mar 2012 17:22:57 GMT","userID":"5","userName":"Employee Anthony","inputID":"newSessionName","level":"info","message":"Started Editing"}
+{"level":"info","message":"User Employee Anthony finished editing newSessionName which now has a value of Let's get Drunk"}
+{"date":"Sun, 25 Mar 2012 17:23:09 GMT","userID":"5","userName":"Employee Anthony","inputID":"startNewSession","level":"info","message":"Started Editing"}
+{"date":"Sun, 25 Mar 2012 17:23:09 GMT","userID":"5","userName":"Employee Anthony","inputID":"sessionURL","level":"info","message":"Started Editing"}
+{"level":"info","message":"User Employee Anthony finished editing startNewSession which now has a value of Start"}
+{"date":"Sun, 25 Mar 2012 17:23:25 GMT","userID":"1","userName":"CEO John","level":"info","message":"Started Editing"}
+{"level":"info","message":"User CEO John finished editing undefined which now has a value of "}
+{"date":"Sun, 25 Mar 2012 17:23:55 GMT","userID":"5","userName":"Employee Anthony","level":"info","message":"Started Editing"}
+{"level":"info","message":"User Employee Anthony finished editing undefined which now has a value of "}
+{"level":"info","message":"User Employee Anthony finished editing undefined which now has a value of "}
+{"date":"Sun, 25 Mar 2012 17:38:34 GMT","userID":"1","userName":"CEO John","inputID":"projectInput","level":"info","message":"Started Editing"}
+{"level":"info","message":"User CEO John finished editing projectInput which now has a value of 20"}
+{"date":"Sun, 25 Mar 2012 17:38:37 GMT","userID":"1","userName":"CEO John","inputID":"date_worked","level":"info","message":"Started Editing"}
+{"level":"info","message":"User CEO John finished editing date_worked which now has a value of "}
+{"date":"Sun, 25 Mar 2012 17:38:40 GMT","userID":"1","userName":"CEO John","inputID":"projectInput","level":"info","message":"Started Editing"}
+{"level":"info","message":"User CEO John finished editing projectInput which now has a value of 201"}
+{"date":"Sun, 25 Mar 2012 17:38:56 GMT","userID":"1","userName":"CEO John","inputID":"projectInput","level":"info","message":"Started Editing"}
+{"level":"info","message":"User CEO John finished editing projectInput which now has a value of 2011114 - ThirdForce Arabic"}
+{"date":"Sun, 25 Mar 2012 17:38:59 GMT","userID":"1","userName":"CEO John","inputID":"date_worked","level":"info","message":"Started Editing"}
+{"level":"info","message":"User CEO John finished editing date_worked which now has a value of "}
+{"date":"Sun, 25 Mar 2012 17:41:01 GMT","userID":"1","userName":"CEO John","inputID":"date_worked","level":"info","message":"Started Editing"}
+{"level":"info","message":"User CEO John finished editing date_worked which now has a value of 13/03/2012"}
+{"date":"Sun, 25 Mar 2012 17:45:23 GMT","userID":"1","userName":"CEO John","inputID":"projectInput","level":"info","message":"Started Editing"}
+{"level":"info","message":"User CEO John finished editing projectInput which now has a value of Third"}
+{"date":"Sun, 25 Mar 2012 17:49:12 GMT","userID":"1","userName":"CEO John","inputID":"projectInput","level":"info","message":"Started Editing"}
+{"level":"info","message":"User CEO John finished editing projectInput which now has a value of Third"}
+{"date":"Sun, 25 Mar 2012 17:49:20 GMT","userID":"1","userName":"CEO John","inputID":"projectInput","level":"info","message":"Started Editing"}
+{"level":"info","message":"User CEO John finished editing projectInput which now has a value of Third"}
+{"date":"Sun, 25 Mar 2012 17:49:23 GMT","userID":"1","userName":"CEO John","inputID":"projectInput","level":"info","message":"Started Editing"}
+{"level":"info","message":"User CEO John finished editing projectInput which now has a value of "}
+{"date":"Sun, 25 Mar 2012 17:49:25 GMT","userID":"1","userName":"CEO John","inputID":"projectInput","level":"info","message":"Started Editing"}
+{"level":"info","message":"User CEO John finished editing projectInput which now has a value of 2010032 - Ariba Schools"}
+{"date":"Mon, 26 Mar 2012 14:38:59 GMT","userID":"1","userName":"CEO John","inputID":"projectInput","level":"info","message":"Started Editing"}
+{"level":"info","message":"User CEO John finished editing projectInput which now has a value of 2011114 - ThirdForce Arabic"}
+{"date":"Mon, 26 Mar 2012 14:39:32 GMT","userID":"1","userName":"CEO John","inputID":"date_worked","level":"info","message":"Started Editing"}
+{"level":"info","message":"User CEO John finished editing date_worked which now has a value of "}
+{"date":"Mon, 26 Mar 2012 14:39:34 GMT","userID":"1","userName":"CEO John","inputID":"date_worked","level":"info","message":"Started Editing"}
+{"level":"info","message":"User CEO John finished editing date_worked which now has a value of "}
+{"date":"Mon, 26 Mar 2012 14:51:24 GMT","userID":"1","userName":"CEO John","inputID":"projectInput","level":"info","message":"Started Editing"}
+{"level":"info","message":"User Employee Anthony finished editing undefined which now has a value of "}
+{"date":"Mon, 26 Mar 2012 14:51:32 GMT","userID":"5","userName":"Employee Anthony","inputID":"startTime","level":"info","message":"Started Editing"}
+{"level":"info","message":"User CEO John finished editing projectInput which now has a value of 2011114 - ThirdForce Arabic"}
+{"level":"info","message":"User Employee Anthony finished editing startTime which now has a value of 10:00"}
+{"date":"Mon, 26 Mar 2012 14:51:37 GMT","userID":"5","userName":"Employee Anthony","inputID":"endTime","level":"info","message":"Started Editing"}
+{"level":"info","message":"User Employee Anthony finished editing endTime which now has a value of 11:15"}
+{"date":"Mon, 26 Mar 2012 14:51:47 GMT","userID":"5","userName":"Employee Anthony","inputID":"startTime","level":"info","message":"Started Editing"}
+{"level":"info","message":"User Employee Anthony finished editing startTime which now has a value of 09:00"}
+{"date":"Mon, 26 Mar 2012 14:53:24 GMT","userID":"5","userName":"Employee Anthony","level":"info","message":"Started Editing"}
+{"date":"Mon, 26 Mar 2012 14:53:29 GMT","userID":"1","userName":"CEO John","level":"info","message":"Started Editing"}
+{"level":"info","message":"User CEO John finished editing undefined which now has a value of "}
+{"date":"Mon, 26 Mar 2012 14:53:37 GMT","userID":"1","userName":"CEO John","level":"info","message":"Started Editing"}
+{"level":"info","message":"User CEO John finished editing undefined which now has a value of "}
+{"date":"Mon, 26 Mar 2012 14:53:41 GMT","userID":"1","userName":"CEO John","level":"info","message":"Started Editing"}
+{"level":"info","message":"User Employee Anthony finished editing undefined which now has a value of "}
+{"date":"Mon, 26 Mar 2012 14:55:33 GMT","userID":"5","userName":"Employee Anthony","inputID":"newSessionName","level":"info","message":"Started Editing"}
+{"level":"info","message":"User Employee Anthony finished editing newSessionName which now has a value of t2"}
+{"date":"Mon, 26 Mar 2012 14:55:36 GMT","userID":"5","userName":"Employee Anthony","inputID":"sessionURL","level":"info","message":"Started Editing"}
+{"level":"info","message":"User CEO John finished editing undefined which now has a value of "}
+{"date":"Mon, 26 Mar 2012 14:55:54 GMT","userID":"1","userName":"CEO John","level":"info","message":"Started Editing"}
+{"level":"info","message":"User CEO John finished editing undefined which now has a value of "}
+{"date":"Tue, 27 Mar 2012 12:35:33 GMT","userID":"1","userName":"CEO John","level":"info","message":"Started Editing"}
+{"date":"Wed, 28 Mar 2012 09:48:34 GMT","userID":"1","userName":"CEO John","inputID":"taskMain","level":"info","message":"Started Editing"}
+{"date":"Wed, 28 Mar 2012 09:48:34 GMT","userID":"1","userName":"CEO John","inputID":"taskMain","level":"info","message":"Started Editing"}
+{"level":"info","message":"User CEO John finished editing taskMain which now has a value of null"}
+{"level":"info","message":"User CEO John finished editing taskMain which now has a value of null"}
+{"level":"info","message":"User CEO John finished editing taskMain which now has a value of null"}
+{"date":"Wed, 28 Mar 2012 09:49:15 GMT","userID":"1","userName":"CEO John","inputID":"taskMain","level":"info","message":"Started Editing"}
+{"date":"Wed, 28 Mar 2012 09:49:15 GMT","userID":"1","userName":"CEO John","inputID":"taskMain","level":"info","message":"Started Editing"}
+{"date":"Wed, 28 Mar 2012 09:49:15 GMT","userID":"1","userName":"CEO John","inputID":"taskMain","level":"info","message":"Started Editing"}
+{"level":"info","message":"User CEO John finished editing taskMain which now has a value of null"}
+{"level":"info","message":"User CEO John finished editing taskMain which now has a value of null"}
+{"level":"info","message":"User CEO John finished editing taskMain which now has a value of null"}
+{"date":"Wed, 28 Mar 2012 09:49:23 GMT","userID":"1","userName":"CEO John","inputID":"taskMain","level":"info","message":"Started Editing"}
+{"date":"Wed, 28 Mar 2012 09:49:23 GMT","userID":"1","userName":"CEO John","inputID":"taskMain","level":"info","message":"Started Editing"}
+{"date":"Wed, 28 Mar 2012 09:49:23 GMT","userID":"1","userName":"CEO John","inputID":"taskMain","level":"info","message":"Started Editing"}
+{"level":"info","message":"User CEO John finished editing taskMain which now has a value of null"}
+{"level":"info","message":"User CEO John finished editing taskMain which now has a value of null"}
+{"level":"info","message":"User CEO John finished editing taskMain which now has a value of null"}
+{"date":"Wed, 28 Mar 2012 09:51:31 GMT","userID":"1","userName":"CEO John","inputID":"taskMain","level":"info","message":"Started Editing"}
+{"date":"Wed, 28 Mar 2012 09:51:31 GMT","userID":"1","userName":"CEO John","inputID":"taskMain","level":"info","message":"Started Editing"}
+{"level":"info","message":"User CEO John finished editing taskMain which now has a value of null"}
+{"level":"info","message":"User CEO John finished editing taskMain which now has a value of null"}
+{"date":"Wed, 28 Mar 2012 09:52:21 GMT","userID":"1","userName":"CEO John","inputID":"taskMain","level":"info","message":"Started Editing"}
+{"date":"Wed, 28 Mar 2012 09:52:21 GMT","userID":"1","userName":"CEO John","inputID":"taskMain","level":"info","message":"Started Editing"}
+{"date":"Wed, 28 Mar 2012 09:54:34 GMT","userID":"1","userName":"CEO John","inputID":"taskMain","level":"info","message":"Started Editing"}
+{"level":"info","message":"User CEO John finished editing taskMain which now has a value of null"}
+{"level":"info","message":"User CEO John finished editing taskMain which now has a value of null"}
+{"date":"Wed, 28 Mar 2012 09:54:34 GMT","userID":"1","userName":"CEO John","inputID":"taskSub","level":"info","message":"Started Editing"}
+{"date":"Wed, 28 Mar 2012 09:54:34 GMT","userID":"1","userName":"CEO John","inputID":"taskSub","level":"info","message":"Started Editing"}
+{"level":"info","message":"User CEO John finished editing taskSub which now has a value of null"}
+{"level":"info","message":"User CEO John finished editing taskSub which now has a value of null"}
+{"date":"Wed, 28 Mar 2012 09:55:32 GMT","userID":"1","userName":"CEO John","inputID":"taskSub","level":"info","message":"Started Editing"}
+{"date":"Wed, 28 Mar 2012 09:55:32 GMT","userID":"1","userName":"CEO John","inputID":"taskSub","level":"info","message":"Started Editing"}
+{"date":"Wed, 28 Mar 2012 09:55:36 GMT","userID":"1","userName":"CEO John","inputID":"projectInput","level":"info","message":"Started Editing"}
+{"level":"info","message":"User CEO John finished editing projectInput which now has a value of "}
+{"date":"Wed, 28 Mar 2012 09:55:47 GMT","userID":"1","userName":"CEO John","inputID":"taskMain","level":"info","message":"Started Editing"}
+{"date":"Wed, 28 Mar 2012 09:55:47 GMT","userID":"1","userName":"CEO John","inputID":"taskMain","level":"info","message":"Started Editing"}
+{"level":"info","message":"User CEO John finished editing taskMain which now has a value of null"}
+{"level":"info","message":"User CEO John finished editing taskMain which now has a value of null"}
+{"date":"Wed, 28 Mar 2012 09:56:24 GMT","userID":"1","userName":"CEO John","inputID":"taskMain","level":"info","message":"Started Editing"}
+{"date":"Wed, 28 Mar 2012 09:56:24 GMT","userID":"1","userName":"CEO John","inputID":"taskMain","level":"info","message":"Started Editing"}
+{"date":"Wed, 28 Mar 2012 09:56:28 GMT","userID":"1","userName":"CEO John","inputID":"taskMain","level":"info","message":"Started Editing"}
+{"date":"Wed, 28 Mar 2012 09:56:28 GMT","userID":"1","userName":"CEO John","inputID":"taskMain","level":"info","message":"Started Editing"}
+{"level":"info","message":"User CEO John finished editing taskMain which now has a value of 4"}
+{"level":"info","message":"User CEO John finished editing taskMain which now has a value of 4"}
+{"date":"Wed, 28 Mar 2012 09:56:30 GMT","userID":"1","userName":"CEO John","inputID":"projectInput","level":"info","message":"Started Editing"}
+{"date":"Wed, 28 Mar 2012 09:56:30 GMT","userID":"1","userName":"CEO John","inputID":"projectInput","level":"info","message":"Started Editing"}
+{"level":"info","message":"User CEO John finished editing projectInput which now has a value of 2011"}
+{"level":"info","message":"User CEO John finished editing projectInput which now has a value of 2011"}
+{"date":"Wed, 28 Mar 2012 09:57:01 GMT","userID":"1","userName":"CEO John","inputID":"projectInput","level":"info","message":"Started Editing"}
+{"date":"Wed, 28 Mar 2012 09:57:01 GMT","userID":"1","userName":"CEO John","inputID":"projectInput","level":"info","message":"Started Editing"}
+{"date":"Wed, 28 Mar 2012 09:57:03 GMT","userID":"1","userName":"CEO John","inputID":"projectInput","level":"info","message":"Started Editing"}
+{"level":"info","message":"User CEO John finished editing projectInput which now has a value of "}
+{"date":"Wed, 28 Mar 2012 09:57:07 GMT","userID":"1","userName":"CEO John","inputID":"projectInput","level":"info","message":"Started Editing"}
+{"date":"Wed, 28 Mar 2012 09:57:07 GMT","userID":"1","userName":"CEO John","inputID":"projectInput","level":"info","message":"Started Editing"}
+{"level":"info","message":"User CEO John finished editing projectInput which now has a value of "}
+{"level":"info","message":"User CEO John finished editing projectInput which now has a value of "}
+{"date":"Wed, 28 Mar 2012 09:57:39 GMT","userID":"1","userName":"CEO John","inputID":"projectInput","level":"info","message":"Started Editing"}
+{"date":"Wed, 28 Mar 2012 09:57:39 GMT","userID":"1","userName":"CEO John","inputID":"projectInput","level":"info","message":"Started Editing"}
+{"date":"Wed, 28 Mar 2012 09:57:42 GMT","userID":"1","userName":"CEO John","inputID":"projectInput","level":"info","message":"Started Editing"}
+{"level":"info","message":"User CEO John finished editing projectInput which now has a value of 201"}
+{"date":"Wed, 28 Mar 2012 09:58:02 GMT","userID":"1","userName":"CEO John","inputID":"projectInput","level":"info","message":"Started Editing"}
+{"date":"Wed, 28 Mar 2012 09:58:05 GMT","userID":"1","userName":"CEO John","inputID":"projectInput","level":"info","message":"Started Editing"}
+{"level":"info","message":"User CEO John finished editing projectInput which now has a value of 2012105 - Shadow"}
+{"date":"Wed, 28 Mar 2012 09:58:10 GMT","userID":"1","userName":"CEO John","inputID":"projectInput","level":"info","message":"Started Editing"}
+{"date":"Wed, 28 Mar 2012 09:58:10 GMT","userID":"1","userName":"CEO John","inputID":"projectInput","level":"info","message":"Started Editing"}
+{"level":"info","message":"User CEO John finished editing projectInput which now has a value of "}
+{"level":"info","message":"User CEO John finished editing projectInput which now has a value of "}
+{"date":"Wed, 28 Mar 2012 09:59:31 GMT","userID":"1","userName":"CEO John","inputID":"projectInput","level":"info","message":"Started Editing"}
+{"date":"Wed, 28 Mar 2012 09:59:31 GMT","userID":"1","userName":"CEO John","inputID":"projectInput","level":"info","message":"Started Editing"}
+{"level":"info","message":"User CEO John finished editing projectInput which now has a value of "}
+{"level":"info","message":"User CEO John finished editing projectInput which now has a value of "}
+{"date":"Wed, 28 Mar 2012 09:59:36 GMT","userID":"1","userName":"CEO John","inputID":"projectInput","level":"info","message":"Started Editing"}
+{"date":"Wed, 28 Mar 2012 09:59:36 GMT","userID":"1","userName":"CEO John","inputID":"projectInput","level":"info","message":"Started Editing"}
+{"date":"Wed, 28 Mar 2012 10:35:50 GMT","userID":"1","userName":"CEO John","level":"info","message":"Started Editing"}
+{"level":"info","message":"User CEO John finished editing undefined which now has a value of "}
+{"date":"Wed, 28 Mar 2012 10:47:45 GMT","userID":"1","userName":"CEO John","inputID":"projectInput","level":"info","message":"Started Editing"}
+{"date":"Wed, 28 Mar 2012 10:47:45 GMT","userID":"1","userName":"CEO John","inputID":"projectInput","level":"info","message":"Started Editing"}
+{"level":"info","message":"User CEO John finished editing projectInput which now has a value of 201"}
+{"level":"info","message":"User CEO John finished editing projectInput which now has a value of 201"}
+{"level":"info","message":"User CEO John finished editing projectInput which now has a value of 2011114 - ThirdForce Arabic"}
+{"level":"info","message":"User CEO John finished editing projectInput which now has a value of 2011114 - ThirdForce Arabic"}
+{"date":"Wed, 28 Mar 2012 10:50:30 GMT","userID":"1","userName":"CEO John","inputID":"newSessionName","level":"info","message":"Started Editing"}
+{"level":"info","message":"User CEO John finished editing newSessionName which now has a value of Testing"}
+{"date":"Wed, 28 Mar 2012 10:50:37 GMT","userID":"1","userName":"CEO John","inputID":"sessionURL","level":"info","message":"Started Editing"}
+{"date":"Wed, 28 Mar 2012 10:50:50 GMT","userID":"1","userName":"CEO John","inputID":"projectInput","level":"info","message":"Started Editing"}
+{"level":"info","message":"User CEO John finished editing projectInput which now has a value of 2011114 - ThirdForce Arabic"}
+{"date":"Wed, 28 Mar 2012 10:51:01 GMT","userID":"1","userName":"CEO John","inputID":"date_worked","level":"info","message":"Started Editing"}
+{"level":"info","message":"User CEO John finished editing date_worked which now has a value of "}
+{"date":"Wed, 28 Mar 2012 10:53:06 GMT","userID":"1","userName":"CEO John","inputID":"newSessionName","level":"info","message":"Started Editing"}
+{"date":"Wed, 28 Mar 2012 10:53:08 GMT","userID":"1","userName":"CEO John","inputID":"sessionURL","level":"info","message":"Started Editing"}
+{"level":"info","message":"User CEO John finished editing newSessionName which now has a value of "}
+{"date":"Wed, 28 Mar 2012 10:53:14 GMT","userID":"1","userName":"CEO John","inputID":"projectInput","level":"info","message":"Started Editing"}
+{"level":"info","message":"User Employee Anthony finished editing projectInput which now has a value of 2012063 - Thirdforce Spanish"}
+{"level":"info","message":"User Employee Anthony finished editing projectInput which now has a value of 2012063 - Thirdforce Spanish"}
+{"date":"Wed, 28 Mar 2012 10:53:43 GMT","userID":"1","userName":"CEO John","inputID":"projectInput","level":"info","message":"Started Editing"}
+{"level":"info","message":"User CEO John finished editing projectInput which now has a value of 2"}
+{"level":"info","message":"User CEO John finished editing projectInput which now has a value of 2011114 - ThirdForce Arabic"}
+{"date":"Wed, 28 Mar 2012 10:53:47 GMT","userID":"5","userName":"Employee Anthony","inputID":"projectInput","level":"info","message":"Started Editing"}
+{"date":"Wed, 28 Mar 2012 10:53:47 GMT","userID":"5","userName":"Employee Anthony","inputID":"projectInput","level":"info","message":"Started Editing"}
+{"level":"info","message":"User Employee Anthony finished editing projectInput which now has a value of 20"}
+{"level":"info","message":"User Employee Anthony finished editing projectInput which now has a value of 20"}
+{"level":"info","message":"User Employee Anthony finished editing projectInput which now has a value of 2012105 - Shadow"}
+{"level":"info","message":"User Employee Anthony finished editing projectInput which now has a value of 2012105 - Shadow"}
+{"date":"Wed, 28 Mar 2012 10:53:53 GMT","userID":"5","userName":"Employee Anthony","inputID":"projectInput","level":"info","message":"Started Editing"}
+{"date":"Wed, 28 Mar 2012 10:53:53 GMT","userID":"5","userName":"Employee Anthony","inputID":"projectInput","level":"info","message":"Started Editing"}
+{"date":"Wed, 28 Mar 2012 10:54:44 GMT","userID":"1","userName":"CEO John","inputID":"projectInput","level":"info","message":"Started Editing"}
+{"level":"info","message":"User CEO John finished editing projectInput which now has a value of "}
+{"date":"Wed, 28 Mar 2012 10:55:48 GMT","userID":"1","userName":"CEO John","level":"info","message":"Started Editing"}
+{"level":"info","message":"User CEO John finished editing undefined which now has a value of "}
+{"date":"Wed, 28 Mar 2012 10:56:20 GMT","userID":"1","userName":"CEO John","level":"info","message":"Started Editing"}
+{"date":"Wed, 28 Mar 2012 10:57:34 GMT","userID":"1","userName":"CEO John","level":"info","message":"Started Editing"}
+{"level":"info","message":"User CEO John finished editing undefined which now has a value of "}
+{"date":"Wed, 28 Mar 2012 10:57:59 GMT","userID":"1","userName":"CEO John","level":"info","message":"Started Editing"}
+{"level":"info","message":"User CEO John finished editing undefined which now has a value of "}
+{"date":"Wed, 28 Mar 2012 10:58:09 GMT","userID":"1","userName":"CEO John","inputID":"newSessionName","level":"info","message":"Started Editing"}
+{"date":"Wed, 28 Mar 2012 10:58:11 GMT","userID":"1","userName":"CEO John","inputID":"sessionURL","level":"info","message":"Started Editing"}
+{"level":"info","message":"User CEO John finished editing newSessionName which now has a value of "}
+{"date":"Wed, 28 Mar 2012 10:58:19 GMT","userID":"1","userName":"CEO John","level":"info","message":"Started Editing"}
+{"date":"Wed, 28 Mar 2012 10:58:38 GMT","userID":"5","userName":"Employee Anthony","level":"info","message":"Started Editing"}
+{"date":"Wed, 28 Mar 2012 10:58:38 GMT","userID":"5","userName":"Employee Anthony","level":"info","message":"Started Editing"}
+{"level":"info","message":"User CEO John finished editing undefined which now has a value of "}
+{"date":"Wed, 28 Mar 2012 10:59:39 GMT","userID":"1","userName":"CEO John","inputID":"newSessionName","level":"info","message":"Started Editing"}
+{"date":"Wed, 28 Mar 2012 10:59:39 GMT","userID":"1","userName":"CEO John","inputID":"newSessionName","level":"info","message":"Started Editing"}
+{"level":"info","message":"User CEO John finished editing newSessionName which now has a value of hkjh"}
+{"level":"info","message":"User CEO John finished editing newSessionName which now has a value of hkjh"}
+{"date":"Wed, 28 Mar 2012 10:59:40 GMT","userID":"1","userName":"CEO John","inputID":"sessionURL","level":"info","message":"Started Editing"}
+{"date":"Wed, 28 Mar 2012 10:59:40 GMT","userID":"1","userName":"CEO John","inputID":"sessionURL","level":"info","message":"Started Editing"}
+{"date":"Wed, 28 Mar 2012 10:59:45 GMT","userID":"1","userName":"CEO John","inputID":"newSessionName","level":"info","message":"Started Editing"}
+{"date":"Wed, 28 Mar 2012 10:59:45 GMT","userID":"1","userName":"CEO John","inputID":"newSessionName","level":"info","message":"Started Editing"}
+{"date":"Wed, 28 Mar 2012 10:59:46 GMT","userID":"1","userName":"CEO John","inputID":"sessionURL","level":"info","message":"Started Editing"}
+{"date":"Wed, 28 Mar 2012 10:59:46 GMT","userID":"1","userName":"CEO John","inputID":"sessionURL","level":"info","message":"Started Editing"}
+{"date":"Wed, 28 Mar 2012 10:59:47 GMT","userID":"1","userName":"CEO John","inputID":"sessionURL","level":"info","message":"Started Editing"}
+{"date":"Wed, 28 Mar 2012 10:59:47 GMT","userID":"1","userName":"CEO John","inputID":"sessionURL","level":"info","message":"Started Editing"}
+{"level":"info","message":"User CEO John finished editing newSessionName which now has a value of "}
+{"level":"info","message":"User CEO John finished editing newSessionName which now has a value of "}
+{"level":"info","message":"User CEO John finished editing sessionURL which now has a value of http://localhost:13476/s//"}
+{"level":"info","message":"User CEO John finished editing sessionURL which now has a value of http://localhost:13476/s//"}
+{"date":"Wed, 28 Mar 2012 10:59:55 GMT","userID":"1","userName":"CEO John","inputID":"newSessionName","level":"info","message":"Started Editing"}
+{"date":"Wed, 28 Mar 2012 10:59:55 GMT","userID":"1","userName":"CEO John","inputID":"newSessionName","level":"info","message":"Started Editing"}
+{"date":"Wed, 28 Mar 2012 10:59:56 GMT","userID":"1","userName":"CEO John","inputID":"sessionURL","level":"info","message":"Started Editing"}
+{"date":"Wed, 28 Mar 2012 10:59:56 GMT","userID":"1","userName":"CEO John","inputID":"sessionURL","level":"info","message":"Started Editing"}
+{"level":"info","message":"User CEO John finished editing newSessionName which now has a value of "}
+{"level":"info","message":"User CEO John finished editing newSessionName which now has a value of "}
+{"date":"Wed, 28 Mar 2012 11:00:03 GMT","userID":"1","userName":"CEO John","inputID":"newSessionName","level":"info","message":"Started Editing"}
+{"date":"Wed, 28 Mar 2012 11:00:03 GMT","userID":"1","userName":"CEO John","inputID":"newSessionName","level":"info","message":"Started Editing"}
+{"level":"info","message":"User Employee Anthony finished editing undefined which now has a value of "}
+{"level":"info","message":"User Employee Anthony finished editing undefined which now has a value of "}
+{"level":"info","message":"User CEO John finished editing newSessionName which now has a value of kjljj"}
+{"level":"info","message":"User CEO John finished editing newSessionName which now has a value of kjljj"}
+{"date":"Wed, 28 Mar 2012 11:00:08 GMT","userID":"1","userName":"CEO John","inputID":"sessionURL","level":"info","message":"Started Editing"}
+{"date":"Wed, 28 Mar 2012 11:00:08 GMT","userID":"1","userName":"CEO John","inputID":"sessionURL","level":"info","message":"Started Editing"}
+{"date":"Wed, 28 Mar 2012 11:00:11 GMT","userID":"1","userName":"CEO John","inputID":"newSessionName","level":"info","message":"Started Editing"}
+{"date":"Wed, 28 Mar 2012 11:00:11 GMT","userID":"1","userName":"CEO John","inputID":"newSessionName","level":"info","message":"Started Editing"}
+{"level":"info","message":"User CEO John finished editing newSessionName which now has a value of fgf"}
+{"level":"info","message":"User CEO John finished editing newSessionName which now has a value of fgf"}
+{"date":"Wed, 28 Mar 2012 11:00:13 GMT","userID":"1","userName":"CEO John","inputID":"sessionURL","level":"info","message":"Started Editing"}
+{"date":"Wed, 28 Mar 2012 11:00:13 GMT","userID":"1","userName":"CEO John","inputID":"sessionURL","level":"info","message":"Started Editing"}
+{"date":"Wed, 28 Mar 2012 11:00:17 GMT","userID":"1","userName":"CEO John","inputID":"newSessionName","level":"info","message":"Started Editing"}
+{"date":"Wed, 28 Mar 2012 11:00:17 GMT","userID":"1","userName":"CEO John","inputID":"newSessionName","level":"info","message":"Started Editing"}
+{"level":"info","message":"User CEO John finished editing newSessionName which now has a value of fhfgh"}
+{"level":"info","message":"User CEO John finished editing newSessionName which now has a value of fhfgh"}
+{"date":"Wed, 28 Mar 2012 11:00:19 GMT","userID":"1","userName":"CEO John","inputID":"sessionURL","level":"info","message":"Started Editing"}
+{"date":"Wed, 28 Mar 2012 11:00:19 GMT","userID":"1","userName":"CEO John","inputID":"sessionURL","level":"info","message":"Started Editing"}
+{"date":"Wed, 28 Mar 2012 11:00:22 GMT","userID":"1","userName":"CEO John","inputID":"newSessionName","level":"info","message":"Started Editing"}
+{"date":"Wed, 28 Mar 2012 11:00:22 GMT","userID":"1","userName":"CEO John","inputID":"newSessionName","level":"info","message":"Started Editing"}
+{"level":"info","message":"User CEO John finished editing newSessionName which now has a value of fdhdfg"}
+{"level":"info","message":"User CEO John finished editing newSessionName which now has a value of fdhdfg"}
+{"date":"Wed, 28 Mar 2012 11:00:24 GMT","userID":"1","userName":"CEO John","inputID":"sessionURL","level":"info","message":"Started Editing"}
+{"date":"Wed, 28 Mar 2012 11:00:24 GMT","userID":"1","userName":"CEO John","inputID":"sessionURL","level":"info","message":"Started Editing"}
+{"date":"Wed, 28 Mar 2012 11:03:21 GMT","userID":"1","userName":"CEO John","inputID":"newSessionName","level":"info","message":"Started Editing"}
+{"level":"info","message":"User CEO John finished editing newSessionName which now has a value of testing"}
+{"date":"Wed, 28 Mar 2012 11:03:24 GMT","userID":"1","userName":"CEO John","inputID":"sessionURL","level":"info","message":"Started Editing"}
+{"date":"Wed, 28 Mar 2012 11:03:30 GMT","userID":"1","userName":"CEO John","inputID":"newSessionName","level":"info","message":"Started Editing"}
+{"level":"info","message":"User CEO John finished editing newSessionName which now has a value of lol"}
+{"date":"Wed, 28 Mar 2012 11:03:33 GMT","userID":"1","userName":"CEO John","inputID":"sessionURL","level":"info","message":"Started Editing"}
+{"date":"Wed, 28 Mar 2012 11:03:38 GMT","userID":"1","userName":"CEO John","inputID":"newSessionName","level":"info","message":"Started Editing"}
+{"level":"info","message":"User CEO John finished editing newSessionName which now has a value of more"}
+{"date":"Wed, 28 Mar 2012 11:03:41 GMT","userID":"1","userName":"CEO John","inputID":"sessionURL","level":"info","message":"Started Editing"}
+{"date":"Wed, 28 Mar 2012 11:03:44 GMT","userID":"1","userName":"CEO John","inputID":"newSessionName","level":"info","message":"Started Editing"}
+{"level":"info","message":"User CEO John finished editing newSessionName which now has a value of and more"}
+{"date":"Wed, 28 Mar 2012 11:03:50 GMT","userID":"1","userName":"CEO John","inputID":"sessionURL","level":"info","message":"Started Editing"}
+{"date":"Wed, 28 Mar 2012 11:03:54 GMT","userID":"1","userName":"CEO John","inputID":"newSessionName","level":"info","message":"Started Editing"}
+{"level":"info","message":"User CEO John finished editing newSessionName which now has a value of scroll"}
+{"date":"Wed, 28 Mar 2012 11:03:57 GMT","userID":"1","userName":"CEO John","inputID":"sessionURL","level":"info","message":"Started Editing"}
+{"date":"Wed, 28 Mar 2012 11:04:02 GMT","userID":"1","userName":"CEO John","inputID":"newSessionName","level":"info","message":"Started Editing"}
+{"level":"info","message":"User CEO John finished editing newSessionName which now has a value of now"}
+{"date":"Wed, 28 Mar 2012 11:04:07 GMT","userID":"1","userName":"CEO John","inputID":"sessionURL","level":"info","message":"Started Editing"}
+{"date":"Wed, 28 Mar 2012 11:04:11 GMT","userID":"1","userName":"CEO John","inputID":"newSessionName","level":"info","message":"Started Editing"}
+{"level":"info","message":"User CEO John finished editing newSessionName which now has a value of not scrolling"}
+{"date":"Wed, 28 Mar 2012 11:04:16 GMT","userID":"1","userName":"CEO John","inputID":"sessionURL","level":"info","message":"Started Editing"}
+{"date":"Wed, 28 Mar 2012 11:04:31 GMT","userID":"1","userName":"CEO John","level":"info","message":"Started Editing"}
+{"level":"info","message":"User CEO John finished editing undefined which now has a value of "}
+{"date":"Wed, 28 Mar 2012 11:05:29 GMT","userID":"1","userName":"CEO John","level":"info","message":"Started Editing"}
+{"date":"Wed, 28 Mar 2012 11:05:38 GMT","userID":"1","userName":"CEO John","inputID":"newSessionName","level":"info","message":"Started Editing"}
+{"level":"info","message":"User CEO John finished editing newSessionName which now has a value of 1 more"}
+{"date":"Wed, 28 Mar 2012 11:05:41 GMT","userID":"1","userName":"CEO John","inputID":"sessionURL","level":"info","message":"Started Editing"}
+{"date":"Wed, 28 Mar 2012 11:06:19 GMT","userID":"1","userName":"CEO John","inputID":"newSessionName","level":"info","message":"Started Editing"}
+{"level":"info","message":"User CEO John finished editing newSessionName which now has a value of now"}
+{"date":"Wed, 28 Mar 2012 11:06:21 GMT","userID":"1","userName":"CEO John","inputID":"sessionURL","level":"info","message":"Started Editing"}
+{"date":"Wed, 28 Mar 2012 11:06:24 GMT","userID":"1","userName":"CEO John","inputID":"newSessionName","level":"info","message":"Started Editing"}
+{"level":"info","message":"User CEO John finished editing newSessionName which now has a value of work"}
+{"date":"Wed, 28 Mar 2012 11:06:26 GMT","userID":"1","userName":"CEO John","inputID":"sessionURL","level":"info","message":"Started Editing"}
+{"date":"Wed, 28 Mar 2012 11:08:12 GMT","userID":"1","userName":"CEO John","inputID":"newSessionName","level":"info","message":"Started Editing"}
+{"level":"info","message":"User CEO John finished editing newSessionName which now has a value of yiuy"}
+{"date":"Wed, 28 Mar 2012 11:08:13 GMT","userID":"1","userName":"CEO John","inputID":"sessionURL","level":"info","message":"Started Editing"}
+{"date":"Wed, 28 Mar 2012 11:08:17 GMT","userID":"1","userName":"CEO John","inputID":"newSessionName","level":"info","message":"Started Editing"}
+{"level":"info","message":"User CEO John finished editing newSessionName which now has a value of hjkh"}
+{"date":"Wed, 28 Mar 2012 11:08:19 GMT","userID":"1","userName":"CEO John","inputID":"sessionURL","level":"info","message":"Started Editing"}
+{"date":"Wed, 28 Mar 2012 11:11:12 GMT","userID":"1","userName":"CEO John","inputID":"newSessionName","level":"info","message":"Started Editing"}
+{"date":"Wed, 28 Mar 2012 11:11:13 GMT","userID":"1","userName":"CEO John","inputID":"sessionURL","level":"info","message":"Started Editing"}
+{"level":"info","message":"User CEO John finished editing newSessionName which now has a value of "}
+{"date":"Wed, 28 Mar 2012 11:11:30 GMT","userID":"5","userName":"Employee Anthony","inputID":"newSessionName","level":"info","message":"Started Editing"}
+{"level":"info","message":"User Employee Anthony finished editing newSessionName which now has a value of 564"}
+{"date":"Wed, 28 Mar 2012 11:11:32 GMT","userID":"5","userName":"Employee Anthony","inputID":"sessionURL","level":"info","message":"Started Editing"}
+{"date":"Wed, 28 Mar 2012 11:11:51 GMT","userID":"1","userName":"CEO John","inputID":"newSessionName","level":"info","message":"Started Editing"}
+{"level":"info","message":"User CEO John finished editing newSessionName which now has a value of dfg"}
+{"date":"Wed, 28 Mar 2012 11:11:53 GMT","userID":"1","userName":"CEO John","inputID":"sessionURL","level":"info","message":"Started Editing"}
+{"date":"Wed, 28 Mar 2012 11:14:02 GMT","userID":"1","userName":"CEO John","inputID":"newSessionName","level":"info","message":"Started Editing"}
+{"level":"info","message":"User CEO John finished editing newSessionName which now has a value of dfgdfdfg"}
+{"date":"Wed, 28 Mar 2012 11:14:06 GMT","userID":"1","userName":"CEO John","inputID":"sessionURL","level":"info","message":"Started Editing"}
+{"date":"Wed, 28 Mar 2012 11:14:10 GMT","userID":"1","userName":"CEO John","inputID":"newSessionName","level":"info","message":"Started Editing"}
+{"level":"info","message":"User CEO John finished editing newSessionName which now has a value of dgdfg"}
+{"date":"Wed, 28 Mar 2012 11:14:12 GMT","userID":"1","userName":"CEO John","inputID":"sessionURL","level":"info","message":"Started Editing"}
+{"date":"Wed, 28 Mar 2012 11:18:42 GMT","userID":"5","userName":"Employee Anthony","inputID":"newSessionName","level":"info","message":"Started Editing"}
+{"level":"info","message":"User Employee Anthony finished editing newSessionName which now has a value of 5642"}
+{"date":"Wed, 28 Mar 2012 11:18:46 GMT","userID":"5","userName":"Employee Anthony","inputID":"sessionURL","level":"info","message":"Started Editing"}
+{"date":"Wed, 28 Mar 2012 11:19:45 GMT","userID":"5","userName":"Employee Anthony","inputID":"newSessionName","level":"info","message":"Started Editing"}
+{"level":"info","message":"User Employee Anthony finished editing newSessionName which now has a value of 69"}
+{"date":"Wed, 28 Mar 2012 11:19:48 GMT","userID":"5","userName":"Employee Anthony","inputID":"sessionURL","level":"info","message":"Started Editing"}
+{"date":"Wed, 28 Mar 2012 11:26:34 GMT","userID":"1","userName":"CEO John","inputID":"newSessionName","level":"info","message":"Started Editing"}
+{"date":"Wed, 28 Mar 2012 11:26:34 GMT","userID":"1","userName":"CEO John","inputID":"sessionURL","level":"info","message":"Started Editing"}
+{"level":"info","message":"User CEO John finished editing newSessionName which now has a value of "}
+{"date":"Wed, 28 Mar 2012 11:37:20 GMT","userID":"5","userName":"Employee Anthony","inputID":"newSessionName","level":"info","message":"Started Editing"}
+{"date":"Wed, 28 Mar 2012 11:37:22 GMT","userID":"5","userName":"Employee Anthony","inputID":"sessionURL","level":"info","message":"Started Editing"}
+{"level":"info","message":"User Employee Anthony finished editing newSessionName which now has a value of "}
+{"date":"Wed, 28 Mar 2012 11:37:28 GMT","userID":"5","userName":"Employee Anthony","inputID":"newSessionName","level":"info","message":"Started Editing"}
+{"date":"Wed, 28 Mar 2012 11:37:30 GMT","userID":"5","userName":"Employee Anthony","inputID":"sessionURL","level":"info","message":"Started Editing"}
+{"level":"info","message":"User Employee Anthony finished editing newSessionName which now has a value of "}
+{"date":"Wed, 28 Mar 2012 11:37:35 GMT","userID":"1","userName":"CEO John","level":"info","message":"Started Editing"}
+{"level":"info","message":"User CEO John finished editing undefined which now has a value of "}
+{"date":"Wed, 28 Mar 2012 11:37:43 GMT","userID":"1","userName":"CEO John","level":"info","message":"Started Editing"}
+{"date":"Wed, 28 Mar 2012 11:37:43 GMT","userID":"1","userName":"CEO John","level":"info","message":"Started Editing"}
+{"level":"info","message":"User CEO John finished editing undefined which now has a value of "}
+{"level":"info","message":"User CEO John finished editing undefined which now has a value of "}
+{"date":"Wed, 28 Mar 2012 11:38:17 GMT","userID":"1","userName":"CEO John","level":"info","message":"Started Editing"}
+{"date":"Wed, 28 Mar 2012 11:38:17 GMT","userID":"1","userName":"CEO John","level":"info","message":"Started Editing"}
+{"date":"Wed, 28 Mar 2012 11:38:20 GMT","userID":"1","userName":"CEO John","level":"info","message":"Started Editing"}
+{"level":"info","message":"User CEO John finished editing undefined which now has a value of "}
+{"date":"Wed, 28 Mar 2012 11:38:37 GMT","userID":"5","userName":"Employee Anthony","level":"info","message":"Started Editing"}
+{"date":"Wed, 28 Mar 2012 11:38:37 GMT","userID":"5","userName":"Employee Anthony","level":"info","message":"Started Editing"}
+{"date":"Wed, 28 Mar 2012 11:38:40 GMT","userID":"1","userName":"CEO John","level":"info","message":"Started Editing"}
+{"date":"Wed, 28 Mar 2012 11:38:40 GMT","userID":"1","userName":"CEO John","level":"info","message":"Started Editing"}
+{"level":"info","message":"User CEO John finished editing undefined which now has a value of "}
+{"level":"info","message":"User CEO John finished editing undefined which now has a value of "}
+{"level":"info","message":"User Employee Anthony finished editing undefined which now has a value of "}
+{"level":"info","message":"User Employee Anthony finished editing undefined which now has a value of "}
+{"level":"info","message":"User Employee Anthony finished editing undefined which now has a value of "}
+{"level":"info","message":"User Employee Anthony finished editing undefined which now has a value of "}
+{"date":"Wed, 28 Mar 2012 11:49:40 GMT","userID":"5","userName":"Employee Anthony","level":"info","message":"Started Editing"}
+{"date":"Wed, 28 Mar 2012 11:49:40 GMT","userID":"5","userName":"Employee Anthony","level":"info","message":"Started Editing"}
+{"date":"Wed, 28 Mar 2012 11:49:40 GMT","userID":"5","userName":"Employee Anthony","level":"info","message":"Started Editing"}
+{"date":"Wed, 28 Mar 2012 11:49:40 GMT","userID":"5","userName":"Employee Anthony","level":"info","message":"Started Editing"}
+{"date":"Wed, 28 Mar 2012 11:51:54 GMT","userID":"1","userName":"CEO John","level":"info","message":"Started Editing"}
+{"date":"Wed, 28 Mar 2012 11:51:54 GMT","userID":"1","userName":"CEO John","level":"info","message":"Started Editing"}
+{"level":"info","message":"User CEO John finished editing undefined which now has a value of "}
+{"level":"info","message":"User CEO John finished editing undefined which now has a value of "}
+{"date":"Wed, 28 Mar 2012 11:52:20 GMT","userID":"1","userName":"CEO John","inputID":"newSessionName","level":"info","message":"Started Editing"}
+{"level":"info","message":"User CEO John finished editing newSessionName which now has a value of testLog"}
+{"date":"Wed, 28 Mar 2012 11:52:37 GMT","userID":"1","userName":"CEO John","level":"info","message":"Started Editing"}
+{"date":"Wed, 28 Mar 2012 11:52:40 GMT","userID":"5","userName":"Employee Anthony","level":"info","message":"Started Editing"}
+{"date":"Wed, 28 Mar 2012 11:52:40 GMT","userID":"5","userName":"Employee Anthony","level":"info","message":"Started Editing"}
+{"level":"info","message":"User CEO John finished editing undefined which now has a value of "}
+{"date":"Wed, 28 Mar 2012 11:54:00 GMT","userID":"1","userName":"CEO John","level":"info","message":"Started Editing"}
+{"date":"Wed, 28 Mar 2012 11:54:00 GMT","userID":"1","userName":"CEO John","level":"info","message":"Started Editing"}
+{"level":"info","message":"User CEO John finished editing undefined which now has a value of "}
+{"level":"info","message":"User CEO John finished editing undefined which now has a value of "}
+{"date":"Wed, 28 Mar 2012 11:54:12 GMT","userID":"1","userName":"CEO John","inputID":"newSessionName","level":"info","message":"Started Editing"}
+{"date":"Wed, 28 Mar 2012 11:54:12 GMT","userID":"1","userName":"CEO John","inputID":"newSessionName","level":"info","message":"Started Editing"}
+{"level":"info","message":"User CEO John finished editing newSessionName which now has a value of NewSession"}
+{"level":"info","message":"User CEO John finished editing newSessionName which now has a value of NewSession"}
+{"date":"Wed, 28 Mar 2012 11:59:15 GMT","userID":"1","userName":"CEO John","level":"info","message":"Started Editing"}
+{"date":"Wed, 28 Mar 2012 11:59:15 GMT","userID":"1","userName":"CEO John","level":"info","message":"Started Editing"}
+{"level":"info","message":"User CEO John finished editing undefined which now has a value of "}
+{"level":"info","message":"User CEO John finished editing undefined which now has a value of "}
+{"date":"Wed, 28 Mar 2012 11:59:30 GMT","userID":"1","userName":"CEO John","inputID":"newSessionName","level":"info","message":"Started Editing"}
+{"date":"Wed, 28 Mar 2012 11:59:30 GMT","userID":"1","userName":"CEO John","inputID":"newSessionName","level":"info","message":"Started Editing"}
+{"level":"info","message":"User CEO John finished editing newSessionName which now has a value of newSessionTest"}
+{"level":"info","message":"User CEO John finished editing newSessionName which now has a value of newSessionTest"}
+{"date":"Wed, 28 Mar 2012 12:00:27 GMT","userID":"1","userName":"CEO John","inputID":"newSessionName","level":"info","message":"Started Editing"}
+{"level":"info","message":"User CEO John finished editing newSessionName which now has a value of New"}
+{"date":"Wed, 28 Mar 2012 12:01:59 GMT","userID":"1","userName":"CEO John","level":"info","message":"Started Editing"}
+{"level":"info","message":"User CEO John finished editing undefined which now has a value of "}
+{"date":"Wed, 28 Mar 2012 12:02:01 GMT","userID":"1","userName":"CEO John","inputID":"newSessionName","level":"info","message":"Started Editing"}
+{"level":"info","message":"User CEO John finished editing newSessionName which now has a value of Howiya"}
+{"date":"Wed, 28 Mar 2012 12:02:09 GMT","userID":"5","userName":"Employee Anthony","level":"info","message":"Started Editing"}
+{"date":"Wed, 28 Mar 2012 12:02:09 GMT","userID":"5","userName":"Employee Anthony","level":"info","message":"Started Editing"}
+{"date":"Wed, 28 Mar 2012 12:02:13 GMT","userID":"1","userName":"CEO John","level":"info","message":"Started Editing"}
+{"level":"info","message":"User CEO John finished editing undefined which now has a value of "}
+{"date":"Wed, 28 Mar 2012 12:02:44 GMT","userID":"1","userName":"CEO John","level":"info","message":"Started Editing"}
+{"date":"Wed, 28 Mar 2012 12:02:49 GMT","userID":"1","userName":"CEO John","level":"info","message":"Started Editing"}
+{"level":"info","message":"User CEO John finished editing undefined which now has a value of "}
+{"date":"Wed, 28 Mar 2012 12:02:53 GMT","userID":"1","userName":"CEO John","inputID":"newSessionName","level":"info","message":"Started Editing"}
+{"level":"info","message":"User CEO John finished editing newSessionName which now has a value of Howiya"}
+{"date":"Wed, 28 Mar 2012 12:03:03 GMT","userID":"5","userName":"Employee Anthony","level":"info","message":"Started Editing"}
+{"date":"Wed, 28 Mar 2012 12:03:03 GMT","userID":"5","userName":"Employee Anthony","level":"info","message":"Started Editing"}
+{"date":"Wed, 28 Mar 2012 12:03:05 GMT","userID":"1","userName":"CEO John","level":"info","message":"Started Editing"}
+{"level":"info","message":"User CEO John finished editing undefined which now has a value of "}
+{"date":"Wed, 28 Mar 2012 12:03:16 GMT","userID":"1","userName":"CEO John","inputID":"newSessionName","level":"info","message":"Started Editing"}
+{"level":"info","message":"User CEO John finished editing newSessionName which now has a value of New"}
+{"date":"Wed, 28 Mar 2012 12:03:23 GMT","userID":"1","userName":"CEO John","level":"info","message":"Started Editing"}
+{"level":"info","message":"User Employee Anthony finished editing undefined which now has a value of "}
+{"level":"info","message":"User Employee Anthony finished editing undefined which now has a value of "}
+{"level":"info","message":"User CEO John finished editing undefined which now has a value of "}
+{"date":"Wed, 28 Mar 2012 12:03:41 GMT","userID":"1","userName":"CEO John","level":"info","message":"Started Editing"}
+{"level":"info","message":"User CEO John finished editing undefined which now has a value of "}
+{"date":"Wed, 28 Mar 2012 12:03:46 GMT","userID":"1","userName":"CEO John","level":"info","message":"Started Editing"}
+{"level":"info","message":"User CEO John finished editing undefined which now has a value of "}
+{"date":"Wed, 28 Mar 2012 12:04:03 GMT","userID":"1","userName":"CEO John","inputID":"newSessionName","level":"info","message":"Started Editing"}
+{"level":"info","message":"User CEO John finished editing newSessionName which now has a value of NewAgain"}
+{"date":"Wed, 28 Mar 2012 12:06:58 GMT","userID":"1","userName":"CEO John","level":"info","message":"Started Editing"}
+{"level":"info","message":"User CEO John finished editing undefined which now has a value of "}
+{"date":"Wed, 28 Mar 2012 12:07:10 GMT","userID":"5","userName":"Employee Anthony","level":"info","message":"Started Editing"}
+{"date":"Wed, 28 Mar 2012 12:07:12 GMT","userID":"1","userName":"CEO John","level":"info","message":"Started Editing"}
+{"date":"Wed, 28 Mar 2012 12:07:12 GMT","userID":"1","userName":"CEO John","level":"info","message":"Started Editing"}
+{"level":"info","message":"User CEO John finished editing undefined which now has a value of "}
+{"level":"info","message":"User CEO John finished editing undefined which now has a value of "}
+{"date":"Wed, 28 Mar 2012 12:07:32 GMT","userID":"1","userName":"CEO John","inputID":"newSessionName","level":"info","message":"Started Editing"}
+{"date":"Wed, 28 Mar 2012 12:07:32 GMT","userID":"1","userName":"CEO John","inputID":"newSessionName","level":"info","message":"Started Editing"}
+{"level":"info","message":"User CEO John finished editing newSessionName which now has a value of TestingNew"}
+{"level":"info","message":"User CEO John finished editing newSessionName which now has a value of TestingNew"}
+{"date":"Wed, 28 Mar 2012 12:08:47 GMT","userID":"1","userName":"CEO John","inputID":"newSessionName","level":"info","message":"Started Editing"}
+{"level":"info","message":"User CEO John finished editing newSessionName which now has a value of Chatting"}
+{"date":"Wed, 28 Mar 2012 12:08:54 GMT","userID":"5","userName":"Employee Anthony","level":"info","message":"Started Editing"}
+{"level":"info","message":"User Employee Anthony finished editing undefined which now has a value of "}
+{"date":"Wed, 28 Mar 2012 12:08:59 GMT","userID":"5","userName":"Employee Anthony","level":"info","message":"Started Editing"}
+{"date":"Wed, 28 Mar 2012 12:08:59 GMT","userID":"5","userName":"Employee Anthony","level":"info","message":"Started Editing"}
+{"date":"Wed, 28 Mar 2012 12:09:04 GMT","userID":"1","userName":"CEO John","level":"info","message":"Started Editing"}
+{"level":"info","message":"User CEO John finished editing undefined which now has a value of "}
+{"date":"Wed, 28 Mar 2012 12:09:11 GMT","userID":"1","userName":"CEO John","inputID":"newSessionName","level":"info","message":"Started Editing"}
+{"level":"info","message":"User CEO John finished editing newSessionName which now has a value of NewSession"}
+{"level":"info","message":"User Employee Anthony finished editing undefined which now has a value of "}
+{"level":"info","message":"User Employee Anthony finished editing undefined which now has a value of "}
+{"date":"Wed, 28 Mar 2012 12:09:23 GMT","userID":"5","userName":"Employee Anthony","level":"info","message":"Started Editing"}
+{"date":"Wed, 28 Mar 2012 12:09:23 GMT","userID":"5","userName":"Employee Anthony","level":"info","message":"Started Editing"}
+{"date":"Wed, 28 Mar 2012 12:09:23 GMT","userID":"5","userName":"Employee Anthony","level":"info","message":"Started Editing"}
+{"date":"Wed, 28 Mar 2012 12:09:27 GMT","userID":"1","userName":"CEO John","level":"info","message":"Started Editing"}
+{"level":"info","message":"User CEO John finished editing undefined which now has a value of "}
+{"date":"Wed, 28 Mar 2012 12:09:36 GMT","userID":"1","userName":"CEO John","inputID":"newSessionName","level":"info","message":"Started Editing"}
+{"level":"info","message":"User CEO John finished editing newSessionName which now has a value of NewSessionf"}
+{"level":"info","message":"User Employee Anthony finished editing undefined which now has a value of "}
+{"level":"info","message":"User Employee Anthony finished editing undefined which now has a value of "}
+{"level":"info","message":"User Employee Anthony finished editing undefined which now has a value of "}
+{"level":"info","message":"User Employee Anthony finished editing undefined which now has a value of "}
+{"level":"info","message":"User Employee Anthony finished editing undefined which now has a value of "}
+{"level":"info","message":"User Employee Anthony finished editing undefined which now has a value of "}
+{"date":"Wed, 28 Mar 2012 12:24:22 GMT","userID":"5","userName":"Employee Anthony","level":"info","message":"Started Editing"}
+{"date":"Wed, 28 Mar 2012 12:24:22 GMT","userID":"5","userName":"Employee Anthony","level":"info","message":"Started Editing"}
+{"date":"Wed, 28 Mar 2012 12:24:22 GMT","userID":"5","userName":"Employee Anthony","level":"info","message":"Started Editing"}
+{"date":"Wed, 28 Mar 2012 12:24:22 GMT","userID":"5","userName":"Employee Anthony","level":"info","message":"Started Editing"}
+{"date":"Wed, 28 Mar 2012 12:24:22 GMT","userID":"5","userName":"Employee Anthony","level":"info","message":"Started Editing"}
+{"date":"Wed, 28 Mar 2012 12:24:22 GMT","userID":"5","userName":"Employee Anthony","level":"info","message":"Started Editing"}
+{"date":"Wed, 28 Mar 2012 12:25:35 GMT","userID":"5","userName":"Employee Anthony","level":"info","message":"Started Editing"}
+{"date":"Wed, 28 Mar 2012 12:25:35 GMT","userID":"5","userName":"Employee Anthony","level":"info","message":"Started Editing"}
+{"date":"Wed, 28 Mar 2012 12:25:39 GMT","userID":"1","userName":"CEO John","level":"info","message":"Started Editing"}
+{"level":"info","message":"User CEO John finished editing undefined which now has a value of "}
+{"date":"Wed, 28 Mar 2012 12:25:48 GMT","userID":"1","userName":"CEO John","inputID":"newSessionName","level":"info","message":"Started Editing"}
+{"level":"info","message":"User CEO John finished editing newSessionName which now has a value of New"}
+{"date":"Wed, 28 Mar 2012 12:25:52 GMT","userID":"1","userName":"CEO John","level":"info","message":"Started Editing"}
+{"level":"info","message":"User CEO John finished editing undefined which now has a value of "}
+{"date":"Wed, 28 Mar 2012 12:27:29 GMT","userID":"5","userName":"Employee Anthony","level":"info","message":"Started Editing"}
+{"date":"Wed, 28 Mar 2012 12:33:24 GMT","userID":"1","userName":"CEO John","inputID":"newSessionName","level":"info","message":"Started Editing"}
+{"level":"info","message":"User CEO John finished editing newSessionName which now has a value of Testing"}
+{"date":"Wed, 28 Mar 2012 12:34:05 GMT","userID":"1","userName":"CEO John","inputID":"taskMain","level":"info","message":"Started Editing"}
+{"date":"Wed, 28 Mar 2012 12:34:05 GMT","userID":"1","userName":"CEO John","inputID":"taskMain","level":"info","message":"Started Editing"}
+{"date":"Wed, 28 Mar 2012 12:34:05 GMT","userID":"1","userName":"CEO John","inputID":"taskMain","level":"info","message":"Started Editing"}
+{"level":"info","message":"User CEO John finished editing taskMain which now has a value of 7"}
+{"level":"info","message":"User CEO John finished editing taskMain which now has a value of 7"}
+{"level":"info","message":"User CEO John finished editing taskMain which now has a value of 7"}
+{"level":"info","message":"User Employee Anthony finished editing undefined which now has a value of "}
+{"level":"info","message":"User Employee Anthony finished editing undefined which now has a value of "}
+{"level":"info","message":"User Employee Anthony finished editing undefined which now has a value of "}
+{"level":"info","message":"User Employee Anthony finished editing undefined which now has a value of "}
+{"date":"Wed, 28 Mar 2012 12:37:31 GMT","userID":"5","userName":"Employee Anthony","level":"info","message":"Started Editing"}
+{"date":"Wed, 28 Mar 2012 12:37:31 GMT","userID":"5","userName":"Employee Anthony","level":"info","message":"Started Editing"}
+{"date":"Wed, 28 Mar 2012 12:37:31 GMT","userID":"5","userName":"Employee Anthony","level":"info","message":"Started Editing"}
+{"date":"Wed, 28 Mar 2012 12:37:31 GMT","userID":"5","userName":"Employee Anthony","level":"info","message":"Started Editing"}
+{"date":"Wed, 28 Mar 2012 13:19:02 GMT","userID":"5","userName":"Employee Anthony","inputID":"projectInput","level":"info","message":"Started Editing"}
+{"level":"info","message":"User Employee Anthony finished editing projectInput which now has a value of 2011114 - ThirdForce Arabic"}
+{"date":"Wed, 28 Mar 2012 16:06:22 GMT","userID":"1","userName":"CEO John","inputID":"projectInput","level":"info","message":"Started Editing"}
+{"level":"info","message":"User CEO John finished editing projectInput which now has a value of 2012063 - Thirdforce Spanish"}
+{"date":"Wed, 28 Mar 2012 16:06:29 GMT","userID":"1","userName":"CEO John","inputID":"taskMain","level":"info","message":"Started Editing"}
+{"level":"info","message":"User CEO John finished editing taskMain which now has a value of 4"}
+{"date":"Wed, 28 Mar 2012 16:06:32 GMT","userID":"1","userName":"CEO John","inputID":"taskSub","level":"info","message":"Started Editing"}
+{"level":"info","message":"User CEO John finished editing taskSub which now has a value of 6"}
+{"date":"Wed, 28 Mar 2012 16:06:34 GMT","userID":"1","userName":"CEO John","inputID":"taskMain","level":"info","message":"Started Editing"}
+{"level":"info","message":"User CEO John finished editing taskMain which now has a value of 7"}
+{"date":"Wed, 28 Mar 2012 16:06:37 GMT","userID":"1","userName":"CEO John","inputID":"taskSub","level":"info","message":"Started Editing"}
+{"level":"info","message":"User CEO John finished editing taskSub which now has a value of 9"}
+{"date":"Wed, 28 Mar 2012 16:06:40 GMT","userID":"1","userName":"CEO John","inputID":"date_worked","level":"info","message":"Started Editing"}
+{"level":"info","message":"User CEO John finished editing date_worked which now has a value of "}
+{"date":"Wed, 28 Mar 2012 16:06:43 GMT","userID":"1","userName":"CEO John","inputID":"startTime","level":"info","message":"Started Editing"}
+{"level":"info","message":"User CEO John finished editing startTime which now has a value of 09:00d"}
+{"date":"Wed, 28 Mar 2012 16:06:45 GMT","userID":"1","userName":"CEO John","inputID":"endTime","level":"info","message":"Started Editing"}
+{"level":"info","message":"User CEO John finished editing endTime which now has a value of 09:15bv"}

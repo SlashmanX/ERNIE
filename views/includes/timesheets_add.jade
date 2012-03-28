@@ -5,7 +5,7 @@ form.form-horizontal#timesheetForm
 			label.control-label(for="projectInput") Project
 			div.controls
 				.input-append
-					input#projectInput.input-xlarge(type="text", name = 'projectText', data-provide="typeahead")
+					input#projectInput.input-xlarge(type="text", name = 'projectText', data-provide="typeahead", required)
 					span.hide.add-on.reset-project &times;
 				p.help-block Start typing the name or ID of the project then select from the dropdown provided.
 				
@@ -17,16 +17,16 @@ form.form-horizontal#timesheetForm
 		.control-group
 			label.control-label(for="date_worked") Date:
 			div.controls
-				input#date_worked(type="date", name = 'date_worked')
+				input#date_worked(type="date", name = 'date_worked', required)
 		.control-group
 			label.control-label(for="startTime") Start:
 			.controls.form-inline
-				input.timepicker#startTime(type="text", name = 'start_time', value = '09:00')
+				input.timepicker#startTime(type="text", name = 'start_time', value = '09:00', required)
 		.control-group
 			label.control-label.warning(for="endTime") End: 
 			.controls
 				.input
-					input.timepicker#endTime(type="text", name = 'end_time', value = '09:15')
+					input.timepicker#endTime(type="text", name = 'end_time', value = '09:15', required)
 				p.help-block
 
 		div.control-group
@@ -37,8 +37,3 @@ form.form-horizontal#timesheetForm
 		div.form-actions
 			button#submitTimesheet.btn.btn-primary.btn-large(type="submit", data-loading-text="Submitting...") Submit Timesheet 
 			button.btn(type="reset") Cancel
-			
-		div.btn-group#toggleTestCheck
-			a.btn.btn-primary.checkboxOn(href="#") On
-			a.btn.checkboxOff(href="#") Off
-		input.checkboxToggle#TestCheck(type="checkbox", checked="checked")

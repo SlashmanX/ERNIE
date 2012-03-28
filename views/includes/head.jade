@@ -10,7 +10,7 @@ header.navbar.navbar-fixed-top
 				span.icon-bar
 				span.icon-bar
 				span.icon-bar
-			a.brand(href="#") ERNIE
+			a.brand(href="/") ERNIE
 			.nav-collapse
 				ul.nav
 					li#home
@@ -22,7 +22,7 @@ header.navbar.navbar-fixed-top
 							a(href="/timesheets/") Timesheets
 						li#projects.forceLogIn
 							a(href="/projects/") Projects
-						li#projects.forceLogIn
+						li#graphs.forceLogIn
 							a(href="/graphs/") Graphs
 						
 				if(loggedIn == 'true')
@@ -60,11 +60,8 @@ div.modal.hide.fade#sessionIDModal
 		a.close(data-dismiss="modal") &times;
 		h3 Sessions
 	div.modal-body
-		h4 Share Current Session
+		h4 New Session URL
 		input.x-large.span5#sessionURL(readonly="readonly")
-		h4 Create bi-directional Session
-		label(for="newRoomName") Name of Session: 
-		input#newRoomName(type="text") 
-		a#createRoom(href="#") Create Room
+		p.help-block Share this URL with whoever you wish to join your session
 	div.modal-footer
 		a(href="#", data-dismiss="modal").btn.btn-primary Close

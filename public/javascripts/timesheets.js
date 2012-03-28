@@ -1,10 +1,17 @@
-var mainOptions = $('#taskMain');
-var subOptions = $('#taskSub');
-$(document).ready(function() {
+var mainOptions;
+var subOptions;
+var projects;
+$(document).ready(function () {
 
-	var projects = [];
+	timesheetsBind();
+});
+
+function timesheetsBind()
+{
+	projects = [];
 	var tasks = [];
-
+	mainOptions = $('#taskMain');
+	subOptions = $('#taskSub');
 	var path = location.pathname;
 	var path = path.split('/');
 	var activeTab = 'add';
@@ -19,7 +26,6 @@ $(document).ready(function() {
 		case 'add':
 			addTimesheetsJS();
 		break;
-		
 		case 'review':
 			$('.nav-tabs a:last').tab('show');
 		break;
@@ -48,53 +54,35 @@ $(document).ready(function() {
 		history.pushState(stateObj, "ERNIE", '/timesheets/add/');
 		addTimesheetsJS();
 	});
-	
-	
-
-});
+}
 
 function bindItems()
 {
 	
 	$('#date_worked').dateinput({format: 'dd/mm/yyyy', max: 1});
-	$('body').on('focus', 'input', function(e) {
+	$('body').on('focus', 'input, select', function(e) {
 		socket.emit('textboxFocus', {id: $(this).attr('id'), initValue: $(this).val()});
 	
 	});
 	
-	$('input').change(function() {
-		socket.emit('textboxTyped', {id: $(this).attr('id'), value: $(this).val()});
+	$('input, select').on('keyup change', function(e, from) {
+		if(from != 'server')
+		{
+			socket.emit('textboxTyped', {id: $(this).attr('id'), value: $(this).val()});
+		}
 	});
 	
-	$('body').on('blur', 'input', function(e) {
-		console.log('blur: '+ $(this).val());
-		socket.emit('textboxBlur', {id: $(this).attr('id'), value: $(this).val()});
+	$('body').on('blur', 'input, select', function(e, from) {
+		if(from != 'server')
+		{
+			socket.emit('textboxBlur', {id: $(this).attr('id'), value: $(this).val()});
+		}
 	
 	})
-	$('.checkboxOn').on('click', function(e) {
-		e.preventDefault();
-		var parent = $(this).parent('div');
-		parent.children('.checkboxOff').removeClass('btn-primary');
-		$(this).addClass('btn-primary');
-		var checkboxID = parent.attr('id').replace('toggle', '');
-		$('input#'+checkboxID).attr('checked', true);
-	});
-	$('.checkboxOff').on('click', function(e) {
-		e.preventDefault();
-		var parent = $(this).parent('div');
-		parent.children('.checkboxOn').removeClass('btn-primary');
-		$(this).addClass('btn-primary');
-		var checkboxID = parent.attr('id').replace('toggle', '');
-		$('input#'+checkboxID).removeAttr('checked');
-	});
-	// Use default settings
-    
     $('#taskMain').on('change', function(event){
 		subOptions.html('');
 		var selectedID = $(this).val();
-		
 		$.each(tasks.task, function() {
-	    
 	    	if(this.parent == selectedID)
 	    	{
 				subOptions.append('<option value="'+ this.id +'">'+ this.task_name +'</option>');
@@ -105,40 +93,41 @@ function bindItems()
 	});
 	
 	$('.reset-project').on('click', function(event){
-		$('#projectInput').attr('disabled', false).val('').focus();
+		$('#projectInput').removeAttr('readonly').val('').focus();
 	
 	});
 	
 	$('#projectInput').on('blur', function(event){
-		if(!($(this).is(':disabled')))
+		if((jQuery.inArray($(this).val(), projects)) == -1)
 		{
 			$(this).parentsUntil('.control-group').parent('div').addClass('warning').children('p.help-block').text('Please make sure you have selected a valid project.');
+		}
+		else
+		{
+			$(this).parentsUntil('.control-group').parent('div').removeClass('warning').children('p.help-block').text('');
 		}
 	
 	});
 	
 	$('button[type=reset]').on('click', function(event){ 
 	
-		$('#projectInput').attr('disabled', false);
-		notifications.show('Error submitting timesheet!');
+		$('#projectInput').removeAttr('readonly');
+		//notifications.show('Error submitting timesheet!');
 	
 	})
 	
-	$('form').on('submit', function(event){
+	$('form#timesheetForm').on('submit', function(event){
 	
 		var timesheetData = {};
 		event.preventDefault();
 		$('#submitTimesheet').button('loading');
-		
 		timesheetData['project_id'] = $('#projectInput').val().replace(/[^\d\.]+/g, "");
 		timesheetData['task_id'] = subOptions.val();
 		timesheetData['date_worked'] = $('#date_worked').val();
 		timesheetData['start_time'] = $('#startTime').val();
 		timesheetData['end_time'] = $('#endTime').val();
 		timesheetData['comment'] = $('#comments').val();
-		
 		var formData = decodeURIComponent($.param(timesheetData));
-		
 		$.ajax({
   		type: "POST",
     	url: "/submitTimesheet",
@@ -150,13 +139,11 @@ function bindItems()
 	    		notifications.show('Timesheet submitted successfully!');
 	    		$('button[type=reset]').trigger('click');
 			}
-			
 			else
 			{
 				notifications.show('Error submitting timesheet!');
 				$('#submitTimesheet').button('reset');
 			}
-			
       	}
 	  });
 	
@@ -165,14 +152,9 @@ function bindItems()
 
 function reviewTimesheetsJS()
 {
-	socket.emit('getTimesheets', -1);
-	
-	socket.on('getTimesheets', function(timesheetsJSON){
-		
+	socket.emit('getTimesheets', -1, function(timesheetsJSON){
 		$('.timesheetsTable tbody tr').remove();
-		
 		myTimesheets = JSON.parse(timesheetsJSON);
-		
 	
 		$.each(myTimesheets.timesheet, function() {
 			var approved = 'ok';
@@ -190,11 +172,18 @@ function reviewTimesheetsJS()
 function addTimesheetsJS()
 {	
 	var temp;
+	socket.emit('getProject', -1, function(projectsJSON){
+		projects = [];
+		temp = JSON.parse(projectsJSON);
+		$.each(temp.project, function() {
+	    		// Use the values this.Name and this.Location
+	    		projects.push(this.project_id +' - '+ this.project_name);
+			});
+		$('#projectInput').typeahead({source: projects});
+	});
 	
-	socket.emit('getProject', -1);
-	socket.emit('getTasks');
 	
-	socket.on('getTasks', function(tasksJSON){
+	socket.emit('getTasks',function(tasksJSON){
 		mainOptions.html('');
 		tasks = JSON.parse(tasksJSON);
 	
@@ -206,20 +195,8 @@ function addTimesheetsJS()
 			}
 
 		});
-		
 		mainOptions.trigger('change');
 	
-	});
-	
-	
-	socket.on('getProject', function(projectsJSON){
-		var projects = [];
-		temp = JSON.parse(projectsJSON);
-		$.each(temp.project, function() {
-	    		// Use the values this.Name and this.Location
-	    		projects.push(this.project_id +' - '+ this.project_name);
-			});
-		$('#projectInput').typeahead({source: projects});
 	});
 	
 

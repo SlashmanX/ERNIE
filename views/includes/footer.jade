@@ -1,2 +1,76 @@
+section.sessionsNav.forceLogIn
+	nav.sessions.btn-group-vertical
+		div.accordion#sessionsSideNav
+			div.accordion-group
+				div.accordion-heading
+					a.accordion-toggle(data-toggle="collapse", data-parent="#sessionsSideNav", href="#newSession") 
+						i.icon-pencil
+						span.title New Session
+				div#newSession.accordion-body.collapse
+					div.accordion-inner
+						table#newSessionForm
+							form#startingSession
+								tr
+									td(colspan="2")
+										input#newSessionName(type="text", placeholder = "Name of Session")
+								tr
+									td 
+										a(rel="tooltip", title="Everyone can see and join this session") Public
+									td
+										div.btn-group#togglepublicSession
+											a.btn.btn-mini.btn-primary.checkboxOn(href="#") On
+											a.btn.btn-mini.checkboxOff(href="#") Off
+										input.checkboxToggle#publicSession(type="checkbox", checked="checked")
+								tr
+									td 
+										a(rel="tooltip", title="Every user has control of what links are clicked") 2-way Session
+									td
+										div.btn-group#togglebidirectionalSession
+											a.btn.btn-mini.btn-primary.checkboxOn(href="#") On
+											a.btn.btn-mini.checkboxOff(href="#") Off
+										input.checkboxToggle#bidirectionalSession(type="checkbox", checked="checked")
+								tr
+									td 
+										a(rel="tooltip", title="Email users to say you have added them to this session") Email Users
+									td
+										div.btn-group#toggleemailUsers
+											a.btn.btn-primary.checkboxOn(href="#") On
+											a.btn.checkboxOff(href="#") Off
+										input.checkboxToggle#emailUsers(type="checkbox", checked="checked")
+								tr
+									td 
+										a(rel="tooltip", title="Notify users if they are online to say you have added them to this session") Notify Users
+									td
+										div.btn-group#togglenotifyUsers
+											a.btn.btn-primary.checkboxOn(href="#") On
+											a.btn.checkboxOff(href="#") Off
+										input.checkboxToggle#notifyUsers(type="checkbox", checked="checked")
+								tr(colspan="2")
+									td
+										input.btn.btn-primary#startNewSession(data-loading-text="Creating...", type = "submit", value = "Start")
+						
+			div.accordion-group
+				div.accordion-heading
+					a.accordion-toggle(data-toggle="collapse", data-parent="#sessionsSideNav", href="#activeSessions")
+						i.icon-cog <span id = "activeSessionsNotificationCount" class="badge">0</span>
+						span.title View Sessions
+				div#activeSessions.accordion-body.collapse
+					div.accordion-inner
+						ul.activeSessions.scrollBar
+							li.help-block Public Sessions are in green 
+							
+						
+			div.accordion-group
+				div.accordion-heading
+					a.accordion-toggle(data-toggle="collapse", data-parent="#sessionsSideNav", href="#chat")
+						i.icon-user <span id = "chatNotificationCount" class="badge badge-error">0</span>
+						span.title Chat
+				div#chat.accordion-body.collapse
+					.infoMessage#chatParticipants You must join a session before you can chat
+					div.accordion-inner
+						ul.chatMessages.scrollBar
+							li
+						.infoMessage#typingArea &nbsp;
+						input(type="text", placeholder = "Chat Message Here", readonly="readonly", title = "You must join a session before you can chat").chatInput
 footer
 	p &copy; E&oacute;in Martin 2012

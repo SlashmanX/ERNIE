@@ -31,7 +31,6 @@
             base.speed = speed;
             base.maxDots = maxDots;
             base.loadString = loadString;
-            console.log("LOADSTRING!!!!"+ base.loadString + " " + base.speed + " " + base.maxDots);
                                     
             
                         
@@ -63,7 +62,6 @@
     
     $.fn.Loadingdotdotdot = function(options) {
     
-    	console.log("LOADSTRINGOPTIONS!!!!"+ options.loadString);
         
         if (typeof(options) == "string" && options == "Stop") {
             var safeGuard = $(this).data('Loadingdotdotdot');

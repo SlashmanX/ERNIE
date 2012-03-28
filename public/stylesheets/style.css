@@ -4424,6 +4424,55 @@ a.thumbnail:hover {
 .label-info {
   background-color: #3a87ad;
 }
+.badge {
+  padding: 1px 9px 2px;
+  font-size: 9.75px;
+  font-weight: bold;
+  white-space: nowrap;
+  color: #ffffff;
+  background-color: #999999;
+  -webkit-border-radius: 9px;
+  -moz-border-radius: 9px;
+  border-radius: 9px;
+  -webkit-border-radius: 9px;
+  -moz-border-radius: 9px;
+  border-radius: 9px;
+}
+.badge:hover {
+  color: #ffffff;
+  text-decoration: none;
+  cursor: pointer;
+}
+.badge-error {
+  background-color: #b94a48;
+}
+.badge-error:hover {
+  background-color: #953b39;
+}
+.badge-warning {
+  background-color: #f89406;
+}
+.badge-warning:hover {
+  background-color: #c67605;
+}
+.badge-success {
+  background-color: #468847;
+}
+.badge-success:hover {
+  background-color: #356635;
+}
+.badge-info {
+  background-color: #3a87ad;
+}
+.badge-info:hover {
+  background-color: #2d6987;
+}
+.badge-inverse {
+  background-color: #333333;
+}
+.badge-inverse:hover {
+  background-color: #1a1a1a;
+}
 @-webkit-keyframes progress-bar-stripes {
   from {
     background-position: 0 0;
@@ -4670,16 +4719,39 @@ a.thumbnail:hover {
 }
 .accordion {
   margin-bottom: 18px;
+  background-color: #fcfcfc;
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#ffffff), color-stop(33%, #ffffff), to(#f2f2f2));
+  background-image: -webkit-linear-gradient(#ffffff, #ffffff 33%, #f2f2f2);
+  background-image: -moz-linear-gradient(top, #ffffff, #ffffff 33%, #f2f2f2);
+  background-image: -ms-linear-gradient(#ffffff, #ffffff 33%, #f2f2f2);
+  background-image: -o-linear-gradient(#ffffff, #ffffff 33%, #f2f2f2);
+  background-image: linear-gradient(#ffffff, #ffffff 33%, #f2f2f2);
+  background-repeat: no-repeat;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#f2f2f2', GradientType=0);
+  background-color: #fcfcfc;
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#ffffff), color-stop(33%, #ffffff), to(#f2f2f2));
+  background-image: -webkit-linear-gradient(#ffffff, #ffffff 33%, #f2f2f2);
+  background-image: -moz-linear-gradient(top, #ffffff, #ffffff 33%, #f2f2f2);
+  background-image: -ms-linear-gradient(#ffffff, #ffffff 33%, #f2f2f2);
+  background-image: -o-linear-gradient(#ffffff, #ffffff 33%, #f2f2f2);
+  background-image: linear-gradient(#ffffff, #ffffff 33%, #f2f2f2);
+  background-repeat: no-repeat;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#f2f2f2', GradientType=0);
 }
 .accordion-group {
-  margin-bottom: 2px;
   border: 1px solid #e5e5e5;
-  -webkit-border-radius: 4px;
-  -moz-border-radius: 4px;
-  border-radius: 4px;
-  -webkit-border-radius: 4px;
-  -moz-border-radius: 4px;
-  border-radius: 4px;
+  border-bottom: none;
+}
+.accordion .accordion-group:first-child {
+  -webkit-border-top-left-radius: 4px;
+  -moz-border-radius-topleft: 4px;
+  border-top-left-radius: 4px;
+}
+.accordion .accordion-group:last-child {
+  border-bottom: 1px solid #e5e5e5;
+  -webkit-border-bottom-left-radius: 4px;
+  -moz-border-radius-bottomleft: 4px;
+  border-bottom-left-radius: 4px;
 }
 .accordion-heading {
   border-bottom: 0;
@@ -4689,7 +4761,9 @@ a.thumbnail:hover {
   padding: 8px 15px;
 }
 .accordion-inner {
-  padding: 9px 15px;
+  margin-right: -5px;
+  padding-top: 0px;
+  padding: 5px;
   border-top: 1px solid #e5e5e5;
 }
 .carousel {
@@ -6047,7 +6121,6 @@ body {
 }
 .checkboxToggle {
   position: absolute;
-  top: -9999px;
   left: -9999px;
 }
 table {
@@ -6136,11 +6209,14 @@ table tbody tr:nth-child(odd) td, table tbody tr:nth-child(odd) th {
 table.projectsTable tr:hover {
   cursor: pointer;
 }
+a[rel=tooltip] {
+  cursor: pointer;
+}
 .linked-icon i {
-  opacity: 0.4;
-  filter: alpha(opacity=40);
-  opacity: 0.4;
-  filter: alpha(opacity=40);
+  opacity: 0.41;
+  filter: alpha(opacity=41);
+  opacity: 0.41;
+  filter: alpha(opacity=41);
   -webkit-transition: all 0.5s ease-in-out;
   -moz-transition: all 0.5s ease-in-out;
   -ms-transition: all 0.5s ease-in-out;
@@ -6167,6 +6243,234 @@ table.timesheetDisplay thead:first-child tr th, table.timesheetDisplay thead:fir
 }
 table.timesheetDisplay tbody + tbody {
   border: none;
+}
+nav.sessions span.title {
+  position: absolute;
+  right: -9999px;
+  white-space: nowrap;
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -ms-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -ms-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+nav.sessions {
+  position: relative;
+  width: 50px;
+  position: fixed;
+  top: 100px;
+  right: 0px;
+  border-right: none;
+  overflow: hidden;
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -ms-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -ms-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+nav.sessions:hover {
+  width: 240px;
+}
+nav.sessions:hover .title {
+  right: 20px;
+}
+nav.sessions i {
+  margin-left: -10px;
+}
+nav.sessions .badge {
+  position: relative;
+  margin-left: 15px;
+  top: -10px;
+}
+ul.activeSessions {
+  width: 235px;
+  height: 250px;
+  overflow-y: auto;
+  margin-left: -5px;
+}
+ul.activeSessions li {
+  padding: 3px;
+  list-style: none;
+  white-space: normal;
+}
+li.availableSession {
+  display: block;
+  cursor: pointer;
+}
+li.availableSession a {
+  color: green;
+}
+li.unavailableSession {
+  display: block;
+  cursor: default;
+}
+li.unavailableSession a {
+  color: red;
+}
+table#newSessionForm {
+  border: none;
+}
+table#newSessionForm td {
+  border: none;
+}
+div#chat {
+  padding: 0px;
+}
+div#chat ul.chatMessages {
+  width: 240px;
+  height: 400px;
+  margin-left: -5px;
+  overflow-y: auto;
+}
+div#chat ul.chatMessages li {
+  padding: 7px;
+  list-style: none;
+  white-space: normal;
+  border-bottom: 1px solid #ccc;
+}
+div#chat .infoMessage {
+  width: 100%;
+  padding: 3px;
+  font-size: 10px;
+  background-color: #eee;
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+}
+div#chat .chatInput {
+  margin: 5px;
+}
+.reportDrag {
+  cursor: move;
+}
+.placeholder {
+  background: #f0f0f0;
+  border: 1px dashed #ddd;
+}
+/*
+ * CSS Styles that are needed by jScrollPane for it to operate correctly.
+ *
+ */
+.jspContainer {
+  overflow: hidden;
+  position: relative;
+}
+.jspPane {
+  position: absolute;
+}
+.jspVerticalBar {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 16px;
+  height: 100%;
+  background: red;
+}
+.jspHorizontalBar {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 16px;
+  background: red;
+}
+.jspVerticalBar *, .jspHorizontalBar * {
+  margin: 0;
+  padding: 0;
+}
+.jspCap {
+  display: none;
+}
+.jspHorizontalBar .jspCap {
+  float: left;
+}
+.jspTrack {
+  background: #dde;
+  position: relative;
+}
+.jspDrag {
+  background: #bbd;
+  position: relative;
+  top: 0;
+  left: 0;
+  cursor: pointer;
+}
+.jspHorizontalBar .jspTrack, .jspHorizontalBar .jspDrag {
+  float: left;
+  height: 100%;
+}
+.jspArrow {
+  background: #50506d;
+  text-indent: -20000px;
+  display: block;
+  cursor: pointer;
+}
+.jspArrow.jspDisabled {
+  cursor: default;
+  background: #80808d;
+}
+.jspVerticalBar .jspArrow {
+  height: 16px;
+}
+.jspHorizontalBar .jspArrow {
+  width: 16px;
+  float: left;
+  height: 100%;
+}
+.jspVerticalBar .jspArrow:focus {
+  outline: none;
+}
+.jspCorner {
+  background: #eeeef4;
+  float: left;
+  height: 100%;
+}
+/* Yuk! CSS Hack for IE6 3 pixel bug :( */
+* html .jspCorner {
+  margin: 0 -3px 0 0;
+}
+/*scrollpane custom CSS*/
+.jspVerticalBar {
+  width: 8px;
+  background: transparent;
+  right: 10px;
+}
+.jspHorizontalBar {
+  bottom: 5px;
+  width: 100%;
+  height: 8px;
+  background: transparent;
+}
+.jspTrack {
+  background: transparent;
+}
+.jspDrag {
+  background: url(../images/transparent-black.png) repeat;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+}
+.jspHorizontalBar .jspTrack, .jspHorizontalBar .jspDrag {
+  float: left;
+  height: 100%;
+}
+.jspCorner {
+  display: none;
+}
+.notification-count {
+  color: white;
+  margin-left: 15px;
+  background-color: #FF0000;
+  border-radius: 5px;
 }
 .ttw-simple-notification-wrapper {
   padding: 0 10px;
