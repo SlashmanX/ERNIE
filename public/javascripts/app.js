@@ -325,6 +325,7 @@ function initSocketFunctions()
 	    socket.emit('getActiveSessions', {}, function(sessionsJSON){
 			var sessions = JSON.parse(sessionsJSON);
 			var sessionList = $('ul.activeSessions li:last');
+			$('ul.activeSessions a').parent('li').remove();
 			var status = 'unavailable';
 			var count = 0;
 			$.each(sessions.session, function() {
@@ -596,7 +597,7 @@ function joinNewSession(sessionID, me) {
 }
 
 function joinedSession(theNewSession){
-	if(typeof theNewSession != "Object")
+	if(typeof theNewSession != "object")
 	{
 		theNewSession = JSON.parse(theNewSession);
 	}
