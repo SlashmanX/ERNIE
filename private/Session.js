@@ -5,7 +5,7 @@ module.exports = function(id, name, public, bidirectional, leader, currentPage, 
     this.bidirectional 		= 	bidirectional;
 	this.leader				=	leader;
 	this.currentPage		=	currentPage;
-	this.chatOnly			=	chatOnly
+	this.chatOnly			=	chatOnly;
     this.numUsers			=	0;
     this.users			 	= 	[];
     // Methods

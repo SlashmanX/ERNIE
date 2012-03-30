@@ -422,9 +422,10 @@ socket.sockets.on('connection', function(client){
 		var joinedSession = getSession(sessionName);
 		addUserToSession(client, users[myID], joinedSession);
 		client.broadcast.to(sessionName).emit('notification', users[myID].getName() +' has joined your session');
+		console.log('sending note');
 		if(typeof callback != 'undefined')
 		{
-			callback(json({newUrl: joinedSession.getCurrentPage(), name: joinedSession.getName()}));
+			callback(json({currentPage: joinedSession.getCurrentPage(), name: joinedSession.getName()}));
 		}
 	
 	})
@@ -453,7 +454,6 @@ socket.sockets.on('connection', function(client){
 	client.on('createSession', function(data, callback) {
 		var leader = myID;
 		var session = new Session(sessions.length, data.name, data.public, data.bidirectional, leader, data.currentPage, data.chatOnly);
-		console.log("Current page is : "+ data.currentPage);
 		addUserToSession(client, users[myID], session);
 		sessions.push(session);
 		socket.sockets.emit('newSessionActive', json({name: data.name, isPublic: data.public}));
@@ -725,6 +725,7 @@ function getUserCount()
 //DONE(?): Create an addUserToSession method which does the grunt work ie leave current room, set session in user object, add user to session object and joins the room
 function addUserToSession(client, user, session)
 {
+	console.log('Session: '+session);
 	if(user.getSession() != null)
 	{
 		var oldSession = user.getSession();

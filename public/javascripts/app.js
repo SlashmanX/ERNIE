@@ -180,6 +180,7 @@ function bindMenus()
 	
 	$('form#startingSession').on('submit', function(e){
 		e.preventDefault();
+		console.log('clicked')
 		var sessionName = $('#newSessionName').val();
 		var isPublic = $('#publicSession').is(':checked');
 		var isBi = $('#bidirectionalSession').is(':checked');
@@ -192,7 +193,7 @@ function bindMenus()
 			$('#newSessionName').val('');
 			$('#sessionURL').val(url + '/s/'+newSession.name+'/').focus().select();
 			$('#startNewSession').button('reset');*/
-			joinNewSession(newSession);
+			joinNewSession(newSession, 'true');
 		});
 	
 	});
@@ -583,38 +584,49 @@ function updatePage(DivUrl, callback)
 	});
 }
 
-function joinNewSession(sessionID) {
-	
-	socket.emit('joinSession', sessionID, function(newSession){
-		
-		newSession = JSON.parse(newSession);
-		//TODO: Check if current joined session exists in the chatLog, if it does, add the chats
-		if(localStorage.getItem('ChatLog'))
-		{
-			tempLog = JSON.parse(localStorage.getItem('ChatLog'));
-		}
-		else
-		{
-			tempLog = [];
-		}
-		if(chatLog.length > 0)
-		{
-			tempLog.push({session: currentSession, chat: chatLog});
-			localStorage.setItem('ChatLog', JSON.stringify(tempLog));
-		}
-		$('ul.chatMessages li.chat').remove();
-		$('#chatParticipants').text('Currently chatting in session: '+ newSession.name);
-		$('.chatInput').removeAttr('readonly').removeAttr('title');
-		$('#sessionBoxName').text(newSession.name);
-		$('.sessionBox').fadeIn();
-	
-		if(!(newSession.isChatOnly))
-		{
-			updatePage(newSession.newUrl);
-		}
-		currentSession = newSession.name;
-		chatLog = [];
-	});
+function joinNewSession(sessionID, me) {
+	if(me != 'true')
+	{
+		socket.emit('joinSession', sessionID, joinedSession);
+	}
+	else
+	{
+		joinedSession(sessionID)
+	}
+}
+
+function joinedSession(theNewSession){
+	if(typeof theNewSession != "Object")
+	{
+		theNewSession = JSON.parse(theNewSession);
+	}
+	console.log(theNewSession);
+	//TODO: Check if current joined session exists in the chatLog, if it does, add the chats
+	if(localStorage.getItem('ChatLog'))
+	{
+		tempLog = JSON.parse(localStorage.getItem('ChatLog'));
+	}
+	else
+	{
+		tempLog = [];
+	}
+	if(chatLog.length > 0)
+	{
+		tempLog.push({session: currentSession, chat: chatLog});
+		localStorage.setItem('ChatLog', JSON.stringify(tempLog));
+	}
+	$('ul.chatMessages li.chat').remove();
+	$('#chatParticipants').text('Currently chatting in session: '+ theNewSession.name);
+	$('.chatInput').removeAttr('readonly').removeAttr('title');
+	$('#sessionBoxName').text(theNewSession.name);
+	$('.sessionBox').fadeIn();
+
+	if(!(theNewSession.isChatOnly))
+	{
+		updatePage(theNewSession.currentPage);
+	}
+	currentSession = theNewSession.name;
+	chatLog = [];
 }
 
 function parse_date(oldDate) {
