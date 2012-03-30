@@ -21,12 +21,12 @@ form.form-horizontal#timesheetForm
 		.control-group
 			label.control-label(for="startTime") Start:
 			.controls.form-inline
-				input.timepicker#startTime(type="text", name = 'start_time', value = '09:00', required)
+				input.timepicker#startTime(type="time", name = 'start_time', value = '09:00', required)
 		.control-group
 			label.control-label.warning(for="endTime") End: 
 			.controls
 				.input
-					input.timepicker#endTime(type="text", name = 'end_time', value = '09:15', required)
+					input.timepicker#endTime(type="time", name = 'end_time', value = '09:15', required)
 				p.help-block
 
 		div.control-group

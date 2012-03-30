@@ -125,14 +125,14 @@ function bindMenus()
 	});
 	chatBox = $('ul.chatMessages');
 	
-	$(window).resize(function() {
-		var chatHeight = $(window).height() - chatBox.offset().top - 3;
-		chatBox.height(chatHeight);
+	
+	$(window).on('resize', function() {
+		chatHeight = $(this).height() - 320;
+		chatBox.css("height", chatHeight);
 	});
 	
-	var chatHeight = $(window).height() - chatBox.offset().top - 3;
-	
-	chatBox.height(chatHeight);
+	var chatHeight = $(window).height() - 320;
+	chatBox.css("height", chatHeight);
 
 	
 	chatScrollAPI = $('ul.chatMessages').data('jsp');
@@ -165,11 +165,14 @@ function bindMenus()
 		}
 		$('.chatInput').focus();
 	});
+	//webkitTransitionEnd oTransitionEnd transitionend
+	$('nav.sessions').on('nresize', function(event){
 	
-	$('nav.sessions').on('mouseleave', function(){
-	
-		$('div.accordion-body.in').collapse('hide');
-		$('#sessionsSideNav').collapse({toggle: false});
+		if($(this).width() < 240)
+		{
+			$('div.accordion-body.in').collapse('hide');
+			$('#sessionsSideNav').collapse({toggle: false});
+		}
 	});
 	
 	
@@ -180,7 +183,8 @@ function bindMenus()
 		var sessionName = $('#newSessionName').val();
 		var isPublic = $('#publicSession').is(':checked');
 		var isBi = $('#bidirectionalSession').is(':checked');
-		var data = {name: sessionName, public: isPublic, bidirectional: isBi, currentPage: location.pathname};
+		var isChat = $('#chatOnly').is(':checked');
+		var data = {name: sessionName, public: isPublic, bidirectional: isBi, currentPage: location.pathname, chatOnly : isChat};
 		$(this).button('loading');
 
 		socket.emit('createSession', data, function(newSession) {
@@ -275,7 +279,7 @@ function bindMenus()
 		e.preventDefault();
 		if($(this).parent('li').hasClass('availableSession'))
 		{
-			updatePage($(this).attr('href'));
+			joinNewSession($(this).text());
 		}
 		else
 		{
@@ -579,27 +583,38 @@ function updatePage(DivUrl, callback)
 	});
 }
 
-function joinNewSession(newSession) {
-	newSession = JSON.parse(newSession);
-	//TODO: Check if current joined session exists in the chatLog, if it does, add the chats
-	if(localStorage.getItem('ChatLog'))
-	{
-		tempLog = JSON.parse(localStorage.getItem('ChatLog'));
-	}
-	else
-	{
-		tempLog = [];
-	}
-	if(chatLog.length > 0)
-	{
-		tempLog.push({session: currentSession, chat: chatLog});
-		localStorage.setItem('ChatLog', JSON.stringify(tempLog));
-	}
-	$('ul.chatMessages li.chat').remove();
-	$('#chatParticipants').text('Currently chatting in session: '+ newSession.name);
-	$('.chatInput').removeAttr('readonly').removeAttr('title');
-	currentSession = newSession.name;
-	chatLog = [];
+function joinNewSession(sessionID) {
+	
+	socket.emit('joinSession', sessionID, function(newSession){
+		
+		newSession = JSON.parse(newSession);
+		//TODO: Check if current joined session exists in the chatLog, if it does, add the chats
+		if(localStorage.getItem('ChatLog'))
+		{
+			tempLog = JSON.parse(localStorage.getItem('ChatLog'));
+		}
+		else
+		{
+			tempLog = [];
+		}
+		if(chatLog.length > 0)
+		{
+			tempLog.push({session: currentSession, chat: chatLog});
+			localStorage.setItem('ChatLog', JSON.stringify(tempLog));
+		}
+		$('ul.chatMessages li.chat').remove();
+		$('#chatParticipants').text('Currently chatting in session: '+ newSession.name);
+		$('.chatInput').removeAttr('readonly').removeAttr('title');
+		$('#sessionBoxName').text(newSession.name);
+		$('.sessionBox').fadeIn();
+	
+		if(!(newSession.isChatOnly))
+		{
+			updatePage(newSession.newUrl);
+		}
+		currentSession = newSession.name;
+		chatLog = [];
+	});
 }
 
 function parse_date(oldDate) {

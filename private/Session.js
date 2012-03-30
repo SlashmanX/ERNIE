@@ -1,10 +1,11 @@
-module.exports = function(id, name, public, bidirectional, leader, currentPage) {
+module.exports = function(id, name, public, bidirectional, leader, currentPage, chatOnly) {
     this.id					=	id;
     this.name 				= 	name;
     this.public 			= 	public;
     this.bidirectional 		= 	bidirectional;
 	this.leader				=	leader;
 	this.currentPage		=	currentPage;
+	this.chatOnly			=	chatOnly
     this.numUsers			=	0;
     this.users			 	= 	[];
     // Methods
@@ -25,6 +26,9 @@ module.exports = function(id, name, public, bidirectional, leader, currentPage) 
     };
     this.isBidirectional	=	function() {
     	return this.bidirectional;
+    };
+	this.isChatOnly			=	function() {
+    	return this.chatOnly;
     };
     this.addUser			=	function(newUserID) {
     	if(this.users.indexOf(newUserID) == -1)

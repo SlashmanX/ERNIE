@@ -12,9 +12,5 @@ function sBind()
 	{
 		sessionID = decodeURIComponent(path[2]);
 	}
-	socket.emit('joinSession', sessionID, function(newSession){
-		var session = JSON.parse(newSession);
-		joinNewSession(newSession);
-		updatePage(session.newUrl);
-	});
+	joinNewSession(sessionID);
 }

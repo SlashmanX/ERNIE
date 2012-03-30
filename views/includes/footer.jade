@@ -31,12 +31,12 @@ section.sessionsNav.forceLogIn
 										input.checkboxToggle#bidirectionalSession(type="checkbox", checked="checked")
 								tr
 									td 
-										a(rel="tooltip", title="Email users to say you have added them to this session") Email Users
+										a(rel="tooltip", title="This session is just for users to chat, no information will be shared") Chat Only
 									td
-										div.btn-group#toggleemailUsers
-											a.btn.btn-primary.checkboxOn(href="#") On
-											a.btn.checkboxOff(href="#") Off
-										input.checkboxToggle#emailUsers(type="checkbox", checked="checked")
+										div.btn-group#togglechatOnly
+											a.btn.checkboxOn(href="#") On
+											a.btn.btn-primary.checkboxOff(href="#") Off
+										input.checkboxToggle#chatOnly(type="checkbox")
 								tr
 									td 
 										a(rel="tooltip", title="Notify users if they are online to say you have added them to this session") Notify Users
@@ -72,5 +72,6 @@ section.sessionsNav.forceLogIn
 							li
 						.infoMessage#typingArea &nbsp;
 						input(type="text", placeholder = "Chat Message Here", readonly="readonly", title = "You must join a session before you can chat").chatInput
+.sessionBox.hide In Session: <span id = "sessionBoxName"></span>. <a href = "#" id = "sessionBoxLeave">Leave</a>
 footer
 	p &copy; E&oacute;in Martin 2012
