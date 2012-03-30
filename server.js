@@ -551,7 +551,7 @@ socket.sockets.on('connection', function(client){
 		if(users[myID].getSession() != null)
 		{
 			var theSession = users[myID].getSession();
-			if(theSession.isBidirectional() || theSession.getLeader() == myID && !theSession.isChatOnly())
+			if((theSession.isBidirectional() || theSession.getLeader() == myID) && !theSession.isChatOnly())
 			{
 				client.broadcast.to(theSession.getName()).emit('triggerClick', triggeredObject.object);
 				theSession.setCurrentPage(triggeredObject.newPage);
