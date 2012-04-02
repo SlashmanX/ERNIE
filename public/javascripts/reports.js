@@ -28,7 +28,6 @@ socket.on('sortItem', function(sort){
 function reportsBind()
 {
 	socket.emit('generateReport', 1, function(reportJSON){
-		console.log('got report')
 		timesheetsObj = {};
 		startSort = -1;
 		stopSort = -1;

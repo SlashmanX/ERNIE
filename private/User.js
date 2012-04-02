@@ -1,8 +1,9 @@
-module.exports = function(id, name, loggedIn, sessionID) {
+module.exports = function(id, name, loggedIn, sessionID, socketID) {
     this.id			=	id;
     this.name 		= 	name;
     this.loggedIn 	= 	loggedIn;
     this.sessionID 	= 	sessionID;
+	this.socketID	=	socketID;
     this.session;
     this.numTabs 	= 	0;
     // Methods
@@ -32,5 +33,11 @@ module.exports = function(id, name, loggedIn, sessionID) {
     };
     this.getSession	=	function() {
     	return this.session;
+    };
+	this.setSocketID = 	function(socketID) {
+        this.socketID = socketID;
+    };
+    this.getSocketID	=	function() {
+    	return this.socketID;
     };
 };

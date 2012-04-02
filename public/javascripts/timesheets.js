@@ -104,7 +104,7 @@ function bindItems()
 		}
 		else
 		{
-			$(this).parentsUntil('.control-group').parent('div').removeClass('warning').children('p.help-block').text('');
+			$(this).parentsUntil('.control-group').parent('div').removeClass('warning error').children('p.help-block').text('');
 		}
 	
 	});
@@ -121,6 +121,11 @@ function bindItems()
 		var timesheetData = {};
 		event.preventDefault();
 		$('#submitTimesheet').button('loading');
+		if((jQuery.inArray($(this).val(), projects)) == -1)
+		{
+			$('#projectInput').parentsUntil('.control-group').parent('div').addClass('error').children('p.help-block').text('Please select a valid project.');
+			return false;
+		}
 		timesheetData['project_id'] = $('#projectInput').val().replace(/[^\d\.]+/g, "");
 		timesheetData['task_id'] = subOptions.val();
 		timesheetData['date_worked'] = $('#date_worked').val();

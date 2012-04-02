@@ -19,7 +19,7 @@ var json        =   JSON.stringify;
 var	users		=	[];
 var	sessions	=	[];
 
-sessions.push(new Session(1, "testSession", "true", "true", 1, "/main/", false))
+sessions.push(new Session(1, "testSession", "true", "true", 1, "/main/", false, null))
 
 
 var parseCookie =   connect.utils.parseCookie;
@@ -236,6 +236,34 @@ app.post('/submitTimesheet', function(req, res){
 
 });
 
+app.post('/getUsers', function(req, res){
+	var userString = req.param('q', null);
+	
+	var successful;
+	
+	if(userString != null)
+	{
+		SQLclient.query("SELECT `employee_id` AS `id`, `name` FROM "+ EMPLOYEE_TABLE +" WHERE `name` LIKE '%%"+userString+"%%' LIMIT 10", function(err, results, fields){
+			
+			if(err)
+			{
+				throw err;
+				var date = new Date();
+				errorLog.error('MySQL Error', {date: date.toUTCString(), location: '/GetUsers', errorMsg: err});
+				successful = 'false';
+			}
+			else
+			{
+				successful = true;
+				res.contentType('application/json');
+				var data = json(results);
+				res.header('Content-Length', data.length);
+				res.end(data);
+			}
+		});
+	}
+});
+
 
 //The 404 Route (ALWAYS Keep this as the last route)
 app.use(function(req,res){
@@ -285,6 +313,7 @@ socket.set('authorization', function (data, accept) {
  
 socket.sockets.on('connection', function(client){
 	var myID = client.handshake.userID;
+	console.log('connection : ID: '+ myID +', socketID: '+ client.id);
 	if(typeof myID !== "undefined")
 	{
 	
@@ -294,11 +323,11 @@ socket.sockets.on('connection', function(client){
 			if((typeof myID !== "undefined") && myID !== null && !userIsInArray(myID))
 			{
 				
-				users[myID] = new User(myID, username, 'true', client.handshake.sessionID);
+				users[myID] = new User(myID, username, 'true', client.handshake.sessionID, client.id);
 			}
 			else
 			{
-				//users[myID].addSession();
+				users[myID].setSocketID(client.id);
 			}
 			
 			
@@ -420,12 +449,19 @@ socket.sockets.on('connection', function(client){
 	
 	client.on('joinSession', function(sessionName, callback){
 		var joinedSession = getSession(sessionName);
-		addUserToSession(client, users[myID], joinedSession);
-		client.broadcast.to(sessionName).emit('notification', users[myID].getName() +' has joined your session');
-		console.log('sending note');
-		if(typeof callback != 'undefined')
+		if(joinedSession.userCanJoin(myID))
 		{
-			callback(json({currentPage: joinedSession.getCurrentPage(), name: joinedSession.getName()}));
+			addUserToSession(client, users[myID], joinedSession);
+			client.broadcast.to(sessionName).emit('notification', users[myID].getName() +' has joined your session');
+			console.log('sending note');
+			if(typeof callback != 'undefined')
+			{
+				callback(json({status : "ok", currentPage: joinedSession.getCurrentPage(), name: joinedSession.getName(), isChatOnly : joinedSession.isChatOnly()}));
+			}
+		}
+		else
+		{
+			callback(json({status : "error", msg : "You are not allowed join this session"}));
 		}
 	
 	})
@@ -453,10 +489,20 @@ socket.sockets.on('connection', function(client){
 	
 	client.on('createSession', function(data, callback) {
 		var leader = myID;
-		var session = new Session(sessions.length, data.name, data.public, data.bidirectional, leader, data.currentPage, data.chatOnly);
+		var session = new Session(sessions.length, data.name, data.public, data.bidirectional, leader, data.currentPage, data.isChatOnly, data.invitedUsers);
 		addUserToSession(client, users[myID], session);
+		var temp;
+		var tempUser;
+		for(var i = 0; i < data.invitedUsers.length; i++)
+		{
+			temp = data.invitedUsers[i];
+			tempUser = users[temp];
+			console.log('sending notification to '+ tempUser.getName()+' on socket '+ tempUser.getSocketID());
+			socket.sockets.socket(tempUser.getSocketID()).emit('notification', users[myID].getName() +' has invited you to the session: <a class = "notification-link session" href="/s/'+ data.name +'/">'+data.name);
+		}
 		sessions.push(session);
 		socket.sockets.emit('newSessionActive', json({name: data.name, isPublic: data.public}));
+		data.status = "ok";
 		callback(data);
 	
 	});
